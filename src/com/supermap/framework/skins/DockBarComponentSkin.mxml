@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+/////////////////////////////////////////////////////////////////////////////////////////////
+//
+//	Copyright (c) 2013 SuperMap. All Rights Reserved.
+//
+//	Licensed under the Apache License, Version 2.0 (the "License");
+//	you may not use this file except in compliance with the License.
+//	You may obtain a copy of the License at
+//
+//	http://www.apache.org/licenses/LICENSE-2.0
+//
+//	Unless required by applicable law or agreed to in writing, software
+//	distributed under the License is distributed on an  "AS IS" BASIS,
+//	WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+//	See the License for the specific language governing permissions and
+//	limitations under the License.
+//
+///////////////////////////////////////////////////////////////////////////////////////////// 
+-->
+<!---
+	停靠条组件默认皮肤样式 
+-->
+<s:Skin xmlns:fx="http://ns.adobe.com/mxml/2009"
+    xmlns:s="library://ns.adobe.com/flex/spark"
+    xmlns:mx="library://ns.adobe.com/flex/mx">
+    <!-- host component -->
+    <fx:Metadata>
+		[HostComponent("com.supermap.framework.dock.DockBarComponent")]
+	</fx:Metadata>
+
+    <s:Group 
+        left="0" right="0" top="0" bottom="0">
+        <s:Rect 
+            left="0" right="0" top="0" bottom="0"
+            radiusX="3"
+            radiusY="3">
+            <s:fill>
+                <s:LinearGradient 
+                    scaleX="21.7446"
+                    rotation="90">
+                    <s:GradientEntry 
+                        color="#0c94d2"
+                        ratio="0"/>
+                    <s:GradientEntry 
+                        color="#0678ce"
+                        ratio="1"/>
+                </s:LinearGradient>
+            </s:fill>
+            <s:stroke>
+                <s:SolidColorStroke 
+                    color="0xffffff"
+                    alpha="1"/>
+            </s:stroke>
+        </s:Rect>
+        <s:Rect 
+            left="2" right="2" top="2" bottom="2"
+            radiusX="3"
+            radiusY="3">
+            <s:fill>
+                <s:SolidColor 
+                    color="0xffffff"
+                    alpha="0.4"/>
+            </s:fill>
+            <s:stroke>
+                <s:SolidColorStroke 
+                    color="0xffffff"
+                    alpha="1"/>
+            </s:stroke>
+        </s:Rect>
+    </s:Group>
+
+    <!--	<s:Group left="3" right="3" top="4" height="10" visible="false">
+            <s:Rect left="0" right="0" top="0" bottom="0">
+                <s:fill>
+                    <s:SolidColor color="#0678ce" />
+                </s:fill>
+            </s:Rect>
+        </s:Group>-->
+
+    <s:Scroller 
+        width="100%" height="100%"
+        skinClass="com.supermap.framework.skins.scrollBarSkins.Scroller_skin">
+        <s:Group id="dockBar" name="dockBar"
+            left="2" right="2" top="10" bottom="10">
+        </s:Group>
+    </s:Scroller>
+
+</s:Skin>

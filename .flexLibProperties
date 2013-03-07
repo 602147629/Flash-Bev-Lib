@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<flexLibProperties includeAllClasses="false" version="3">
+  <includeClasses>
+    <classEntry path="com.supermap.containers.GearContainer"/>
+    <classEntry path="com.supermap.containers.LayoutContainer"/>
+    <classEntry path="com.supermap.containers.MapContainer"/>
+    <classEntry path="com.supermap.containers.TemplateContainer"/>
+    <classEntry path="com.supermap.framework.GCPlus"/>
+    <classEntry path="com.supermap.framework.commands.Command"/>
+    <classEntry path="com.supermap.framework.commands.ICommand"/>
+    <classEntry path="com.supermap.framework.components.BaseComponent"/>
+    <classEntry path="com.supermap.framework.components.BaseComponentSkin"/>
+    <classEntry path="com.supermap.framework.components.BaseGear"/>
+    <classEntry path="com.supermap.framework.components.ComponentDelegate"/>
+    <classEntry path="com.supermap.framework.components.ComponentDelegateManager"/>
+    <classEntry path="com.supermap.framework.components.GearTemplate"/>
+    <classEntry path="com.supermap.framework.components.GearTemplateSkin"/>
+    <classEntry path="com.supermap.framework.components.LayoutComponent"/>
+    <classEntry path="com.supermap.framework.components.MapControl"/>
+    <classEntry path="com.supermap.framework.components.SkinnableContainerSkin"/>
+    <classEntry path="com.supermap.framework.core.BaseLayout"/>
+    <classEntry path="com.supermap.framework.core.GearStates"/>
+    <classEntry path="com.supermap.framework.core.IAnimation"/>
+    <classEntry path="com.supermap.framework.core.IBaseView"/>
+    <classEntry path="com.supermap.framework.core.IFactory"/>
+    <classEntry path="com.supermap.framework.core.IGear"/>
+    <classEntry path="com.supermap.framework.core.ILayout"/>
+    <classEntry path="com.supermap.framework.core.IPlugin"/>
+    <classEntry path="com.supermap.framework.core.IPosition"/>
+    <classEntry path="com.supermap.framework.core.IState"/>
+    <classEntry path="com.supermap.framework.core.IStyle"/>
+    <classEntry path="com.supermap.framework.core.ITemplate"/>
+    <classEntry path="com.supermap.framework.dock.ChildChangeEvent"/>
+    <classEntry path="com.supermap.framework.dock.ClosableTabNavigator"/>
+    <classEntry path="com.supermap.framework.dock.ClosePanel"/>
+    <classEntry path="com.supermap.framework.dock.DockBarComponent"/>
+    <classEntry path="com.supermap.framework.dock.DockBarDataGroup"/>
+    <classEntry path="com.supermap.framework.dock.DockBarItemRenderer"/>
+    <classEntry path="com.supermap.framework.dock.DockData"/>
+    <classEntry path="com.supermap.framework.dock.DockFinder"/>
+    <classEntry path="com.supermap.framework.dock.DockHelper"/>
+    <classEntry path="com.supermap.framework.dock.DockHint"/>
+    <classEntry path="com.supermap.framework.dock.DockManager"/>
+    <classEntry path="com.supermap.framework.dock.DockManagerImpl"/>
+    <classEntry path="com.supermap.framework.dock.DockSource"/>
+    <classEntry path="com.supermap.framework.dock.DockablePanel"/>
+    <classEntry path="com.supermap.framework.dock.DockableTabNavigator"/>
+    <classEntry path="com.supermap.framework.dock.DragProxyImage"/>
+    <classEntry path="com.supermap.framework.dock.DragStarter"/>
+    <classEntry path="com.supermap.framework.dock.FloatPanel"/>
+    <classEntry path="com.supermap.framework.dock.IDockableContainer"/>
+    <classEntry path="com.supermap.framework.dock.IDockableDividedBox"/>
+    <classEntry path="com.supermap.framework.dock.IDockableTabChild"/>
+    <classEntry path="com.supermap.framework.dock.IconUtil"/>
+    <classEntry path="com.supermap.framework.dock.ItemComponent"/>
+    <classEntry path="com.supermap.framework.dock.RichTab"/>
+    <classEntry path="com.supermap.framework.dock.RichTabBar"/>
+    <classEntry path="com.supermap.framework.dock.ToolTipContainer"/>
+    <classEntry path="com.supermap.framework.dock.supportClasses.CustomContainer"/>
+    <classEntry path="com.supermap.framework.dock.supportClasses.DockBar"/>
+    <classEntry path="com.supermap.framework.dock.supportClasses.DockBarMananger"/>
+    <classEntry path="com.supermap.framework.dock.supportClasses.DockBarSkin"/>
+    <classEntry path="com.supermap.framework.dock.supportClasses.DockBtnSkin"/>
+    <classEntry path="com.supermap.framework.dock.supportClasses.DockUtil"/>
+    <classEntry path="com.supermap.framework.dock.supportClasses.ToolTip"/>
+    <classEntry path="com.supermap.framework.events.BaseEvent"/>
+    <classEntry path="com.supermap.framework.events.BaseEventDispatcher"/>
+    <classEntry path="com.supermap.framework.events.FloatPanelEvent"/>
+    <classEntry path="com.supermap.framework.events.GearEvent"/>
+    <classEntry path="com.supermap.framework.events.LayoutEvent"/>
+    <classEntry path="com.supermap.framework.events.PluginEvent"/>
+    <classEntry path="com.supermap.framework.events.StateEvent"/>
+    <classEntry path="com.supermap.framework.events.StyleEvent"/>
+    <classEntry path="com.supermap.framework.managers.ConfigManager"/>
+    <classEntry path="com.supermap.framework.managers.EventManager"/>
+    <classEntry path="com.supermap.framework.managers.LayoutManager"/>
+    <classEntry path="com.supermap.framework.managers.PluginManager"/>
+    <classEntry path="com.supermap.framework.skins.DockBarComponentSkin"/>
+    <classEntry path="com.supermap.framework.skins.FloatPanelNoTabSkin"/>
+    <classEntry path="com.supermap.framework.skins.FloatPanelSkin"/>
+    <classEntry path="com.supermap.framework.skins.ItemComponentSkin"/>
+    <classEntry path="com.supermap.framework.skins.TabNavigatorTabSelectedSkin"/>
+    <classEntry path="com.supermap.framework.skins.TabNavigatorTabSkin"/>
+    <classEntry path="com.supermap.framework.skins.ToolTipBarSkin"/>
+    <classEntry path="com.supermap.framework.skins.closeButtonSkin"/>
+    <classEntry path="com.supermap.framework.skins.dockButtonSkin"/>
+    <classEntry path="com.supermap.framework.skins.lockButtonSkin"/>
+    <classEntry path="com.supermap.framework.skins.minButtonSkin"/>
+    <classEntry path="com.supermap.framework.skins.scrollBarSkins.ScrollBarLeftButton_H_skin"/>
+    <classEntry path="com.supermap.framework.skins.scrollBarSkins.ScrollBarRightButton_H_skin"/>
+    <classEntry path="com.supermap.framework.skins.scrollBarSkins.ScrollBarThumb_H_skin"/>
+    <classEntry path="com.supermap.framework.skins.scrollBarSkins.ScrollBarThumb_V_skin"/>
+    <classEntry path="com.supermap.framework.skins.scrollBarSkins.ScrollBarTrack_DG_skin"/>
+    <classEntry path="com.supermap.framework.skins.scrollBarSkins.ScrollBarTrack_H_skin"/>
+    <classEntry path="com.supermap.framework.skins.scrollBarSkins.ScrollBarTrack_V_skin"/>
+    <classEntry path="com.supermap.framework.skins.scrollBarSkins.ScrollBarUpButton_V_skin"/>
+    <classEntry path="com.supermap.framework.skins.scrollBarSkins.ScrollBar_H_skin"/>
+    <classEntry path="com.supermap.framework.skins.scrollBarSkins.ScrollBar_V_skin"/>
+    <classEntry path="com.supermap.framework.skins.scrollBarSkins.Scroller_skin"/>
+    <classEntry path="fl.transitions.Tween"/>
+    <classEntry path="fl.transitions.TweenEvent"/>
+    <classEntry path="fl.transitions.easing.Strong"/>
+    <classEntry path="inject.Injector"/>
+    <classEntry path="inject.utils.ReflectUtil"/>
+  </includeClasses>
+  <includeResources>
+    <resourceEntry destPath="assets/bg.png" sourcePath="assets/bg.png"/>
+    <resourceEntry destPath="assets/default.png" sourcePath="assets/default.png"/>
+    <resourceEntry destPath="assets/panel_close.png" sourcePath="assets/panel_close.png"/>
+    <resourceEntry destPath="assets/panel_close_over.png" sourcePath="assets/panel_close_over.png"/>
+    <resourceEntry destPath="assets/panel_dock.png" sourcePath="assets/panel_dock.png"/>
+    <resourceEntry destPath="assets/panel_lock.png" sourcePath="assets/panel_lock.png"/>
+    <resourceEntry destPath="assets/panel_max.png" sourcePath="assets/panel_max.png"/>
+    <resourceEntry destPath="assets/panel_min.png" sourcePath="assets/panel_min.png"/>
+    <resourceEntry destPath="assets/panel_min_over.png" sourcePath="assets/panel_min_over.png"/>
+    <resourceEntry destPath="assets/panel_unlock.png" sourcePath="assets/panel_unlock.png"/>
+    <resourceEntry destPath="assets/resize.png" sourcePath="assets/resize.png"/>
+    <resourceEntry destPath="assets/t_resizecursor.png" sourcePath="assets/t_resizecursor.png"/>
+    <resourceEntry destPath="assets/tab_close.png" sourcePath="assets/tab_close.png"/>
+    <resourceEntry destPath="assets/tab_close_over.png" sourcePath="assets/tab_close_over.png"/>
+    <resourceEntry destPath="assets/template-close.png" sourcePath="assets/template-close.png"/>
+    <resourceEntry destPath="assets/template-default.png" sourcePath="assets/template-default.png"/>
+    <resourceEntry destPath="assets/template-min.png" sourcePath="assets/template-min.png"/>
+    <resourceEntry destPath="assets/w_resizecursor.png" sourcePath="assets/w_resizecursor.png"/>
+    <resourceEntry destPath="defaults.css" sourcePath="defaults.css"/>
+    <resourceEntry destPath="docs/com.supermap.containers.xml" sourcePath="docs/com.supermap.containers.xml"/>
+    <resourceEntry destPath="docs/com.supermap.framework.commands.xml" sourcePath="docs/com.supermap.framework.commands.xml"/>
+    <resourceEntry destPath="docs/com.supermap.framework.components.xml" sourcePath="docs/com.supermap.framework.components.xml"/>
+    <resourceEntry destPath="docs/com.supermap.framework.core.xml" sourcePath="docs/com.supermap.framework.core.xml"/>
+    <resourceEntry destPath="docs/com.supermap.framework.dock.supportClasses.xml" sourcePath="docs/com.supermap.framework.dock.supportClasses.xml"/>
+    <resourceEntry destPath="docs/com.supermap.framework.dock.xml" sourcePath="docs/com.supermap.framework.dock.xml"/>
+    <resourceEntry destPath="docs/com.supermap.framework.events.xml" sourcePath="docs/com.supermap.framework.events.xml"/>
+    <resourceEntry destPath="docs/com.supermap.framework.skins.scrollBarSkins.xml" sourcePath="docs/com.supermap.framework.skins.scrollBarSkins.xml"/>
+    <resourceEntry destPath="docs/com.supermap.framework.skins.xml" sourcePath="docs/com.supermap.framework.skins.xml"/>
+    <resourceEntry destPath="docs/packages.dita" sourcePath="docs/packages.dita"/>
+    <resourceEntry destPath="license.txt" sourcePath="license.txt"/>
+  </includeResources>
+  <namespaceManifests/>
+</flexLibProperties>

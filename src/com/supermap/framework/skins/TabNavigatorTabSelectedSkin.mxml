@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+/////////////////////////////////////////////////////////////////////////////////////////////
+//
+//	Copyright (c) 2013 SuperMap. All Rights Reserved.
+//
+//	Licensed under the Apache License, Version 2.0 (the "License");
+//	you may not use this file except in compliance with the License.
+//	You may obtain a copy of the License at
+//
+//	http://www.apache.org/licenses/LICENSE-2.0
+//
+//	Unless required by applicable law or agreed to in writing, software
+//	distributed under the License is distributed on an  "AS IS" BASIS,
+//	WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+//	See the License for the specific language governing permissions and
+//	limitations under the License.
+//
+///////////////////////////////////////////////////////////////////////////////////////////// 
+-->
+<!---
+	面板标签页默认选中样式.
+-->
+<s:SparkSkin xmlns:fx="http://ns.adobe.com/mxml/2009" 
+			 xmlns:s="library://ns.adobe.com/flex/spark" 
+			 xmlns:mx="library://ns.adobe.com/flex/mx"
+			 >
+	
+	<s:Rect  left="1" right="1" top="1" bottom="0"  topLeftRadiusY="5" 
+			 topRightRadiusY="5" topLeftRadiusX="5" topRightRadiusX="5">
+		<s:fill>
+			<s:LinearGradient x="45.0005" y="34" scaleX="33.9995" rotation="270">
+				<s:GradientEntry ratio="0.3" color="#D1D1D1"/>
+				<s:GradientEntry ratio="0.490309" color="#DDDDDD"/>
+				<s:GradientEntry ratio="0.71" color="#E0E0E0"/>
+				<s:GradientEntry ratio="1" color="#E5E5E5"/>
+			</s:LinearGradient>
+		</s:fill>
+	</s:Rect>
+	
+	<s:Rect alpha="0.5">
+		<s:fill>
+			<s:SolidColor color="#FFFFFF"/>
+		</s:fill>
+	</s:Rect>
+	
+</s:SparkSkin>

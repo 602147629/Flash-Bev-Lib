@@ -1,0 +1,365 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+/////////////////////////////////////////////////////////////////////////////////////////////
+//
+//	Copyright (c) 2013 SuperMap. All Rights Reserved.
+//
+//	Licensed under the Apache License, Version 2.0 (the "License");
+//	you may not use this file except in compliance with the License.
+//	You may obtain a copy of the License at
+//
+//	http://www.apache.org/licenses/LICENSE-2.0
+//
+//	Unless required by applicable law or agreed to in writing, software
+//	distributed under the License is distributed on an  "AS IS" BASIS,
+//	WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+//	See the License for the specific language governing permissions and
+//	limitations under the License.
+//
+///////////////////////////////////////////////////////////////////////////////////////////// 
+-->
+<!---
+    基础模块对应的皮肤文件,可自行写皮肤来统一修改模块的外观.
+    @see com.supermap.framework.components.GearTemplate
+-->
+<s:SparkSkin xmlns:fx="http://ns.adobe.com/mxml/2009"
+    xmlns:s="library://ns.adobe.com/flex/spark"
+    xmlns:fb="http://ns.adobe.com/flashbuilder/2009"
+    alpha.disabled="0.5"
+    xmlns:mx="library://ns.adobe.com/flex/mx">
+
+    <fx:Metadata>
+        <![CDATA[ 
+		 [HostComponent("com.supermap.framework.components.GearTemplate")] 
+		]]>
+    </fx:Metadata>
+
+    <fx:Declarations>
+        <s:Bounce id="bounceEasing"/>
+        <s:Elastic id="elasticEasing"/>
+    </fx:Declarations>
+
+    <fx:Script>
+        <![CDATA[
+            import mx.effects.Glow;
+            import mx.effects.easing.*;
+            import mx.events.EffectEvent;
+            import mx.events.FlexEvent;
+
+            import spark.components.BorderContainer;
+            import spark.effects.Move;
+
+            private var glow:Glow;
+
+            [Bindable]
+            private var minStateWidth:Number = 80; //最小化状态下的宽度
+
+            private function iconSetTopHandler(event:FlexEvent):void
+            {
+                var image:Image = (event.target as Image);
+                var imgHeight:int = image.height;
+                image.top = this.header.height-imgHeight;
+            }
+
+            protected function minimizeButton_mouseMoveHandler(event:MouseEvent):void
+            {
+                setEffect(event.currentTarget as Image);
+            }
+
+            protected function closeButton_mouseMoveHandler(event:MouseEvent):void
+            {
+                setEffect(event.currentTarget as Image);
+            }
+
+            private function setEffect(img:Image):void
+            {
+                glow = new Glow(img);
+                glow.end();
+                glow.duration = 300;
+                glow.blurXFrom = 25;
+                glow.blurYFrom = 25;
+                glow.blurXTo = 0;
+                glow.blurYTo = 0;
+                glow.color = getStyle("focusColor");
+                glow.play();
+            }
+
+            protected function minimizeButton_mouseOutHandler(event:MouseEvent):void
+            {
+                glow.end();
+            }
+
+            protected function closeButton_mouseOutHandler(event:MouseEvent):void
+            {
+                glow.end();
+            }
+
+            //从最小化到open状态时候图片的处理动画
+            protected function fade1_effectEndHandler(event:EffectEvent):void
+            {
+                var fade:Fade = new Fade();
+                fade.target = bgGroup;
+                fade.alphaFrom = 0;
+                fade.alphaTo = 1;
+                fade.play();
+                bgGroup.visible = true;
+            }
+
+            //从open到最小化后图片的位置调整
+            protected function resize1_effectEndHandler(event:EffectEvent):void
+            {
+                bgBorder.visible = true;
+            }
+
+            protected function sequence1_effectEndHandler(event:EffectEvent):void
+            {
+                this.icon.y = this.icon.height;
+                this.icon.x = (minStateWidth-this.icon.width)*0.5;
+            }
+
+            protected function sequence2_effectEndHandler(event:EffectEvent):void
+            {
+                this.icon.y = -10;
+                this.icon.x = 12;
+                this.resizeButton.visible = true;
+            }
+
+
+            protected function sequence2_effectStartHandler(event:EffectEvent):void
+            {
+                this.resizeButton.visible = false;
+            }
+        ]]>
+    </fx:Script>
+
+    <s:states>
+        <s:State name="normal"/>
+        <s:State name="open"/>
+        <s:State name="minimized"/>
+        <s:State name="closed"/>
+        <s:State name="disabled"/>
+    </s:states>
+
+    <!--动画效果-->
+    <s:transitions>
+        <!--最小化-->
+        <s:Transition fromState="open"
+            toState="minimized">
+            <s:Sequence effectEnd="sequence1_effectEndHandler(event)">
+                <s:Resize duration="100"
+                    heightTo="35"
+                    target="{hostComponent}"/>
+                <s:Fade duration="50"
+                    target="{backGroup}"
+                    alphaTo="0"/>
+                <s:Fade duration="50"
+                    target="{GearFrame}"/>
+                <s:Fade duration="50"
+                    target="{minCloseBtn}"/>
+                <s:Resize 
+                    effectEnd="resize1_effectEndHandler(event)"
+                    widthTo="{minStateWidth}"
+                    target="{hostComponent}"
+                    duration="50"/>
+                <s:Move duration="200"
+                    target="{this.icon}"
+                    yTo="{this.icon.height}"
+                    xTo="{(minStateWidth - this.icon.width) * 0.5}"
+                    easer="{elasticEasing}"/>
+                <s:Resize duration="100"
+                    target="{bgBorder}"
+                    heightTo="{this.icon.height + 10}"/>
+            </s:Sequence>
+        </s:Transition>
+        <!--打开-->
+        <s:Transition fromState="*"
+            toState="open">
+            <s:Sequence 
+                effectEnd="sequence2_effectEndHandler(event)"
+                effectStart="sequence2_effectStartHandler(event)">
+                <!--<s:Move target="{icon}"/>-->
+                <s:Move duration="100"
+                    target="{this.icon}"
+                    yTo="-10"
+                    xTo="12"
+                    easer="{bounceEasing}"/>
+                <s:Resize duration="50"
+                    target="{bgBorder}"
+                    heightTo="1"/>
+                <s:Resize duration="50"
+                    target="{hostComponent}"
+                    widthTo="{hostComponent.gearWidth}"/>
+                <s:Fade duration="50"
+                    startDelay="50"
+                    target="{backGroup}"
+                    alphaFrom="0.6"
+                    alphaTo="1"/>
+                <s:Fade 
+                    effectEnd="fade1_effectEndHandler(event)"
+                    duration="50"
+                    target="{contentGroup}"/>
+                <s:Fade duration="50"
+                    target="{minCloseBtn}"/>
+            </s:Sequence>
+        </s:Transition>
+        <!--关闭-->
+        <s:Transition fromState="open"
+            toState="closed">
+            <s:Sequence>
+                <s:Fade duration="50"
+                    target="{GearFrame}"/>
+                <s:Fade duration="50"
+                    target="{contentGroup}"/>
+                <s:Fade duration="50"
+                    target="{minCloseBtn}"/>
+                <s:Fade duration="50"
+                    target="{backGroup}"/>
+            </s:Sequence>
+        </s:Transition>
+    </s:transitions>
+
+    <s:Group id="GearFrame"
+        left="0" right="0" top="0" bottom="0">
+    </s:Group>
+
+    <!--标题栏-->
+    <s:Group id="header"
+        height="28"
+        left="-1" right="-1" top="0"
+        visible.open="true"
+        visible.normal="true"
+	    visible.closed="false">
+        <s:Rect 
+            width="100%" height="100%">
+            <s:fill>
+                <s:LinearGradient rotation="90">
+                    <s:GradientEntry 
+                        color="0x0c94d2"
+                        />
+                    <s:GradientEntry 
+                        color="0x0678ce"
+                        />
+                </s:LinearGradient>
+            </s:fill>
+            <s:stroke>
+                <s:SolidColorStroke 
+                    color="0xffffff"
+                    weight="1"/>
+            </s:stroke>
+        </s:Rect>
+
+        <!--标题文本-->
+        <s:Label id="widgetLabel"
+            height="18"
+            top="5"
+            color="0xffffff"
+            fontSize="16"
+            horizontalCenter="0"
+            verticalAlign="middle"
+            text="{hostComponent.GearTitle}"/>
+
+        <s:HGroup id="minCloseBtn"
+            height="100%"
+            right="10"
+            verticalAlign="middle"
+            gap="0"
+            visible.normal="true"
+            visible.minimized="false"
+            visible.closed="false"
+            visible.open="true">
+            <!--最小化按钮-->
+            <mx:Image id="minimizeButton"
+                top="0"
+                source="assets/template-min.png"
+                mouseMove="minimizeButton_mouseMoveHandler(event)"
+                mouseOut="minimizeButton_mouseOutHandler(event)"/>
+            <!--关闭按钮-->
+            <mx:Image id="closeButton"
+                right="9" top="0"
+                source="assets/template-close.png"
+                mouseMove="closeButton_mouseMoveHandler(event)"
+                mouseOut="closeButton_mouseOutHandler(event)"/>
+        </s:HGroup>
+    </s:Group>
+
+    <!--底层透明面板-->
+    <s:Group id="backGroup"
+        left="0" right="0" top="28" bottom="0"
+        visible.closed="false"
+        visible.open="true"
+        visible.normal="true"
+        visible.minimized="true">
+        <s:Rect 
+            width="100%" height="100%">
+            <s:fill>
+                <s:SolidColor 
+                    color="0x0678ce"
+					alpha="0.2"/>
+            </s:fill>
+			<s:stroke>
+				<s:SolidColorStroke color="0xffffff"/>	
+			</s:stroke>
+        </s:Rect>
+    </s:Group>
+
+    <!--上层面板-->
+    <s:Group id="bgGroup"
+        left="6" right="6" top="28" bottom="6"
+        visible.closed="false"
+        visible.minimized="false"
+        visible.normal="true"
+        visible.open="false">
+        <s:Rect 
+            width="100%" height="100%">
+            <s:fill>
+                <s:SolidColor 
+                    color="0x0678ce"
+                    alpha="0.4"/>
+            </s:fill>
+        </s:Rect>
+    </s:Group>
+    <!--内容面板-->
+    <s:Group id="contentGroup"
+        left="6" right="6" top="28" bottom="6"
+        visible.closed="false"
+        visible.minimized="false"
+        visible.normal="true"
+        visible.open="true"
+        clipAndEnableScrolling="true">
+        <s:layout>
+            <s:BasicLayout/>
+        </s:layout>
+    </s:Group>
+
+    <!--处理动画时候的效果-->
+    <s:BorderContainer id="bgBorder"
+        x="0" y="28" width="80" height="1"
+        backgroundColor="0x0678ce"
+	    backgroundAlpha="0.5"
+        borderVisible="false"
+        visible="false"/>
+
+    <!--左侧的图片-->
+    <mx:Image id="icon"
+        x="12" y="-10" visible.closed="false"
+        source="{hostComponent.GearIcon ? hostComponent.GearIcon : hostComponent.GEAR_DEFAULT_ICON}"/>
+
+
+    <!--右下脚伸缩图片-->
+    <s:Group id="resizeButton"
+        width="12" height="12"
+        right="0" bottom="0"
+        visible.closed="false"
+        visible.minimized="false"
+        visible.normal="true"
+        visible.open="true">
+        <s:Path data="M12 12L12 0 L 0 12">
+            <s:fill>
+                <s:SolidColor 
+                    color="0x0678ce"
+                    alpha="0.8"/>
+            </s:fill>
+        </s:Path>
+    </s:Group>
+
+</s:SparkSkin>

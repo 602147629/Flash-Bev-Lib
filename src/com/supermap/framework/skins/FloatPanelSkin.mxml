@@ -1,0 +1,466 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+/////////////////////////////////////////////////////////////////////////////////////////////
+//
+//	Copyright (c) 2013 SuperMap. All Rights Reserved.
+//
+//	Licensed under the Apache License, Version 2.0 (the "License");
+//	you may not use this file except in compliance with the License.
+//	You may obtain a copy of the License at
+//
+//	http://www.apache.org/licenses/LICENSE-2.0
+//
+//	Unless required by applicable law or agreed to in writing, software
+//	distributed under the License is distributed on an  "AS IS" BASIS,
+//	WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+//	See the License for the specific language governing permissions and
+//	limitations under the License.
+//
+///////////////////////////////////////////////////////////////////////////////////////////// 
+-->
+<!--
+
+    ADOBE SYSTEMS INCORPORATED
+    Copyright 2008 Adobe Systems Incorporated
+    All Rights Reserved.
+
+    NOTICE: Adobe permits you to use, modify, and distribute this file
+    in accordance with the terms of the license agreement accompanying it.
+
+-->
+
+<!--- 浮动面板默认皮肤.
+      可参见该皮肤代码来自定义扩展为自己的皮肤,这里需要注意的是动画效果的扩展与基本的布局.建议在比较熟悉FloatPanel逻辑
+      的前提下修改该皮肤文件.
+            可以参见FlexBev2.0里的地图面板容器皮肤MapFloatSkin
+     @see com.supermap.skins.MapPanelSkin
+     @see spark.skins.spark.TitleWindowCloseButtonSkin
+     @see spark.components.TitleWindow
+
+     @langversion 3.0
+     @playerversion Flash 10
+     @playerversion AIR 1.5
+     @productversion Flex 4
+-->
+<s:SparkSkin 
+    minHeight="76"
+    minWidth="76"
+    xmlns:fx="http://ns.adobe.com/mxml/2009"
+    xmlns:s="library://ns.adobe.com/flex/spark"
+    xmlns:fb="http://ns.adobe.com/flashbuilder/2009"
+    blendMode="normal"
+    mouseEnabled="false"
+    alpha.disabled="0.5"
+    alpha.disabledWithControlBar="0.5"
+    xmlns:mx="library://ns.adobe.com/flex/mx">
+
+    <fx:Metadata>
+        <![CDATA[ 
+        /** 
+         * @copy spark.skins.spark.ApplicationSkin#hostComponent
+         */
+        [HostComponent("com.supermap.framework.dock.FloatPanel")]
+        ]]>
+    </fx:Metadata>
+
+
+
+    <fx:Script fb:purpose="styling">
+        /* Define the skin elements that should not be colorized.
+        For panel, border and title background are skinned, but the content area and title text are not. */
+        import com.supermap.framework.dock.FloatPanel;
+
+        static private const exclusions:Array = [ "background", "titleDisplay", "contentGroup" ];
+
+        /**
+         * @private
+         */
+        override public function get colorizeExclusions():Array
+        {
+            return exclusions;
+        }
+
+        /**
+         * @private
+         */
+        override protected function initializationComplete():void
+        {
+            useChromeColor = true;
+            super.initializationComplete();
+        }
+
+        /**
+         * @private
+         */
+        override protected function updateDisplayList(unscaledWidth:Number, unscaledHeight:Number):void
+        {
+            if (getStyle("borderVisible")==true)
+            {
+                border.visible = true;
+                background.left = background.top = background.right = background.bottom = 1;
+                contents.left = contents.top = contents.right = contents.bottom = 1;
+            }
+            else
+            {
+                border.visible = false;
+                background.left = background.top = background.right = background.bottom = 0;
+                contents.left = contents.top = contents.right = contents.bottom = 0;
+            }
+
+            dropShadow.visible = getStyle("dropShadowVisible");
+
+            var cr:Number = getStyle("cornerRadius");
+            var withControls:Boolean = (currentState=="disabledWithControlBar"||currentState=="normalWithControlBar"||currentState=="inactiveWithControlBar");
+
+            if (cornerRadius!=cr)
+            {
+                cornerRadius = cr;
+
+                dropShadow.tlRadius = cornerRadius;
+                dropShadow.trRadius = cornerRadius;
+                dropShadow.blRadius = withControls?cornerRadius:0;
+                dropShadow.brRadius = withControls?cornerRadius:0;
+
+                setPartCornerRadii(topMaskRect, withControls);
+                setPartCornerRadii(border, withControls);
+                setPartCornerRadii(background, withControls);
+            }
+
+            if (bottomMaskRect)
+                setPartCornerRadii(bottomMaskRect, withControls);
+
+            borderStroke.color = getStyle("borderColor");
+            borderStroke.alpha = getStyle("borderAlpha");
+            backgroundFill.color = getStyle("backgroundColor");
+            backgroundFill.alpha = getStyle("backgroundAlpha");
+
+            super.updateDisplayList(unscaledWidth, unscaledHeight);
+        }
+
+        /**
+         * @private
+         */
+        private function setPartCornerRadii(target:Rect, includeBottom:Boolean):void
+        {
+            target.topLeftRadiusX = cornerRadius;
+            target.topRightRadiusX = cornerRadius;
+            target.bottomLeftRadiusX = includeBottom?cornerRadius:0;
+            target.bottomRightRadiusX = includeBottom?cornerRadius:0;
+        }
+
+        private var cornerRadius:Number;
+
+        import mx.events.EffectEvent;
+
+        protected function sequence1_effectEndHandler(event:EffectEvent):void
+        {
+            this.hostComponent.showDockBarHandler();
+        }
+
+        protected function parallel1_effectEndHandler(event:EffectEvent):void
+        {
+            if (this.hostComponent.titleWindowState==FloatPanel.OPEN)
+            {
+                //this.headerTitleBar.visible = true;
+            }
+        }
+
+        protected function parallel2_effectEndHandler(event:EffectEvent):void
+        {
+            if (this.hostComponent.titleWindowState==FloatPanel.MINIMIZED)
+            {
+                //this.headerTitleBar.visible = true;
+            }
+        }
+    </fx:Script>
+
+    <s:states>
+
+        <s:State name="normal"/>
+        <s:State name="inactive"
+            stateGroups="inactiveGroup"/>
+        <s:State name="disabled"/>
+        <s:State name="normalWithControlBar"
+            stateGroups="withControls"/>
+        <s:State name="inactiveWithControlBar"
+            stateGroups="withControls, inactiveGroup"/>
+        <s:State name="disabledWithControlBar"
+            stateGroups="withControls"/>
+
+        <!-- Custom-->
+        <s:State name="open"/>
+        <s:State name="minimized"/>
+        <s:State name="closed"/>
+        <s:State name="dock"/>
+    </s:states>
+
+    <s:transitions>
+        <s:Transition fromState="dock"
+            toState="open">
+            <s:Parallel effectEnd="parallel1_effectEndHandler(event)">
+                <s:Fade alphaTo="0.32"
+                    target="{dropShadow}"/>
+                <s:Fade alphaTo="1"
+                    target="{total}"/>
+            </s:Parallel>
+        </s:Transition>
+
+        <s:Transition fromState="*"
+            toState="dock">
+            <s:Parallel effectEnd="sequence1_effectEndHandler(event)">
+                <s:Fade alphaTo="0"
+                    target="{dropShadow}"/>
+                <s:Fade alphaTo="0"
+                    target="{total}"/>
+            </s:Parallel>
+        </s:Transition>
+
+        <s:Transition fromState="dock"
+            toState="minimized">
+            <s:Parallel effectEnd="parallel2_effectEndHandler(event)">
+                <s:Fade alphaTo="0.32"
+                    target="{dropShadow}"/>
+                <s:Fade alphaTo="1"
+                    target="{total}"/>
+            </s:Parallel>
+        </s:Transition>
+
+    </s:transitions>
+
+
+    <!--- drop shadow can't be hittable so it stays sibling of other graphics @private-->
+    <s:RectangularDropShadow id="dropShadow"
+        left="0" right="0" top="0" bottom="0"
+        color="0x000000"
+        blurX="20"
+        blurY="20"
+        alpha.open="0.32"
+        alpha.minimized="0.32"
+        visible.dock="false"
+        alpha.dock="0"
+        alpha.inactiveGroup="0.22"
+        distance="11"
+        distance.inactiveGroup="7"
+        angle="90"/>
+
+
+
+    <!--停靠栏-->
+    <s:VGroup id="dockbar"
+        visible.dock="true"
+        includeIn="dock"
+        gap="3">
+
+    </s:VGroup>
+
+    <!--- drop shadow can't be hittable so all other graphics go in this group -->
+    <s:Group id="total"
+        left="0" right="0" top="0" bottom="0"
+        visible.dock="false">
+        <fx:Script>
+            <![CDATA[
+                import com.supermap.framework.dock.IconUtil;
+            ]]>
+        </fx:Script>
+        <!--- top group mask @private-->
+        <s:Group id="topGroupMask"
+            left="1" right="1" top="1" bottom="1">
+            <!--- @private-->
+            <s:Rect id="topMaskRect"
+                left="0" right="0" top="0" bottom="0">
+                <s:fill>
+                    <s:SolidColor alpha="0"/>
+                </s:fill>
+            </s:Rect>
+        </s:Group>
+
+        <!--- bottom group mask @private-->
+        <s:Group id="bottomGroupMask"
+            left="1" right="1" top="1" bottom="1"
+            includeIn="withControls">
+            <!--- @private-->
+            <s:Rect id="bottomMaskRect"
+                left="0" right="0" top="0" bottom="0">
+                <s:fill>
+                    <s:SolidColor alpha="0"/>
+                </s:fill>
+            </s:Rect>
+        </s:Group>
+
+        <!--- layer 1: border @private -->
+        <s:Rect id="border"
+            left="0" right="0" top="0" bottom="0">
+            <s:stroke>
+                <!--- Defines the TitleWindowSkin class's border stroke. The default value is 1. -->
+                <s:SolidColorStroke id="borderStroke"
+                    color="#0678ce"
+                    weight="1"
+                    alpha="0.5"/>
+            </s:stroke>
+        </s:Rect>
+
+        <s:Group 
+            left="0" right="0" top="0" bottom="0"
+            alpha="0.7">
+            <s:filters>
+                <s:DropShadowFilter alpha="0.75"
+                    angle="0"
+                    blurX="6"
+                    blurY="6"
+                    distance="0"
+                    quality="3"/>
+            </s:filters>
+            <s:Rect id="background"
+                width="100%" height="100%">
+                <s:fill>
+                    <s:SolidColor id="backgroundFill"
+                        color="#FFFFFF"/>
+                </s:fill>
+            </s:Rect>
+        </s:Group>
+
+        <s:Group id="moveArea2"
+            height="5"
+            left="10" right="10" top="10">
+        </s:Group>
+
+        <!-- layer 3: contents -->
+        <!--- Contains the vertical stack of title bar content and control bar. -->
+        <s:Group id="contents"
+            left="1" right="1" top="1" bottom="1">
+            <s:layout>
+                <s:VerticalLayout 
+                    horizontalAlign="justify"
+                    paddingBottom="8"
+                    paddingLeft="8"
+                    paddingRight="8"
+                    gap="0"/>
+            </s:layout>
+            <!--- @private -->
+            <s:Group id="topGroup"
+                mask="{topGroupMask}" >
+
+                <!--- layer 0: title bar fill @private -->
+                <s:Rect id="tbFill"
+                    left="0" right="0" top="0" bottom="1">
+                </s:Rect>
+
+                <!--- layer 1: title bar highlight @private -->
+                <s:Rect id="tbHilite" alpha="0.8"
+                    left="0" right="0" top="0" bottom="0" height="40">
+					<s:fill>
+						<s:LinearGradient x="600" y="47" scaleX="46.9995" rotation="270">
+							<s:GradientEntry ratio="0" color="#262626"/><!--#262626-->
+							<s:GradientEntry ratio="1" color="#767676"/><!--#767676-->
+						</s:LinearGradient>
+					</s:fill>
+                </s:Rect>
+
+                <!--- layer 2: title bar divider @private -->
+                <s:Rect id="tbDiv"
+                    height="1"
+                    left="0" right="0" bottom="0">
+                    <s:fill>
+                        <s:SolidColor 
+                            color="0x000000"
+                            alpha="0"/>
+                    </s:fill>
+                </s:Rect>
+
+                <!--title image-->
+                <mx:Image id="titleImg"
+                    left="5" right="36" top="1" bottom="0"
+                    source="{hostComponent.icon}"/>
+
+                <!-- layer 3: text -->
+                <!--- @copy spark.components.Panel#titleDisplay -->
+                <s:Label id="titleDisplay"
+                    left="50"  bottom="0"
+                    color="0xffffff"
+                    fontWeight="bold"
+                    verticalAlign="middle"
+					verticalCenter="0"
+                    minHeight="30"
+                    maxDisplayedLines="1"
+                    visible="true"/>
+
+                <!-- layer 4: moveArea -->
+                <!--- @copy spark.components.TitleWindow#moveArea -->
+                <s:Group id="moveArea"
+                    left="0" right="0" top="0" bottom="0"/>
+
+                <s:HGroup id="btnBar"
+                    height="20"
+                    right="10" top="2"
+                    gap="2">
+                    <!--锁定-->
+                    <s:Button id="lockButton"
+                        skinClass="com.supermap.framework.skins.lockButtonSkin"/>
+                    <!--停靠-->
+                    <s:Button id="dockButton"
+                        skinClass="com.supermap.framework.skins.dockButtonSkin"/>
+                    <!--最小化-->
+<!--                    <s:Button id="minButton"
+                        skinClass="com.supermap.framework.skins.minButtonSkin"/>-->
+                    <!--- @copy spark.components.TitleWindow#closeButton -->
+                    <!--关闭-->
+                    <s:Button id="closeButton"
+                        skinClass="com.supermap.framework.skins.closeButtonSkin"/>
+                </s:HGroup>
+            </s:Group>
+
+            <!--
+                Note: setting the minimum size to 0 here so that changes to the host component's
+                size will not be thwarted by this skin part's minimum size.   This is a compromise,
+                more about it here: http://bugs.adobe.com/jira/browse/SDK-21143
+            -->
+            <!--- @copy spark.components.SkinnableContainer#contentGroup -->
+            <s:Group id="contentGroup"
+                width="100%" height="100%"
+                minHeight="0"
+                minWidth="0">
+            </s:Group>
+
+            <!--- @private -->
+            <s:Group id="bottomGroup"
+                minHeight="0"
+                minWidth="0"
+                includeIn="withControls">
+
+                <s:Group 
+                    left="0" right="0" top="0" bottom="0"
+                    mask="{bottomGroupMask}">
+
+                    <!-- layer 0: control bar divider line -->
+                    <s:Rect 
+                        height="1"
+                        left="0" right="0" top="0"
+                        alpha="0.22">
+                        <s:fill>
+                            <s:SolidColor color="0x000000" alpha="0.5"/>
+                        </s:fill>
+                    </s:Rect>
+				</s:Group>	
+                <!--- @copy spark.components.Panel#controlBarGroup -->
+                <s:Group id="controlBarGroup"
+                    left="0" right="0" top="1" bottom="1"
+                    minHeight="0"
+                    minWidth="0">
+                    <s:layout>
+                        <s:HorizontalLayout 
+                            paddingBottom="7"
+                            paddingLeft="10"
+                            paddingRight="10"
+                            paddingTop="7"
+                            gap="10"/>
+                    </s:layout>
+                </s:Group>
+            </s:Group>
+        </s:Group>
+        <mx:Image id="resize"
+            right="0" bottom="0"
+            source="{hostComponent.resizeClass}"
+            visible.minimized="false"
+            visible.open="true"/>
+    </s:Group>
+</s:SparkSkin>

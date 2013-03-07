@@ -1,0 +1,144 @@
+<apiPackage id="com.supermap.framework.events"><apiName>com.supermap.framework.events</apiName><apiDetail/><apiClassifier id="com.supermap.framework.events:FloatPanelEvent"><apiName>FloatPanelEvent</apiName><shortdesc>
+	  处理与面板配置组件之间的事件类型
+	 </shortdesc><prolog><asMetadata/></prolog><apiClassifierDetail><apiClassifierDef><apiAccess value="public"/><apiStatic/><apiBaseClassifier>com.supermap.framework.events:BaseEvent</apiBaseClassifier></apiClassifierDef><apiDesc>
+	  处理与面板配置组件之间的事件类型
+	 </apiDesc></apiClassifierDetail><apiConstructor id="com.supermap.framework.events:FloatPanelEvent:FloatPanelEvent"><apiName>FloatPanelEvent</apiName><shortdesc/><prolog/><apiConstructorDetail><apiConstructorDef><apiAccess value="public"/><apiParam><apiItemName>type</apiItemName><apiType value="String"/><apiData/></apiParam><apiParam><apiItemName>data</apiItemName><apiType value="Object"/><apiData>null</apiData></apiParam></apiConstructorDef></apiConstructorDetail></apiConstructor><apiValue id="com.supermap.framework.events:FloatPanelEvent:FLOATPANEL_CHANGE"><apiName>FLOATPANEL_CHANGE</apiName><shortdesc>
+		  tab标签页数据发生变化时候派发(数目发生变法,仅有当前索引位置变化不派发该事件类型)
+		 </shortdesc><prolog/><apiValueDetail><apiValueDef><apiProperty/><apiAccess value="public"/><apiStatic/><apiData>floatPanel_change</apiData><apiType value="String"/></apiValueDef><apiDesc>
+		  tab标签页数据发生变化时候派发(数目发生变法,仅有当前索引位置变化不派发该事件类型)
+		 </apiDesc></apiValueDetail></apiValue><apiValue id="com.supermap.framework.events:FloatPanelEvent:FLOATPANEL_CREATE"><apiName>FLOATPANEL_CREATE</apiName><shortdesc>
+		  当创建一个新的面板时候派发(由drag引起的创建)
+		  FloatPanel构造函数里派发
+		 </shortdesc><prolog/><apiValueDetail><apiValueDef><apiProperty/><apiAccess value="public"/><apiStatic/><apiData>floatPanel_create</apiData><apiType value="String"/></apiValueDef><apiDesc>
+		  当创建一个新的面板时候派发(由drag引起的创建)
+		  FloatPanel构造函数里派发
+		 </apiDesc></apiValueDetail></apiValue><apiValue id="com.supermap.framework.events:FloatPanelEvent:FLOATPANEL_DOCKDATA"><apiName>FLOATPANEL_DOCKDATA</apiName><shortdesc/><prolog/><apiValueDetail><apiValueDef><apiProperty/><apiAccess value="public"/><apiStatic/><apiData>floatPanel_dockdata</apiData><apiType value="String"/></apiValueDef></apiValueDetail></apiValue><apiValue id="com.supermap.framework.events:FloatPanelEvent:FLOATPANEL_DOCKOPEM"><apiName>FLOATPANEL_DOCKOPEM</apiName><shortdesc/><prolog/><apiValueDetail><apiValueDef><apiProperty/><apiAccess value="public"/><apiStatic/><apiData>floatPanel_dock_Open</apiData><apiType value="String"/></apiValueDef></apiValueDetail></apiValue><apiValue id="com.supermap.framework.events:FloatPanelEvent:FLOATPANEL_REMOVE"><apiName>FLOATPANEL_REMOVE</apiName><shortdesc>
+		  当关闭时候派发
+		 </shortdesc><prolog/><apiValueDetail><apiValueDef><apiProperty/><apiAccess value="public"/><apiStatic/><apiData>floatPanel_remove</apiData><apiType value="String"/></apiValueDef><apiDesc>
+		  当关闭时候派发
+		 </apiDesc></apiValueDetail></apiValue></apiClassifier><apiClassifier id="com.supermap.framework.events:GearEvent"><apiName>GearEvent</apiName><shortdesc>
+      该类是兼容之前版本暂时留下来的事件类型,后续考虑与PluginEvent合并
+     </shortdesc><prolog><asMetadata/></prolog><apiClassifierDetail><apiClassifierDef><apiAccess value="public"/><apiStatic/><apiBaseClassifier>com.supermap.framework.events:BaseEvent</apiBaseClassifier></apiClassifierDef><apiDesc>
+      该类是兼容之前版本暂时留下来的事件类型,后续考虑与PluginEvent合并
+     </apiDesc></apiClassifierDetail><apiConstructor id="com.supermap.framework.events:GearEvent:GearEvent"><apiName>GearEvent</apiName><shortdesc>
+         处理Gear对象时，都会将 GearEvent 对象分派到事件流中。
+         </shortdesc><prolog/><apiConstructorDetail><apiConstructorDef><apiAccess value="public"/><apiParam><apiItemName>type</apiItemName><apiType value="String"/><apiData/><apiDesc>定义事件类型。
+         </apiDesc></apiParam><apiParam><apiItemName>data</apiItemName><apiType value="Object"/><apiData>null</apiData><apiDesc>定义事件信息。
+         </apiDesc></apiParam></apiConstructorDef><apiDesc>
+         处理Gear对象时，都会将 GearEvent 对象分派到事件流中。
+         </apiDesc></apiConstructorDetail></apiConstructor><apiValue id="com.supermap.framework.events:GearEvent:GEAR_ACCORDION_CHANGE"><apiName>GEAR_ACCORDION_CHANGE</apiName><shortdesc/><prolog/><apiValueDetail><apiValueDef><apiAccess value="public"/><apiStatic/><apiData>gearAccordionChange</apiData><apiType value="String"/></apiValueDef></apiValueDetail></apiValue><apiValue id="com.supermap.framework.events:GearEvent:GEAR_ADDED"><apiName>GEAR_ADDED</apiName><shortdesc/><prolog/><apiValueDetail><apiValueDef><apiAccess value="public"/><apiStatic/><apiData>gearAdded</apiData><apiType value="String"/></apiValueDef></apiValueDetail></apiValue><apiValue id="com.supermap.framework.events:GearEvent:GEAR_CHANGE_STATE"><apiName>GEAR_CHANGE_STATE</apiName><shortdesc/><prolog/><apiValueDetail><apiValueDef><apiAccess value="public"/><apiStatic/><apiData>gearChangeState</apiData><apiType value="String"/></apiValueDef></apiValueDetail></apiValue><apiValue id="com.supermap.framework.events:GearEvent:GEAR_DATA_CHANGE"><apiName>GEAR_DATA_CHANGE</apiName><shortdesc>
+         定义当Gear数据改变时，GearEvent事件的type属性值。
+         </shortdesc><prolog/><apiValueDetail><apiValueDef><apiAccess value="public"/><apiStatic/><apiData>gearDataChange</apiData><apiType value="String"/></apiValueDef><apiDesc>
+         定义当Gear数据改变时，GearEvent事件的type属性值。
+         </apiDesc></apiValueDetail></apiValue><apiValue id="com.supermap.framework.events:GearEvent:GEAR_FOCUS"><apiName>GEAR_FOCUS</apiName><shortdesc/><prolog/><apiValueDetail><apiValueDef><apiAccess value="public"/><apiStatic/><apiData>gearfocus</apiData><apiType value="String"/></apiValueDef></apiValueDetail></apiValue><apiValue id="com.supermap.framework.events:GearEvent:GEAR_INITIALIZE"><apiName>GEAR_INITIALIZE</apiName><shortdesc>
+         定义当Gear初始化时，GearEvent事件的type属性值。
+         </shortdesc><prolog/><apiValueDetail><apiValueDef><apiAccess value="public"/><apiStatic/><apiData>gearInitialize</apiData><apiType value="String"/></apiValueDef><apiDesc>
+         定义当Gear初始化时，GearEvent事件的type属性值。
+         </apiDesc></apiValueDetail></apiValue><apiValue id="com.supermap.framework.events:GearEvent:GEAR_LOAD_URL"><apiName>GEAR_LOAD_URL</apiName><shortdesc>
+         定义当Gear载入URL时，GearEvent事件的type属性值。
+         </shortdesc><prolog/><apiValueDetail><apiValueDef><apiAccess value="public"/><apiStatic/><apiData>gearLoadURL</apiData><apiType value="String"/></apiValueDef><apiDesc>
+         定义当Gear载入URL时，GearEvent事件的type属性值。
+         </apiDesc></apiValueDetail></apiValue><apiValue id="com.supermap.framework.events:GearEvent:GEAR_RUN"><apiName>GEAR_RUN</apiName><shortdesc/><prolog/><apiValueDetail><apiValueDef><apiAccess value="public"/><apiStatic/><apiData>gearRun</apiData><apiType value="String"/></apiValueDef></apiValueDetail></apiValue><apiValue id="com.supermap.framework.events:GearEvent:GEAR_SHARE_DATA"><apiName>GEAR_SHARE_DATA</apiName><shortdesc/><prolog/><apiValueDetail><apiValueDef><apiAccess value="public"/><apiStatic/><apiData>gearShareData</apiData><apiType value="String"/></apiValueDef></apiValueDetail></apiValue><apiValue id="com.supermap.framework.events:GearEvent:GEAR_STATE_CHANGED"><apiName>GEAR_STATE_CHANGED</apiName><shortdesc/><prolog/><apiValueDetail><apiValueDef><apiAccess value="public"/><apiStatic/><apiData>gearStateChanged</apiData><apiType value="String"/></apiValueDef></apiValueDetail></apiValue><apiValue id="com.supermap.framework.events:GearEvent:GEAR_STATE_FROM_MINIMIZED"><apiName>GEAR_STATE_FROM_MINIMIZED</apiName><shortdesc/><prolog/><apiValueDetail><apiValueDef><apiAccess value="public"/><apiStatic/><apiData>gearStateFromMinimized</apiData><apiType value="String"/></apiValueDef></apiValueDetail></apiValue><apiValue id="com.supermap.framework.events:GearEvent:GEAR_STYLE_CHANGE"><apiName>GEAR_STYLE_CHANGE</apiName><shortdesc/><prolog/><apiValueDetail><apiValueDef><apiAccess value="public"/><apiStatic/><apiData>gearStyleChange</apiData><apiType value="String"/></apiValueDef></apiValueDetail></apiValue><apiValue id="com.supermap.framework.events:GearEvent:GEAR_TEMPLATE_RESIZE"><apiName>GEAR_TEMPLATE_RESIZE</apiName><shortdesc/><prolog/><apiValueDetail><apiValueDef><apiAccess value="public"/><apiStatic/><apiData>gearTemplateResize</apiData><apiType value="String"/></apiValueDef></apiValueDetail></apiValue><apiValue id="com.supermap.framework.events:GearEvent:GEAR_UNLOAD_URL"><apiName>GEAR_UNLOAD_URL</apiName><shortdesc>
+         定义当Gear卸载URL时，GearEvent事件的type属性值。
+         </shortdesc><prolog/><apiValueDetail><apiValueDef><apiAccess value="public"/><apiStatic/><apiData>gearunLoadURL</apiData><apiType value="String"/></apiValueDef><apiDesc>
+         定义当Gear卸载URL时，GearEvent事件的type属性值。
+         </apiDesc></apiValueDetail></apiValue><apiValue id="com.supermap.framework.events:GearEvent:GEAR_UNLOAD"><apiName>GEAR_UNLOAD</apiName><shortdesc>
+         定义当Gear移除时，GearEvent事件的type属性值。
+         </shortdesc><prolog/><apiValueDetail><apiValueDef><apiAccess value="public"/><apiStatic/><apiData>gearUnload</apiData><apiType value="String"/></apiValueDef><apiDesc>
+         定义当Gear移除时，GearEvent事件的type属性值。
+         </apiDesc></apiValueDetail></apiValue></apiClassifier><apiClassifier id="com.supermap.framework.events:PluginEvent"><apiName>PluginEvent</apiName><shortdesc>
+      主要用来处理插件组件的事件类型,非gear功能的插件.</shortdesc><prolog><asMetadata/></prolog><apiClassifierDetail><apiClassifierDef><apiAccess value="public"/><apiStatic/><apiBaseClassifier>com.supermap.framework.events:BaseEvent</apiBaseClassifier></apiClassifierDef><apiDesc>
+      主要用来处理插件组件的事件类型,非gear功能的插件.
+      在插件操作的过程中对应着事件类型的派发.
+     </apiDesc></apiClassifierDetail><apiConstructor id="com.supermap.framework.events:PluginEvent:PluginEvent"><apiName>PluginEvent</apiName><shortdesc/><prolog/><apiConstructorDetail><apiConstructorDef><apiAccess value="public"/><apiParam><apiItemName>type</apiItemName><apiType value="String"/><apiData/></apiParam><apiParam><apiItemName>data</apiItemName><apiType value="Object"/><apiData>null</apiData></apiParam></apiConstructorDef></apiConstructorDetail></apiConstructor><apiValue id="com.supermap.framework.events:PluginEvent:MAPPLUGINADDED"><apiName>MAPPLUGINADDED</apiName><shortdesc/><prolog/><apiValueDetail><apiValueDef><apiAccess value="public"/><apiStatic/><apiData>mapPluginAdded</apiData><apiType value="String"/></apiValueDef></apiValueDetail></apiValue><apiValue id="com.supermap.framework.events:PluginEvent:PLUGINADDED"><apiName>PLUGINADDED</apiName><shortdesc>
+          插件全部加载完毕后派发该事件
+         </shortdesc><prolog/><apiValueDetail><apiValueDef><apiAccess value="public"/><apiStatic/><apiData>pluginAdded</apiData><apiType value="String"/></apiValueDef><apiDesc>
+          插件全部加载完毕后派发该事件
+         </apiDesc></apiValueDetail></apiValue></apiClassifier><apiClassifier id="com.supermap.framework.events:BaseEventDispatcher"><apiName>BaseEventDispatcher</apiName><shortdesc>
+      基础事件派发器.</shortdesc><prolog><asMetadata/></prolog><apiClassifierDetail><apiClassifierDef><apiAccess value="public"/><apiStatic/><apiBaseClassifier>Object</apiBaseClassifier></apiClassifierDef><apiDesc>
+      基础事件派发器.
+      通过该事件可以获取一个全局的事件派发器.
+      它包含了对事件类型的一系列操作,确保事件流的
+      各个阶段顺利进行.
+     </apiDesc></apiClassifierDetail><apiConstructor id="com.supermap.framework.events:BaseEventDispatcher:BaseEventDispatcher"><apiName>BaseEventDispatcher</apiName><shortdesc>
+         构造函数
+         </shortdesc><prolog/><apiConstructorDetail><apiConstructorDef><apiAccess value="public"/><apiParam><apiItemName>target</apiItemName><apiType value="flash.events:IEventDispatcher"/><apiData>null</apiData></apiParam></apiConstructorDef><apiDesc>
+         构造函数
+         </apiDesc></apiConstructorDetail></apiConstructor><apiOperation id="com.supermap.framework.events:BaseEventDispatcher:addCommand"><apiName>addCommand</apiName><shortdesc>
+          绑定事件类型到命令(command)
+         </shortdesc><prolog/><apiOperationDetail><apiOperationDef><apiAccess value="public"/><apiReturn><apiType value="void"/></apiReturn><apiParam><apiItemName>commandName</apiItemName><apiType value="String"/></apiParam><apiParam><apiItemName>commandRef</apiItemName><apiType value="Class"/></apiParam><apiParam><apiItemName>useWeakReference</apiItemName><apiType value="Boolean"/><apiData>true</apiData></apiParam></apiOperationDef><apiDesc>
+          绑定事件类型到命令(command)
+         </apiDesc></apiOperationDetail></apiOperation><apiOperation id="com.supermap.framework.events:BaseEventDispatcher:addEventListener"><apiName>addEventListener</apiName><shortdesc>
+         添加监听
+         </shortdesc><prolog/><apiOperationDetail><apiOperationDef><apiAccess value="public"/><apiReturn><apiType value="void"/></apiReturn><apiParam><apiItemName>type</apiItemName><apiType value="String"/></apiParam><apiParam><apiItemName>listener</apiItemName><apiType value="Function"/></apiParam><apiParam><apiItemName>useCapture</apiItemName><apiType value="Boolean"/><apiData>false</apiData></apiParam><apiParam><apiItemName>priority</apiItemName><apiType value="int"/><apiData>0</apiData></apiParam><apiParam><apiItemName>useWeakReference</apiItemName><apiType value="Boolean"/><apiData>false</apiData></apiParam></apiOperationDef><apiDesc>
+         添加监听
+         </apiDesc></apiOperationDetail></apiOperation><apiOperation id="com.supermap.framework.events:BaseEventDispatcher:dispatchEvent"><apiName>dispatchEvent</apiName><shortdesc>
+          派发事件.这里主要是处理与事件绑定的command，使得事件派发是全局的单例来作为侦听器。
+         </shortdesc><prolog/><apiOperationDetail><apiOperationDef><apiAccess value="public"/><apiReturn><apiType value="Boolean"/></apiReturn><apiParam><apiItemName>event</apiItemName><apiType value="flash.events:Event"/></apiParam></apiOperationDef><apiDesc>
+          派发事件.这里主要是处理与事件绑定的command，使得事件派发是全局的单例来作为侦听器。
+         </apiDesc></apiOperationDetail></apiOperation><apiOperation id="com.supermap.framework.events:BaseEventDispatcher:protected:executeCommand"><apiName>executeCommand</apiName><shortdesc/><prolog/><apiOperationDetail><apiOperationDef><apiAccess value="protected"/><apiReturn><apiType value="void"/></apiReturn><apiParam><apiItemName>event</apiItemName><apiOperationClassifier>com.supermap.framework.events:BaseEvent</apiOperationClassifier></apiParam></apiOperationDef></apiOperationDetail></apiOperation><apiOperation id="com.supermap.framework.events:BaseEventDispatcher:protected:getCommand"><apiName>getCommand</apiName><shortdesc/><prolog/><apiOperationDetail><apiOperationDef><apiAccess value="protected"/><apiStatic/><apiReturn><apiType value="Class"/></apiReturn><apiParam><apiItemName>commandName</apiItemName><apiType value="String"/></apiParam></apiOperationDef></apiOperationDetail></apiOperation><apiOperation id="com.supermap.framework.events:BaseEventDispatcher:getInstance"><apiName>getInstance</apiName><shortdesc>
+         返回单例类
+         </shortdesc><prolog/><apiOperationDetail><apiOperationDef><apiAccess value="public"/><apiStatic/><apiReturn><apiOperationClassifier>com.supermap.framework.events:BaseEventDispatcher</apiOperationClassifier></apiReturn></apiOperationDef><apiDesc>
+         返回单例类
+         </apiDesc></apiOperationDetail></apiOperation><apiOperation id="com.supermap.framework.events:BaseEventDispatcher:hasEventListener"><apiName>hasEventListener</apiName><shortdesc>
+         判断是否包含了对某个事件的监听
+         </shortdesc><prolog/><apiOperationDetail><apiOperationDef><apiAccess value="public"/><apiReturn><apiType value="Boolean"/></apiReturn><apiParam><apiItemName>type</apiItemName><apiType value="String"/></apiParam></apiOperationDef><apiDesc>
+         判断是否包含了对某个事件的监听
+         </apiDesc></apiOperationDetail></apiOperation><apiOperation id="com.supermap.framework.events:BaseEventDispatcher:removeCommand"><apiName>removeCommand</apiName><shortdesc>
+          移除事件类型到命令(command)的绑定
+         </shortdesc><prolog/><apiOperationDetail><apiOperationDef><apiAccess value="public"/><apiReturn><apiType value="void"/></apiReturn><apiParam><apiItemName>commandName</apiItemName><apiType value="String"/></apiParam><apiParam><apiItemName>commandRef</apiItemName><apiType value="Class"/></apiParam></apiOperationDef><apiDesc>
+          移除事件类型到命令(command)的绑定
+         </apiDesc></apiOperationDetail></apiOperation><apiOperation id="com.supermap.framework.events:BaseEventDispatcher:removeEventListener"><apiName>removeEventListener</apiName><shortdesc>
+         移除监听
+         </shortdesc><prolog/><apiOperationDetail><apiOperationDef><apiAccess value="public"/><apiReturn><apiType value="void"/></apiReturn><apiParam><apiItemName>type</apiItemName><apiType value="String"/></apiParam><apiParam><apiItemName>listener</apiItemName><apiType value="Function"/></apiParam><apiParam><apiItemName>useCapture</apiItemName><apiType value="Boolean"/><apiData>false</apiData></apiParam></apiOperationDef><apiDesc>
+         移除监听
+         </apiDesc></apiOperationDetail></apiOperation><apiOperation id="com.supermap.framework.events:BaseEventDispatcher:willTrigger"><apiName>willTrigger</apiName><shortdesc>
+         判断一个事件是否被触发.</shortdesc><prolog/><apiOperationDetail><apiOperationDef><apiAccess value="public"/><apiReturn><apiType value="Boolean"/></apiReturn><apiParam><apiItemName>type</apiItemName><apiType value="String"/></apiParam></apiOperationDef><apiDesc>
+         判断一个事件是否被触发.
+         检查是否用此 EventDispatcher 对象或其任何始祖为指定事件类型注册了事件侦听器。
+         将指定类型的事件分派给此 EventDispatcher 对象或其任一后代时，
+         如果在事件流的任何阶段触发了事件侦听器，则此方法返回 true。
+         </apiDesc></apiOperationDetail></apiOperation></apiClassifier><apiClassifier id="com.supermap.framework.events:BaseEvent"><apiName>BaseEvent</apiName><shortdesc>
+      基础事件类.</shortdesc><prolog><asMetadata/></prolog><apiClassifierDetail><apiClassifierDef><apiAccess value="public"/><apiStatic/><apiBaseClassifier>flash.events:Event</apiBaseClassifier></apiClassifierDef><apiDesc>
+      基础事件类.
+      该类是框架自定义事件的基类.
+      通过自定义事件可以更好控制和展现数据流.
+      自定义事件可以直接集成子该类.用户不必再为每一个自定义事件类覆写ToString方法与Clone方法.
+     </apiDesc></apiClassifierDetail><apiConstructor id="com.supermap.framework.events:BaseEvent:BaseEvent"><apiName>BaseEvent</apiName><shortdesc>
+          构造函数
+          </shortdesc><prolog/><apiConstructorDetail><apiConstructorDef><apiAccess value="public"/><apiParam><apiItemName>type</apiItemName><apiType value="String"/><apiData/><apiDesc>事件类型
+          </apiDesc></apiParam><apiParam><apiItemName>data</apiItemName><apiType value="Object"/><apiData>null</apiData><apiDesc>传入数据
+         </apiDesc></apiParam></apiConstructorDef><apiDesc>
+          构造函数
+          </apiDesc></apiConstructorDetail></apiConstructor><apiOperation id="com.supermap.framework.events:BaseEvent:clone"><apiName>clone</apiName><shortdesc>
+          覆写clone方法
+          </shortdesc><prolog/><apiOperationDetail><apiOperationDef><apiAccess value="public"/><apiIsOverride/><apiReturn><apiDesc>Event 返回自身的一个克隆
+         </apiDesc><apiType value="flash.events:Event"/></apiReturn></apiOperationDef><apiDesc>
+          覆写clone方法
+          </apiDesc></apiOperationDetail></apiOperation><apiOperation id="com.supermap.framework.events:BaseEvent:getInstance"><apiName>getInstance</apiName><shortdesc>
+         获取一个事件单例
+         </shortdesc><prolog/><apiOperationDetail><apiOperationDef><apiAccess value="public"/><apiReturn><apiDesc>
+         </apiDesc><apiOperationClassifier>com.supermap.framework.events:BaseEvent</apiOperationClassifier></apiReturn></apiOperationDef><apiDesc>
+         获取一个事件单例
+         </apiDesc></apiOperationDetail></apiOperation><apiOperation id="com.supermap.framework.events:BaseEvent:toString"><apiName>toString</apiName><shortdesc>
+          覆写toString方法
+          </shortdesc><prolog/><apiOperationDetail><apiOperationDef><apiAccess value="public"/><apiIsOverride/><apiReturn><apiDesc>String 返回完全限定类名
+         </apiDesc><apiType value="String"/></apiReturn></apiOperationDef><apiDesc>
+          覆写toString方法
+          </apiDesc></apiOperationDetail></apiOperation><apiValue id="com.supermap.framework.events:BaseEvent:protected:_currentType"><apiName>_currentType</apiName><shortdesc>
+          事件当前类型
+         </shortdesc><prolog/><apiValueDetail><apiValueDef><apiProperty/><apiAccess value="protected"/><apiDynamic/><apiType value="String"/></apiValueDef><apiDesc>
+          事件当前类型
+         </apiDesc></apiValueDetail></apiValue><apiValue id="com.supermap.framework.events:BaseEvent:protected:_data"><apiName>_data</apiName><shortdesc>
+          事件数据
+         </shortdesc><prolog/><apiValueDetail><apiValueDef><apiProperty/><apiAccess value="protected"/><apiDynamic/><apiData>null</apiData><apiType value="Object"/></apiValueDef><apiDesc>
+          事件数据
+         </apiDesc></apiValueDetail></apiValue><apiValue id="com.supermap.framework.events:BaseEvent:currentType:get"><apiName>currentType</apiName><shortdesc>
+          获取事件当前类型
+          </shortdesc><prolog/><apiValueDetail><apiValueDef><apiProperty/><apiAccess value="public"/><apiDynamic/><apiValueAccess value="readwrite"/><apiType value="String"/></apiValueDef><apiDesc>
+          获取事件当前类型
+          </apiDesc></apiValueDetail></apiValue><apiValue id="com.supermap.framework.events:BaseEvent:data:get"><apiName>data</apiName><shortdesc>
+          获取数据
+          </shortdesc><prolog/><apiValueDetail><apiValueDef><apiProperty/><apiAccess value="public"/><apiDynamic/><apiValueAccess value="readwrite"/><apiType value="Object"/></apiValueDef><apiDesc>
+          获取数据
+          </apiDesc></apiValueDetail></apiValue></apiClassifier></apiPackage>

@@ -1,0 +1,532 @@
+<apiPackage id="com.supermap.framework.components"><apiName>com.supermap.framework.components</apiName><apiDetail/><apiClassifier id="com.supermap.framework.components:GearTemplate"><apiName>GearTemplate</apiName><shortdesc>
+      基础模板类.</shortdesc><prolog><asMetadata><skinStates><SkinState name="closed" owner="com.supermap.framework.components:GearTemplate">
+	</SkinState><SkinState name="minimized" owner="com.supermap.framework.components:GearTemplate">
+	</SkinState><SkinState name="open" owner="com.supermap.framework.components:GearTemplate">
+	</SkinState></skinStates><DefaultProperty name="mxmlContentFactory"/><skinParts><SkinPart name="GearFrame" owner="com.supermap.framework.components:GearTemplate" required="false" var_type="spark.components:Group">
+	</SkinPart><SkinPart name="header" owner="com.supermap.framework.components:GearTemplate" required="false" var_type="spark.components:Group">
+	</SkinPart><SkinPart name="headerToolGroup" owner="com.supermap.framework.components:GearTemplate" required="false" var_type="spark.components:Group">
+	</SkinPart><SkinPart name="icon" owner="com.supermap.framework.components:GearTemplate" required="false" var_type="mx.controls:Image">
+	</SkinPart><SkinPart name="closeButton" owner="com.supermap.framework.components:GearTemplate" required="false" var_type="mx.controls:Image">
+	</SkinPart><SkinPart name="minimizeButton" owner="com.supermap.framework.components:GearTemplate" required="false" var_type="mx.controls:Image">
+	</SkinPart><SkinPart name="resizeButton" owner="com.supermap.framework.components:GearTemplate" required="false" var_type="spark.components:Group">
+	</SkinPart></skinParts></asMetadata></prolog><apiClassifierDetail><apiClassifierDef><apiAccess value="public"/><apiStatic/><apiBaseInterface>com.supermap.framework.core:ITemplate</apiBaseInterface><apiBaseClassifier>spark.components:SkinnableContainer</apiBaseClassifier></apiClassifierDef><apiDesc>
+      基础模板类.
+      该类是基础模块统一外观的逻辑封装类.继承自SkinnableContainer.
+      该类也可以单独定义皮肤外观文件,以便于更好的呈现统一模板.
+      </apiDesc></apiClassifierDetail><related-links><link href="com.supermap.framework.core.xml#ITemplate"><linktext>com.supermap.framework.core.ITemplate</linktext></link></related-links><adobeApiEvent id="com.supermap.framework.components:GearTemplate_com.supermap.events.GearEvent_gearStateFromMinimized"><apiName>gearStateFromMinimized</apiName><shortdesc/><prolog/><adobeApiEventDetail><adobeApiEventDef><adobeApiEventClassifier>com.supermap.events.GearEvent</adobeApiEventClassifier><apiGeneratedEvent/></adobeApiEventDef><apiDesc></apiDesc></adobeApiEventDetail></adobeApiEvent><adobeApiEvent id="com.supermap.framework.components:GearTemplate_flash.events.Event_closed"><apiName>closed</apiName><shortdesc/><prolog/><adobeApiEventDetail><adobeApiEventDef><adobeApiEventClassifier>flash.events.Event</adobeApiEventClassifier><apiGeneratedEvent/></adobeApiEventDef><apiDesc></apiDesc></adobeApiEventDetail></adobeApiEvent><adobeApiEvent id="com.supermap.framework.components:GearTemplate_flash.events.Event_minimized"><apiName>minimized</apiName><shortdesc/><prolog/><adobeApiEventDetail><adobeApiEventDef><adobeApiEventClassifier>flash.events.Event</adobeApiEventClassifier><apiGeneratedEvent/></adobeApiEventDef><apiDesc></apiDesc></adobeApiEventDetail></adobeApiEvent><adobeApiEvent id="com.supermap.framework.components:GearTemplate_flash.events.Event_open"><apiName>open</apiName><shortdesc/><prolog/><adobeApiEventDetail><adobeApiEventDef><adobeApiEventClassifier>flash.events.Event</adobeApiEventClassifier><apiGeneratedEvent/></adobeApiEventDef><apiDesc></apiDesc></adobeApiEventDetail></adobeApiEvent><apiConstructor id="com.supermap.framework.components:GearTemplate:GearTemplate"><apiName>GearTemplate</apiName><shortdesc>
+          构造函数
+         </shortdesc><prolog/><apiConstructorDetail><apiConstructorDef><apiAccess value="public"/></apiConstructorDef><apiDesc>
+          构造函数
+         </apiDesc></apiConstructorDetail></apiConstructor><apiOperation id="com.supermap.framework.components:GearTemplate:sm_internal:clearListeners"><apiName>clearListeners</apiName><shortdesc>
+          移除所有监听器
+         </shortdesc><prolog/><apiOperationDetail><apiOperationDef><apiAccess value="sm_internal"/><apiReturn><apiType value="void"/></apiReturn></apiOperationDef><apiDesc>
+          移除所有监听器
+         </apiDesc></apiOperationDetail></apiOperation><apiOperation id="com.supermap.framework.components:GearTemplate:protected:close_clickHandler"><apiName>close_clickHandler</apiName><shortdesc/><prolog/><apiOperationDetail><apiOperationDef><apiAccess value="protected"/><apiReturn><apiType value="void"/></apiReturn><apiParam><apiItemName>event</apiItemName><apiType value="flash.events:MouseEvent"/></apiParam></apiOperationDef></apiOperationDetail></apiOperation><apiOperation id="com.supermap.framework.components:GearTemplate:protected:commitProperties"><apiName>commitProperties</apiName><shortdesc/><prolog/><apiOperationDetail><apiOperationDef><apiAccess value="protected"/><apiIsOverride/><apiReturn><apiType value="void"/></apiReturn></apiOperationDef></apiOperationDetail></apiOperation><apiOperation id="com.supermap.framework.components:GearTemplate:destroy"><apiName>destroy</apiName><shortdesc>
+          对象销毁
+          使用之前请先清理自己的外部使用过的引用,然后再调用该方法.</shortdesc><prolog/><apiOperationDetail><apiOperationDef><apiAccess value="public"/><apiReturn><apiType value="void"/></apiReturn></apiOperationDef><apiDesc>
+          对象销毁
+          使用之前请先清理自己的外部使用过的引用,然后再调用该方法.
+         </apiDesc></apiOperationDetail></apiOperation><apiOperation id="com.supermap.framework.components:GearTemplate:protected:getCurrentSkinState"><apiName>getCurrentSkinState</apiName><shortdesc/><prolog/><apiOperationDetail><apiOperationDef><apiAccess value="protected"/><apiIsOverride/><apiReturn><apiType value="String"/></apiReturn></apiOperationDef></apiOperationDetail></apiOperation><apiOperation id="com.supermap.framework.components:GearTemplate:protected:icon_clickHandler"><apiName>icon_clickHandler</apiName><shortdesc/><prolog/><apiOperationDetail><apiOperationDef><apiAccess value="protected"/><apiReturn><apiType value="void"/></apiReturn><apiParam><apiItemName>event</apiItemName><apiType value="flash.events:MouseEvent"/></apiParam></apiOperationDef></apiOperationDetail></apiOperation><apiOperation id="com.supermap.framework.components:GearTemplate:protected:minimize_clickHandler"><apiName>minimize_clickHandler</apiName><shortdesc/><prolog/><apiOperationDetail><apiOperationDef><apiAccess value="protected"/><apiReturn><apiType value="void"/></apiReturn><apiParam><apiItemName>event</apiItemName><apiType value="flash.events:MouseEvent"/></apiParam></apiOperationDef></apiOperationDetail></apiOperation><apiOperation id="com.supermap.framework.components:GearTemplate:notify"><apiName>notify</apiName><shortdesc>
+          TODO:派发全局共享数据
+          </shortdesc><prolog/><apiOperationDetail><apiOperationDef><apiAccess value="public"/><apiReturn><apiType value="void"/></apiReturn><apiParam><apiItemName>evtClass</apiItemName><apiType value="String"/><apiData/><apiDesc>evtClass 事件类型完全限定名
+          </apiDesc></apiParam><apiParam><apiItemName>evtType</apiItemName><apiType value="String"/><apiData/><apiDesc>evtType  事件类型
+          </apiDesc></apiParam><apiParam><apiItemName>data</apiItemName><apiType value="any"/><apiData>null</apiData><apiDesc>数据对象。
+         </apiDesc></apiParam></apiOperationDef><apiDesc>
+          TODO:派发全局共享数据
+          </apiDesc></apiOperationDetail></apiOperation><apiOperation id="com.supermap.framework.components:GearTemplate:protected:partAdded"><apiName>partAdded</apiName><shortdesc/><prolog/><apiOperationDetail><apiOperationDef><apiAccess value="protected"/><apiIsOverride/><apiReturn><apiType value="void"/></apiReturn><apiParam><apiItemName>partName</apiItemName><apiType value="String"/></apiParam><apiParam><apiItemName>instance</apiItemName><apiType value="Object"/></apiParam></apiOperationDef></apiOperationDetail></apiOperation><apiValue id="com.supermap.framework.components:GearTemplate:GEAR_DEFAULT_TITLE"><apiName>GEAR_DEFAULT_TITLE</apiName><shortdesc/><prolog/><apiValueDetail><apiValueDef><apiAccess value="public"/><apiStatic/><apiData>默认模板</apiData><apiType value="String"/></apiValueDef></apiValueDetail></apiValue><apiValue id="com.supermap.framework.components:GearTemplate:sm_internal:parentSize"><apiName>parentSize</apiName><shortdesc/><prolog/><apiValueDetail><apiValueDef><apiProperty/><apiAccess value="sm_internal"/><apiDynamic/><apiType value="Object"/></apiValueDef></apiValueDetail></apiValue><apiValue id="com.supermap.framework.components:GearTemplate:resizeCursor"><apiName>resizeCursor</apiName><shortdesc/><prolog/><apiValueDetail><apiValueDef><apiProperty/><apiAccess value="public"/><apiDynamic/><apiType value="Class"/></apiValueDef></apiValueDetail></apiValue><apiValue id="com.supermap.framework.components:GearTemplate:EventBus:get"><apiName>EventBus</apiName><shortdesc>
+          获取事件总线
+         </shortdesc><prolog/><apiValueDetail><apiValueDef><apiProperty/><apiAccess value="public"/><apiDynamic/><apiValueAccess value="read"/><apiType value="Object"/></apiValueDef><apiDesc>
+          获取事件总线
+         </apiDesc></apiValueDetail></apiValue><apiValue id="com.supermap.framework.components:GearTemplate:GEAR_DEFAULT_ICON:get"><apiName>GEAR_DEFAULT_ICON</apiName><shortdesc/><prolog/><apiValueDetail><apiValueDef><apiProperty isBindable="true"/><apiAccess value="public"/><apiDynamic/><apiValueAccess value="read"/><apiType value="Class"/></apiValueDef></apiValueDetail></apiValue><apiValue id="com.supermap.framework.components:GearTemplate:GearIcon:get"><apiName>GearIcon</apiName><shortdesc/><prolog/><apiValueDetail><apiValueDef><apiProperty isBindable="true"/><apiAccess value="public"/><apiDynamic/><apiValueAccess value="readwrite"/><apiType value="String"/></apiValueDef></apiValueDetail></apiValue><apiValue id="com.supermap.framework.components:GearTemplate:GearTitle:get"><apiName>GearTitle</apiName><shortdesc/><prolog/><apiValueDetail><apiValueDef><apiProperty isBindable="true"/><apiAccess value="public"/><apiDynamic/><apiValueAccess value="readwrite"/><apiType value="String"/></apiValueDef></apiValueDetail></apiValue><apiValue id="com.supermap.framework.components:GearTemplate:baseGear:get"><apiName>baseGear</apiName><shortdesc>
+          根据模板关联的基础组件,获取绑定在该模板上的组件
+          </shortdesc><prolog/><apiValueDetail><apiValueDef><apiProperty/><apiAccess value="public"/><apiDynamic/><apiValueAccess value="readwrite"/><apiValueClassifier>com.supermap.framework.core:IGear</apiValueClassifier></apiValueDef><apiDesc>
+          根据模板关联的基础组件,获取绑定在该模板上的组件
+          </apiDesc></apiValueDetail></apiValue><apiValue id="com.supermap.framework.components:GearTemplate:enableCloseButton:get"><apiName>enableCloseButton</apiName><shortdesc/><prolog/><apiValueDetail><apiValueDef><apiProperty isBindable="true"/><apiAccess value="public"/><apiDynamic/><apiValueAccess value="read"/><apiType value="Boolean"/></apiValueDef></apiValueDetail></apiValue><apiValue id="com.supermap.framework.components:GearTemplate:enableDraging:get"><apiName>enableDraging</apiName><shortdesc/><prolog/><apiValueDetail><apiValueDef><apiProperty isBindable="true"/><apiAccess value="public"/><apiDynamic/><apiValueAccess value="read"/><apiType value="Boolean"/></apiValueDef></apiValueDetail></apiValue><apiValue id="com.supermap.framework.components:GearTemplate:enableIcon:get"><apiName>enableIcon</apiName><shortdesc/><prolog/><apiValueDetail><apiValueDef><apiProperty isBindable="true"/><apiAccess value="public"/><apiDynamic/><apiValueAccess value="read"/><apiType value="Boolean"/></apiValueDef></apiValueDetail></apiValue><apiValue id="com.supermap.framework.components:GearTemplate:enableMinimizeButton:get"><apiName>enableMinimizeButton</apiName><shortdesc/><prolog/><apiValueDetail><apiValueDef><apiProperty isBindable="true"/><apiAccess value="public"/><apiDynamic/><apiValueAccess value="read"/><apiType value="Boolean"/></apiValueDef></apiValueDetail></apiValue><apiValue id="com.supermap.framework.components:GearTemplate:enableResizeButton:get"><apiName>enableResizeButton</apiName><shortdesc/><prolog/><apiValueDetail><apiValueDef><apiProperty isBindable="true"/><apiAccess value="public"/><apiDynamic/><apiValueAccess value="read"/><apiType value="Boolean"/></apiValueDef></apiValueDetail></apiValue><apiValue id="com.supermap.framework.components:GearTemplate:gearHeight:get"><apiName>gearHeight</apiName><shortdesc/><prolog/><apiValueDetail><apiValueDef><apiProperty isBindable="true"/><apiAccess value="public"/><apiDynamic/><apiValueAccess value="read"/><apiType value="Number"/></apiValueDef></apiValueDetail></apiValue><apiValue id="com.supermap.framework.components:GearTemplate:gearState:get"><apiName>gearState</apiName><shortdesc>
+          获取皮肤状态
+         </shortdesc><prolog/><apiValueDetail><apiValueDef><apiProperty/><apiAccess value="public"/><apiDynamic/><apiValueAccess value="readwrite"/><apiType value="String"/></apiValueDef><apiDesc>
+          获取皮肤状态
+         </apiDesc></apiValueDetail></apiValue><apiValue id="com.supermap.framework.components:GearTemplate:gearWidth:get"><apiName>gearWidth</apiName><shortdesc/><prolog/><apiValueDetail><apiValueDef><apiProperty isBindable="true"/><apiAccess value="public"/><apiDynamic/><apiValueAccess value="read"/><apiType value="Number"/></apiValueDef></apiValueDetail></apiValue><apiValue id="com.supermap.framework.components:GearTemplate:resizable:get"><apiName>resizable</apiName><shortdesc>
+          返回是否可缩放
+          </shortdesc><prolog/><apiValueDetail><apiValueDef><apiProperty isBindable="true"/><apiAccess value="public"/><apiDynamic/><apiValueAccess value="readwrite"/><apiType value="Boolean"/></apiValueDef><apiDesc>
+          返回是否可缩放
+          </apiDesc></apiValueDetail></apiValue><apiValue id="com.supermap.framework.components:GearTemplate:type:get"><apiName>type</apiName><shortdesc>
+          获取该类类名
+         </shortdesc><prolog/><apiValueDetail><apiValueDef><apiProperty/><apiAccess value="public"/><apiDynamic/><apiValueAccess value="read"/><apiType value="String"/></apiValueDef><apiDesc>
+          获取该类类名
+         </apiDesc></apiValueDetail></apiValue><apiValue id="com.supermap.framework.components:GearTemplate:draggable:set"><apiName>draggable</apiName><shortdesc>
+          设置是否可拖拽
+          </shortdesc><prolog/><apiValueDetail><apiValueDef><apiProperty/><apiAccess value="public"/><apiDynamic/><apiValueAccess value="write"/><apiType value="Boolean"/></apiValueDef><apiDesc>
+          设置是否可拖拽
+          </apiDesc></apiValueDetail></apiValue></apiClassifier><apiClassifier id="com.supermap.framework.components:GearTemplateSkin"><apiName>GearTemplateSkin</apiName><shortdesc>基础模块对应的皮肤文件,可自行写皮肤来统一修改模块的外观.</shortdesc><prolog><asMetadata><DefaultProperty name="mxmlContent"/></asMetadata></prolog><apiClassifierDetail><apiClassifierDef><apiAccess value="public"/><apiStatic/><apiBaseInterface>mx.binding:IBindingClient</apiBaseInterface><apiBaseInterface>mx.core:IStateClient2</apiBaseInterface><apiBaseClassifier>spark.skins:SparkSkin</apiBaseClassifier></apiClassifierDef><apiDesc>基础模块对应的皮肤文件,可自行写皮肤来统一修改模块的外观.
+    </apiDesc></apiClassifierDetail><related-links><link href="com.supermap.framework.components.xml#GearTemplate"><linktext>com.supermap.framework.components.GearTemplate</linktext></link></related-links><apiConstructor id="com.supermap.framework.components:GearTemplateSkin:GearTemplateSkin"><apiName>GearTemplateSkin</apiName><shortdesc>Constructor.</shortdesc><prolog/><apiConstructorDetail><apiConstructorDef><apiAccess value="public"/></apiConstructorDef><apiDesc>Constructor.</apiDesc></apiConstructorDetail></apiConstructor><apiOperation id="com.supermap.framework.components:GearTemplateSkin:protected:closeButton_mouseMoveHandler"><apiName>closeButton_mouseMoveHandler</apiName><shortdesc/><prolog/><apiOperationDetail><apiOperationDef><apiAccess value="protected"/><apiReturn><apiType value="void"/></apiReturn><apiParam><apiItemName>event</apiItemName><apiType value="flash.events:MouseEvent"/></apiParam></apiOperationDef></apiOperationDetail></apiOperation><apiOperation id="com.supermap.framework.components:GearTemplateSkin:protected:closeButton_mouseOutHandler"><apiName>closeButton_mouseOutHandler</apiName><shortdesc/><prolog/><apiOperationDetail><apiOperationDef><apiAccess value="protected"/><apiReturn><apiType value="void"/></apiReturn><apiParam><apiItemName>event</apiItemName><apiType value="flash.events:MouseEvent"/></apiParam></apiOperationDef></apiOperationDetail></apiOperation><apiOperation id="com.supermap.framework.components:GearTemplateSkin:protected:fade1_effectEndHandler"><apiName>fade1_effectEndHandler</apiName><shortdesc/><prolog/><apiOperationDetail><apiOperationDef><apiAccess value="protected"/><apiReturn><apiType value="void"/></apiReturn><apiParam><apiItemName>event</apiItemName><apiType value="mx.events:EffectEvent"/></apiParam></apiOperationDef></apiOperationDetail></apiOperation><apiOperation id="com.supermap.framework.components:GearTemplateSkin:protected:minimizeButton_mouseMoveHandler"><apiName>minimizeButton_mouseMoveHandler</apiName><shortdesc/><prolog/><apiOperationDetail><apiOperationDef><apiAccess value="protected"/><apiReturn><apiType value="void"/></apiReturn><apiParam><apiItemName>event</apiItemName><apiType value="flash.events:MouseEvent"/></apiParam></apiOperationDef></apiOperationDetail></apiOperation><apiOperation id="com.supermap.framework.components:GearTemplateSkin:protected:minimizeButton_mouseOutHandler"><apiName>minimizeButton_mouseOutHandler</apiName><shortdesc/><prolog/><apiOperationDetail><apiOperationDef><apiAccess value="protected"/><apiReturn><apiType value="void"/></apiReturn><apiParam><apiItemName>event</apiItemName><apiType value="flash.events:MouseEvent"/></apiParam></apiOperationDef></apiOperationDetail></apiOperation><apiOperation id="com.supermap.framework.components:GearTemplateSkin:protected:resize1_effectEndHandler"><apiName>resize1_effectEndHandler</apiName><shortdesc/><prolog/><apiOperationDetail><apiOperationDef><apiAccess value="protected"/><apiReturn><apiType value="void"/></apiReturn><apiParam><apiItemName>event</apiItemName><apiType value="mx.events:EffectEvent"/></apiParam></apiOperationDef></apiOperationDetail></apiOperation><apiOperation id="com.supermap.framework.components:GearTemplateSkin:protected:sequence1_effectEndHandler"><apiName>sequence1_effectEndHandler</apiName><shortdesc/><prolog/><apiOperationDetail><apiOperationDef><apiAccess value="protected"/><apiReturn><apiType value="void"/></apiReturn><apiParam><apiItemName>event</apiItemName><apiType value="mx.events:EffectEvent"/></apiParam></apiOperationDef></apiOperationDetail></apiOperation><apiOperation id="com.supermap.framework.components:GearTemplateSkin:protected:sequence2_effectEndHandler"><apiName>sequence2_effectEndHandler</apiName><shortdesc/><prolog/><apiOperationDetail><apiOperationDef><apiAccess value="protected"/><apiReturn><apiType value="void"/></apiReturn><apiParam><apiItemName>event</apiItemName><apiType value="mx.events:EffectEvent"/></apiParam></apiOperationDef></apiOperationDetail></apiOperation><apiOperation id="com.supermap.framework.components:GearTemplateSkin:protected:sequence2_effectStartHandler"><apiName>sequence2_effectStartHandler</apiName><shortdesc/><prolog/><apiOperationDetail><apiOperationDef><apiAccess value="protected"/><apiReturn><apiType value="void"/></apiReturn><apiParam><apiItemName>event</apiItemName><apiType value="mx.events:EffectEvent"/></apiParam></apiOperationDef></apiOperationDetail></apiOperation><apiValue id="com.supermap.framework.components:GearTemplateSkin:GearFrame"><apiName>GearFrame</apiName><shortdesc/><prolog/><apiValueDetail><apiValueDef><apiProperty isBindable="true" name="Bindable"/><apiAccess value="public"/><apiDynamic/><apiType value="spark.components:Group"/></apiValueDef><apiDesc></apiDesc></apiValueDetail></apiValue><apiValue id="com.supermap.framework.components:GearTemplateSkin:backGroup"><apiName>backGroup</apiName><shortdesc/><prolog/><apiValueDetail><apiValueDef><apiProperty isBindable="true" name="Bindable"/><apiAccess value="public"/><apiDynamic/><apiType value="spark.components:Group"/></apiValueDef><apiDesc></apiDesc></apiValueDetail></apiValue><apiValue id="com.supermap.framework.components:GearTemplateSkin:bgBorder"><apiName>bgBorder</apiName><shortdesc/><prolog/><apiValueDetail><apiValueDef><apiProperty isBindable="true" name="Bindable"/><apiAccess value="public"/><apiDynamic/><apiType value="spark.components:BorderContainer"/></apiValueDef><apiDesc></apiDesc></apiValueDetail></apiValue><apiValue id="com.supermap.framework.components:GearTemplateSkin:bgGroup"><apiName>bgGroup</apiName><shortdesc/><prolog/><apiValueDetail><apiValueDef><apiProperty isBindable="true" name="Bindable"/><apiAccess value="public"/><apiDynamic/><apiType value="spark.components:Group"/></apiValueDef><apiDesc></apiDesc></apiValueDetail></apiValue><apiValue id="com.supermap.framework.components:GearTemplateSkin:bounceEasing"><apiName>bounceEasing</apiName><shortdesc/><prolog/><apiValueDetail><apiValueDef><apiProperty isBindable="true" name="Bindable"/><apiAccess value="public"/><apiDynamic/><apiType value="spark.effects.easing:Bounce"/></apiValueDef><apiDesc></apiDesc></apiValueDetail></apiValue><apiValue id="com.supermap.framework.components:GearTemplateSkin:closeButton"><apiName>closeButton</apiName><shortdesc/><prolog/><apiValueDetail><apiValueDef><apiProperty isBindable="true" name="Bindable"/><apiAccess value="public"/><apiDynamic/><apiType value="mx.controls:Image"/></apiValueDef><apiDesc></apiDesc></apiValueDetail></apiValue><apiValue id="com.supermap.framework.components:GearTemplateSkin:contentGroup"><apiName>contentGroup</apiName><shortdesc/><prolog/><apiValueDetail><apiValueDef><apiProperty isBindable="true" name="Bindable"/><apiAccess value="public"/><apiDynamic/><apiType value="spark.components:Group"/></apiValueDef><apiDesc></apiDesc></apiValueDetail></apiValue><apiValue id="com.supermap.framework.components:GearTemplateSkin:elasticEasing"><apiName>elasticEasing</apiName><shortdesc/><prolog/><apiValueDetail><apiValueDef><apiProperty isBindable="true" name="Bindable"/><apiAccess value="public"/><apiDynamic/><apiType value="spark.effects.easing:Elastic"/></apiValueDef><apiDesc></apiDesc></apiValueDetail></apiValue><apiValue id="com.supermap.framework.components:GearTemplateSkin:header"><apiName>header</apiName><shortdesc/><prolog/><apiValueDetail><apiValueDef><apiProperty isBindable="true" name="Bindable"/><apiAccess value="public"/><apiDynamic/><apiType value="spark.components:Group"/></apiValueDef><apiDesc></apiDesc></apiValueDetail></apiValue><apiValue id="com.supermap.framework.components:GearTemplateSkin:hostComponent"><apiName>hostComponent</apiName><shortdesc/><prolog/><apiValueDetail><apiValueDef><apiProperty isBindable="true" name="Bindable"/><apiAccess value="public"/><apiDynamic/><apiValueClassifier>com.supermap.framework.components:GearTemplate</apiValueClassifier></apiValueDef></apiValueDetail></apiValue><apiValue id="com.supermap.framework.components:GearTemplateSkin:icon"><apiName>icon</apiName><shortdesc/><prolog/><apiValueDetail><apiValueDef><apiProperty isBindable="true" name="Bindable"/><apiAccess value="public"/><apiDynamic/><apiType value="mx.controls:Image"/></apiValueDef><apiDesc></apiDesc></apiValueDetail></apiValue><apiValue id="com.supermap.framework.components:GearTemplateSkin:minCloseBtn"><apiName>minCloseBtn</apiName><shortdesc/><prolog/><apiValueDetail><apiValueDef><apiProperty isBindable="true" name="Bindable"/><apiAccess value="public"/><apiDynamic/><apiType value="spark.components:HGroup"/></apiValueDef><apiDesc></apiDesc></apiValueDetail></apiValue><apiValue id="com.supermap.framework.components:GearTemplateSkin:minimizeButton"><apiName>minimizeButton</apiName><shortdesc/><prolog/><apiValueDetail><apiValueDef><apiProperty isBindable="true" name="Bindable"/><apiAccess value="public"/><apiDynamic/><apiType value="mx.controls:Image"/></apiValueDef><apiDesc></apiDesc></apiValueDetail></apiValue><apiValue id="com.supermap.framework.components:GearTemplateSkin:resizeButton"><apiName>resizeButton</apiName><shortdesc/><prolog/><apiValueDetail><apiValueDef><apiProperty isBindable="true" name="Bindable"/><apiAccess value="public"/><apiDynamic/><apiType value="spark.components:Group"/></apiValueDef><apiDesc></apiDesc></apiValueDetail></apiValue><apiValue id="com.supermap.framework.components:GearTemplateSkin:widgetLabel"><apiName>widgetLabel</apiName><shortdesc/><prolog/><apiValueDetail><apiValueDef><apiProperty isBindable="true" name="Bindable"/><apiAccess value="public"/><apiDynamic/><apiType value="spark.components:Label"/></apiValueDef><apiDesc></apiDesc></apiValueDetail></apiValue></apiClassifier><apiClassifier id="com.supermap.framework.components:BaseGear"><apiName>BaseGear</apiName><shortdesc>
+      基础模块实现类.</shortdesc><prolog><asMetadata/></prolog><apiClassifierDetail><apiClassifierDef><apiAccess value="public"/><apiStatic/><apiBaseInterface>com.supermap.framework.core:IGear</apiBaseInterface><apiBaseClassifier>mx.modules:Module</apiBaseClassifier></apiClassifierDef><apiDesc>
+      基础模块实现类.
+      该类继承自Module类,主要用来模块化主应用程序.
+      TODO:该类的很多属性要支持动态修改,目前只能在初始化的时候设置其作用......
+      </apiDesc></apiClassifierDetail><related-links><link href="com.supermap.framework.core.xml#IPlugin"><linktext>com.supermap.framework.core.IPlugin</linktext></link><link href="com.supermap.framework.core.xml#IGear"><linktext>com.supermap.framework.core.IGear</linktext></link></related-links><adobeApiEvent id="com.supermap.framework.components:BaseGear_com.supermap.framework.events.GearEvent_gearShareData"><apiName>gearShareData</apiName><shortdesc/><prolog/><adobeApiEventDetail><adobeApiEventDef><adobeApiEventClassifier>com.supermap.framework.events.GearEvent</adobeApiEventClassifier><apiGeneratedEvent/></adobeApiEventDef><apiDesc></apiDesc></adobeApiEventDetail></adobeApiEvent><apiConstructor id="com.supermap.framework.components:BaseGear:BaseGear"><apiName>BaseGear</apiName><shortdesc/><prolog/><apiConstructorDetail><apiConstructorDef><apiAccess value="public"/></apiConstructorDef></apiConstructorDetail></apiConstructor><apiOperation id="com.supermap.framework.components:BaseGear:addTo"><apiName>addTo</apiName><shortdesc>
+          覆写基类里的方法,根据传入的具体类型动态生成管理容器
+          比方说 我们继承自baseComponent写一个类的时候
+          baseComponent.addTo();即可实现添加舞台
+         
+          </shortdesc><prolog/><apiOperationDetail><apiOperationDef><apiAccess value="public"/><apiReturn><apiDesc>IVisualElementContainer 返回一个容器
+         </apiDesc><apiType value="mx.core:IVisualElementContainer"/></apiReturn><apiParam><apiItemName>containId</apiItemName><apiType value="String"/><apiData/><apiDesc>传入参数为container的id 这里建议使用gearContainer
+          </apiDesc></apiParam></apiOperationDef><apiDesc>
+          覆写基类里的方法,根据传入的具体类型动态生成管理容器
+          比方说 我们继承自baseComponent写一个类的时候
+          baseComponent.addTo();即可实现添加舞台
+         
+          </apiDesc></apiOperationDetail></apiOperation><apiOperation id="com.supermap.framework.components:BaseGear:sm_internal:clearListeners"><apiName>clearListeners</apiName><shortdesc>
+          移除所有监听器
+         </shortdesc><prolog/><apiOperationDetail><apiOperationDef><apiAccess value="sm_internal"/><apiReturn><apiType value="void"/></apiReturn></apiOperationDef><apiDesc>
+          移除所有监听器
+         </apiDesc></apiOperationDetail></apiOperation><apiOperation id="com.supermap.framework.components:BaseGear:destroy"><apiName>destroy</apiName><shortdesc>
+          对象销毁
+         </shortdesc><prolog/><apiOperationDetail><apiOperationDef><apiAccess value="public"/><apiReturn><apiType value="void"/></apiReturn></apiOperationDef><apiDesc>
+          对象销毁
+         </apiDesc></apiOperationDetail></apiOperation><apiOperation id="com.supermap.framework.components:BaseGear:getIcon"><apiName>getIcon</apiName><shortdesc>
+          获取标题头位置图片url
+          </shortdesc><prolog/><apiOperationDetail><apiOperationDef><apiAccess value="public"/><apiReturn><apiDesc>String 图片url
+         </apiDesc><apiType value="String"/></apiReturn></apiOperationDef><apiDesc>
+          获取标题头位置图片url
+          </apiDesc></apiOperationDetail></apiOperation><apiOperation id="com.supermap.framework.components:BaseGear:getId"><apiName>getId</apiName><shortdesc>
+          获取id
+          </shortdesc><prolog/><apiOperationDetail><apiOperationDef><apiAccess value="public"/><apiReturn><apiDesc>String
+         </apiDesc><apiType value="String"/></apiReturn></apiOperationDef><apiDesc>
+          获取id
+          </apiDesc></apiOperationDetail></apiOperation><apiOperation id="com.supermap.framework.components:BaseGear:getTitle"><apiName>getTitle</apiName><shortdesc>
+          获取标题
+          </shortdesc><prolog/><apiOperationDetail><apiOperationDef><apiAccess value="public"/><apiReturn><apiDesc>String
+         </apiDesc><apiType value="String"/></apiReturn></apiOperationDef><apiDesc>
+          获取标题
+          </apiDesc></apiOperationDetail></apiOperation><apiOperation id="com.supermap.framework.components:BaseGear:notify"><apiName>notify</apiName><shortdesc>
+          TODO:派发全局共享数据
+          </shortdesc><prolog/><apiOperationDetail><apiOperationDef><apiAccess value="public"/><apiReturn><apiType value="void"/></apiReturn><apiParam><apiItemName>evtClass</apiItemName><apiType value="String"/><apiData/><apiDesc>evtClass 事件类型完全限定名
+          </apiDesc></apiParam><apiParam><apiItemName>evtType</apiItemName><apiType value="String"/><apiData/><apiDesc>evtType  事件类型
+          </apiDesc></apiParam><apiParam><apiItemName>data</apiItemName><apiType value="any"/><apiData>null</apiData><apiDesc>数据对象。
+         </apiDesc></apiParam></apiOperationDef><apiDesc>
+          TODO:派发全局共享数据
+          </apiDesc></apiOperationDetail></apiOperation><apiOperation id="com.supermap.framework.components:BaseGear:setIcon"><apiName>setIcon</apiName><shortdesc>
+          设置标题头位置显示图片
+          </shortdesc><prolog/><apiOperationDetail><apiOperationDef><apiAccess value="public"/><apiReturn><apiType value="void"/></apiReturn><apiParam><apiItemName>value</apiItemName><apiType value="String"/><apiDesc>图片url
+         </apiDesc></apiParam></apiOperationDef><apiDesc>
+          设置标题头位置显示图片
+          </apiDesc></apiOperationDetail></apiOperation><apiOperation id="com.supermap.framework.components:BaseGear:setId"><apiName>setId</apiName><shortdesc>
+          设置id
+          </shortdesc><prolog/><apiOperationDetail><apiOperationDef><apiAccess value="public"/><apiReturn><apiType value="void"/></apiReturn><apiParam><apiItemName>value</apiItemName><apiType value="String"/><apiDesc>        </apiDesc></apiParam></apiOperationDef><apiDesc>
+          设置id
+          </apiDesc></apiOperationDetail></apiOperation><apiOperation id="com.supermap.framework.components:BaseGear:setMap"><apiName>setMap</apiName><shortdesc>
+          设置map对象
+          </shortdesc><prolog/><apiOperationDetail><apiOperationDef><apiAccess value="public"/><apiReturn><apiType value="void"/></apiReturn><apiParam><apiItemName>value</apiItemName><apiType value="com.supermap.web.mapping:Map"/><apiDesc>        </apiDesc></apiParam></apiOperationDef><apiDesc>
+          设置map对象
+          </apiDesc></apiOperationDetail></apiOperation><apiOperation id="com.supermap.framework.components:BaseGear:setPreload"><apiName>setPreload</apiName><shortdesc>
+          设置是否预加载
+         </shortdesc><prolog/><apiOperationDetail><apiOperationDef><apiAccess value="public"/><apiReturn><apiType value="void"/></apiReturn><apiParam><apiItemName>value</apiItemName><apiType value="String"/></apiParam></apiOperationDef><apiDesc>
+          设置是否预加载
+         </apiDesc></apiOperationDetail></apiOperation><apiOperation id="com.supermap.framework.components:BaseGear:sm_internal:setRelativePosition"><apiName>setRelativePosition</apiName><shortdesc/><prolog/><apiOperationDetail><apiOperationDef><apiAccess value="sm_internal"/><apiReturn><apiType value="void"/></apiReturn><apiParam><apiItemName>left</apiItemName><apiType value="String"/></apiParam><apiParam><apiItemName>right</apiItemName><apiType value="String"/></apiParam><apiParam><apiItemName>top</apiItemName><apiType value="String"/></apiParam><apiParam><apiItemName>bottom</apiItemName><apiType value="String"/></apiParam></apiOperationDef></apiOperationDetail></apiOperation><apiOperation id="com.supermap.framework.components:BaseGear:setTitle"><apiName>setTitle</apiName><shortdesc>
+          设置标题
+          </shortdesc><prolog/><apiOperationDetail><apiOperationDef><apiAccess value="public"/><apiReturn><apiType value="void"/></apiReturn><apiParam><apiItemName>value</apiItemName><apiType value="String"/><apiDesc>        </apiDesc></apiParam></apiOperationDef><apiDesc>
+          设置标题
+          </apiDesc></apiOperationDetail></apiOperation><apiOperation id="com.supermap.framework.components:BaseGear:sm_internal:setXYPosition"><apiName>setXYPosition</apiName><shortdesc/><prolog/><apiOperationDetail><apiOperationDef><apiAccess value="sm_internal"/><apiReturn><apiType value="void"/></apiReturn><apiParam><apiItemName>x</apiItemName><apiType value="Number"/></apiParam><apiParam><apiItemName>y</apiItemName><apiType value="Number"/></apiParam></apiOperationDef></apiOperationDetail></apiOperation><apiOperation id="com.supermap.framework.components:BaseGear:shareBevData"><apiName>shareBevData</apiName><shortdesc>
+          在模块之间共享数据。按照key-value的方式组织数据。
+          全局的数据共享参加notify方法
+         </shortdesc><prolog/><apiOperationDetail><apiOperationDef><apiAccess value="public"/><apiReturn><apiType value="void"/></apiReturn><apiParam><apiItemName>key</apiItemName><apiType value="String"/></apiParam><apiParam><apiItemName>value</apiItemName><apiType value="Object"/></apiParam></apiOperationDef><apiDesc>
+          在模块之间共享数据。按照key-value的方式组织数据。
+          全局的数据共享参加notify方法
+         </apiDesc></apiOperationDetail></apiOperation><apiValue id="com.supermap.framework.components:BaseGear:sm_internal:parentSize"><apiName>parentSize</apiName><shortdesc/><prolog/><apiValueDetail><apiValueDef><apiProperty/><apiAccess value="sm_internal"/><apiDynamic/><apiType value="Object"/></apiValueDef></apiValueDetail></apiValue><apiValue id="com.supermap.framework.components:BaseGear:EventBus:get"><apiName>EventBus</apiName><shortdesc>
+          获取事件总线
+         </shortdesc><prolog/><apiValueDetail><apiValueDef><apiProperty/><apiAccess value="public"/><apiDynamic/><apiValueAccess value="read"/><apiType value="Object"/></apiValueDef><apiDesc>
+          获取事件总线
+         </apiDesc></apiValueDetail></apiValue><apiValue id="com.supermap.framework.components:BaseGear:configData:get"><apiName>configData</apiName><shortdesc/><prolog/><apiValueDetail><apiValueDef><apiProperty/><apiAccess value="public"/><apiDynamic/><apiValueAccess value="readwrite"/><apiType value="Object"/></apiValueDef></apiValueDetail></apiValue><apiValue id="com.supermap.framework.components:BaseGear:isDraggable:get"><apiName>isDraggable</apiName><shortdesc>
+          获取是否支持拖拽
+          </shortdesc><prolog/><apiValueDetail><apiValueDef><apiProperty/><apiAccess value="public"/><apiDynamic/><apiValueAccess value="readwrite"/><apiType value="Boolean"/></apiValueDef><apiDesc>
+          获取是否支持拖拽
+          </apiDesc></apiValueDetail></apiValue><apiValue id="com.supermap.framework.components:BaseGear:isResizeable:get"><apiName>isResizeable</apiName><shortdesc>
+          获取是否支持缩放
+          </shortdesc><prolog/><apiValueDetail><apiValueDef><apiProperty/><apiAccess value="public"/><apiDynamic/><apiValueAccess value="readwrite"/><apiType value="Boolean"/></apiValueDef><apiDesc>
+          获取是否支持缩放
+          </apiDesc></apiValueDetail></apiValue><apiValue id="com.supermap.framework.components:BaseGear:map:get"><apiName>map</apiName><shortdesc>
+          获取map对象
+         </shortdesc><prolog/><apiValueDetail><apiValueDef><apiProperty/><apiAccess value="public"/><apiDynamic/><apiValueAccess value="readwrite"/><apiType value="com.supermap.web.mapping:Map"/></apiValueDef><apiDesc>
+          获取map对象
+         </apiDesc></apiValueDetail></apiValue><apiValue id="com.supermap.framework.components:BaseGear:topPad:get"><apiName>topPad</apiName><shortdesc/><prolog/><apiValueDetail><apiValueDef><apiProperty/><apiAccess value="public"/><apiDynamic/><apiValueAccess value="readwrite"/><apiType value="Number"/></apiValueDef></apiValueDetail></apiValue><apiValue id="com.supermap.framework.components:BaseGear:type:get"><apiName>type</apiName><shortdesc>
+          返回该类类名
+         </shortdesc><prolog/><apiValueDetail><apiValueDef><apiProperty/><apiAccess value="public"/><apiDynamic/><apiValueAccess value="read"/><apiType value="String"/></apiValueDef><apiDesc>
+          返回该类类名
+         </apiDesc></apiValueDetail></apiValue></apiClassifier><apiClassifier id="com.supermap.framework.components:MapControl"><apiName>MapControl</apiName><shortdesc>
+      框架本身用到的map类，该类继承SuperMap iClient for Flex里的map类
+      这里不影响对map的使用，只是扩展了map，使得该地图组件在框架里当做一个插件使用。
+     </shortdesc><prolog><asMetadata><DefaultProperty name="layers"/></asMetadata></prolog><apiClassifierDetail><apiClassifierDef><apiAccess value="public"/><apiStatic/><apiBaseInterface>com.supermap.framework.core:IPlugin</apiBaseInterface><apiBaseClassifier>com.supermap.web.mapping:Map</apiBaseClassifier></apiClassifierDef><apiDesc>
+      框架本身用到的map类，该类继承SuperMap iClient for Flex里的map类
+      这里不影响对map的使用，只是扩展了map，使得该地图组件在框架里当做一个插件使用。
+     </apiDesc></apiClassifierDetail><apiConstructor id="com.supermap.framework.components:MapControl:MapControl"><apiName>MapControl</apiName><shortdesc/><prolog/><apiConstructorDetail><apiConstructorDef><apiAccess value="public"/></apiConstructorDef></apiConstructorDetail></apiConstructor><apiOperation id="com.supermap.framework.components:MapControl:addEventListener"><apiName>addEventListener</apiName><shortdesc> add Managed EventListener
+         </shortdesc><prolog/><apiOperationDetail><apiOperationDef><apiAccess value="public"/><apiIsOverride/><apiReturn><apiType value="void"/></apiReturn><apiParam><apiItemName>type</apiItemName><apiType value="String"/><apiDesc>        </apiDesc></apiParam><apiParam><apiItemName>listener</apiItemName><apiType value="Function"/><apiDesc>        </apiDesc></apiParam><apiParam><apiItemName>useCapture</apiItemName><apiType value="Boolean"/><apiData>false</apiData><apiDesc>        </apiDesc></apiParam><apiParam><apiItemName>priority</apiItemName><apiType value="int"/><apiData>0</apiData><apiDesc>        </apiDesc></apiParam><apiParam><apiItemName>useWeakPeference</apiItemName><apiType value="Boolean"/><apiData>false</apiData><apiDesc>        </apiDesc></apiParam></apiOperationDef><apiDesc> add Managed EventListener
+         </apiDesc></apiOperationDetail></apiOperation><apiOperation id="com.supermap.framework.components:MapControl:sm_internal:clearListeners"><apiName>clearListeners</apiName><shortdesc>
+          移除所有监听器
+         </shortdesc><prolog/><apiOperationDetail><apiOperationDef><apiAccess value="sm_internal"/><apiReturn><apiType value="void"/></apiReturn></apiOperationDef><apiDesc>
+          移除所有监听器
+         </apiDesc></apiOperationDetail></apiOperation><apiOperation id="com.supermap.framework.components:MapControl:destroy"><apiName>destroy</apiName><shortdesc>
+          插件销毁
+          注意：框架本身只是把内置的事件监听以及对象引用给移除，如果用户自己还写了引用，需要手动也清理掉，这样才会最终释放资源。
+         
+         </shortdesc><prolog/><apiOperationDetail><apiOperationDef><apiAccess value="public"/><apiReturn><apiType value="void"/></apiReturn></apiOperationDef><apiDesc>
+          插件销毁
+          注意：框架本身只是把内置的事件监听以及对象引用给移除，如果用户自己还写了引用，需要手动也清理掉，这样才会最终释放资源。
+         
+         </apiDesc></apiOperationDetail></apiOperation><apiOperation id="com.supermap.framework.components:MapControl:notify"><apiName>notify</apiName><shortdesc>
+          TODO:派发全局共享数据
+          </shortdesc><prolog/><apiOperationDetail><apiOperationDef><apiAccess value="public"/><apiReturn><apiType value="void"/></apiReturn><apiParam><apiItemName>evtClass</apiItemName><apiType value="String"/><apiData/><apiDesc>evtClass 事件类型完全限定名
+          </apiDesc></apiParam><apiParam><apiItemName>evtType</apiItemName><apiType value="String"/><apiData/><apiDesc>evtType  事件类型
+          </apiDesc></apiParam><apiParam><apiItemName>data</apiItemName><apiType value="any"/><apiData>null</apiData><apiDesc>数据对象。
+         </apiDesc></apiParam></apiOperationDef><apiDesc>
+          TODO:派发全局共享数据
+          </apiDesc></apiOperationDetail></apiOperation><apiValue id="com.supermap.framework.components:MapControl:sm_internal:listeners"><apiName>listeners</apiName><shortdesc/><prolog/><apiValueDetail><apiValueDef><apiProperty/><apiAccess value="sm_internal"/><apiDynamic/><apiData>unknown</apiData><apiType value="Array"/></apiValueDef></apiValueDetail></apiValue><apiValue id="com.supermap.framework.components:MapControl:EventBus:get"><apiName>EventBus</apiName><shortdesc>
+          获取事件总线
+         </shortdesc><prolog/><apiValueDetail><apiValueDef><apiProperty/><apiAccess value="public"/><apiDynamic/><apiValueAccess value="read"/><apiType value="Object"/></apiValueDef><apiDesc>
+          获取事件总线
+         </apiDesc></apiValueDetail></apiValue><apiValue id="com.supermap.framework.components:MapControl:type:get"><apiName>type</apiName><shortdesc>
+          返回插件类名
+          </shortdesc><prolog/><apiValueDetail><apiValueDef><apiProperty/><apiAccess value="public"/><apiDynamic/><apiValueAccess value="read"/><apiType value="String"/></apiValueDef><apiDesc>
+          返回插件类名
+          </apiDesc></apiValueDetail><related-links><link href="" invalidHref="com.supermap.framework.components.IPlugin.xml"><linktext>插件接口</linktext></link></related-links></apiValue></apiClassifier><apiClassifier id="com.supermap.framework.components:BaseComponent"><apiName>BaseComponent</apiName><shortdesc>
+      基础组件类
+      该类主要用来作为框架本身可视化组件的基类,同时也是MapContianer,GearContainer与TemplateContainer容器的父类.</shortdesc><prolog><asMetadata><skinParts><SkinPart name="border" owner="com.supermap.framework.components:BaseComponent" required="false" var_type="spark.components:Group">
+<description>
+          默认皮肤
+         </description>
+	</SkinPart></skinParts></asMetadata></prolog><apiClassifierDetail><apiClassifierDef><apiAccess value="public"/><apiStatic/><apiBaseInterface>com.supermap.framework.core:IPlugin</apiBaseInterface><apiBaseInterface>com.supermap.framework.core:IState</apiBaseInterface><apiBaseInterface>com.supermap.framework.core:IAnimation</apiBaseInterface><apiBaseInterface>com.supermap.framework.core:IStyle</apiBaseInterface><apiBaseClassifier>spark.components.supportClasses:SkinnableComponent</apiBaseClassifier></apiClassifierDef><apiDesc>
+      基础组件类
+      该类主要用来作为框架本身可视化组件的基类,同时也是MapContianer,GearContainer与TemplateContainer容器的父类.
+     
+     </apiDesc></apiClassifierDetail><adobeApiEvent id="com.supermap.framework.components:BaseComponent_com.supermap.framework.events.StyleEvent_styleChanged"><apiName>styleChanged</apiName><shortdesc/><prolog/><adobeApiEventDetail><adobeApiEventDef><adobeApiEventClassifier>com.supermap.framework.events.StyleEvent</adobeApiEventClassifier><apiGeneratedEvent/></adobeApiEventDef><apiDesc></apiDesc></adobeApiEventDetail></adobeApiEvent><apiConstructor id="com.supermap.framework.components:BaseComponent:BaseComponent"><apiName>BaseComponent</apiName><shortdesc>
+          构造函数
+         </shortdesc><prolog/><apiConstructorDetail><apiConstructorDef><apiAccess value="public"/></apiConstructorDef><apiDesc>
+          构造函数
+         </apiDesc></apiConstructorDetail></apiConstructor><apiOperation id="com.supermap.framework.components:BaseComponent:addEventListener"><apiName>addEventListener</apiName><shortdesc> add Managed EventListener
+        </shortdesc><prolog/><apiOperationDetail><apiOperationDef><apiAccess value="public"/><apiIsOverride/><apiReturn><apiType value="void"/></apiReturn><apiParam><apiItemName>type</apiItemName><apiType value="String"/><apiDesc>       </apiDesc></apiParam><apiParam><apiItemName>listener</apiItemName><apiType value="Function"/><apiDesc>       </apiDesc></apiParam><apiParam><apiItemName>useCapture</apiItemName><apiType value="Boolean"/><apiData>false</apiData><apiDesc>       </apiDesc></apiParam><apiParam><apiItemName>priority</apiItemName><apiType value="int"/><apiData>0</apiData><apiDesc>       </apiDesc></apiParam><apiParam><apiItemName>useWeakPeference</apiItemName><apiType value="Boolean"/><apiData>false</apiData><apiDesc>       </apiDesc></apiParam></apiOperationDef><apiDesc> add Managed EventListener
+        </apiDesc></apiOperationDetail></apiOperation><apiOperation id="com.supermap.framework.components:BaseComponent:addTo"><apiName>addTo</apiName><shortdesc>
+          覆写基类里的方法,根据传入的具体类型动态生成管理容器
+          比方说 我们继承自baseComponent写一个类的时候
+          baseComponent.addTo();即可实现添加舞台
+         
+          </shortdesc><prolog/><apiOperationDetail><apiOperationDef><apiAccess value="public"/><apiReturn><apiDesc>IVisualElementContainer 返回一个容器
+         </apiDesc><apiType value="mx.core:IVisualElementContainer"/></apiReturn><apiParam><apiItemName>containId</apiItemName><apiType value="String"/><apiData/><apiDesc>传入参数为container的id
+          </apiDesc></apiParam></apiOperationDef><apiDesc>
+          覆写基类里的方法,根据传入的具体类型动态生成管理容器
+          比方说 我们继承自baseComponent写一个类的时候
+          baseComponent.addTo();即可实现添加舞台
+         
+          </apiDesc></apiOperationDetail></apiOperation><apiOperation id="com.supermap.framework.components:BaseComponent:clearAnimation"><apiName>clearAnimation</apiName><shortdesc>
+          TODO:清除组件动画
+         </shortdesc><prolog/><apiOperationDetail><apiOperationDef><apiAccess value="public"/><apiReturn><apiType value="void"/></apiReturn></apiOperationDef><apiDesc>
+          TODO:清除组件动画
+         </apiDesc></apiOperationDetail></apiOperation><apiOperation id="com.supermap.framework.components:BaseComponent:clearGraphics"><apiName>clearGraphics</apiName><shortdesc>
+          清除本身的绘制(皮肤设置)
+         </shortdesc><prolog/><apiOperationDetail><apiOperationDef><apiAccess value="public"/><apiReturn><apiType value="void"/></apiReturn></apiOperationDef><apiDesc>
+          清除本身的绘制(皮肤设置)
+         </apiDesc></apiOperationDetail></apiOperation><apiOperation id="com.supermap.framework.components:BaseComponent:sm_internal:clearListeners"><apiName>clearListeners</apiName><shortdesc>
+          移除所有监听器
+         </shortdesc><prolog/><apiOperationDetail><apiOperationDef><apiAccess value="sm_internal"/><apiReturn><apiType value="void"/></apiReturn></apiOperationDef><apiDesc>
+          移除所有监听器
+         </apiDesc></apiOperationDetail></apiOperation><apiOperation id="com.supermap.framework.components:BaseComponent:protected:commitProperties"><apiName>commitProperties</apiName><shortdesc/><prolog/><apiOperationDetail><apiOperationDef><apiAccess value="protected"/><apiIsOverride/><apiReturn><apiType value="void"/></apiReturn></apiOperationDef></apiOperationDetail></apiOperation><apiOperation id="com.supermap.framework.components:BaseComponent:destroy"><apiName>destroy</apiName><shortdesc>
+          对象销毁
+         </shortdesc><prolog/><apiOperationDetail><apiOperationDef><apiAccess value="public"/><apiReturn><apiType value="void"/></apiReturn></apiOperationDef><apiDesc>
+          对象销毁
+         </apiDesc></apiOperationDetail></apiOperation><apiOperation id="com.supermap.framework.components:BaseComponent:getStyleObject"><apiName>getStyleObject</apiName><shortdesc>
+          TODO:获取组件本身共享样式对象
+         </shortdesc><prolog/><apiOperationDetail><apiOperationDef><apiAccess value="public"/><apiReturn><apiType value="Object"/></apiReturn><apiParam><apiItemName>value</apiItemName><apiType value="Object"/></apiParam></apiOperationDef><apiDesc>
+          TODO:获取组件本身共享样式对象
+         </apiDesc></apiOperationDetail></apiOperation><apiOperation id="com.supermap.framework.components:BaseComponent:notify"><apiName>notify</apiName><shortdesc>
+          TODO:派发全局共享数据
+          </shortdesc><prolog/><apiOperationDetail><apiOperationDef><apiAccess value="public"/><apiReturn><apiType value="void"/></apiReturn><apiParam><apiItemName>evtClass</apiItemName><apiType value="String"/><apiData/><apiDesc>evtClass 事件类型完全限定名
+          </apiDesc></apiParam><apiParam><apiItemName>evtType</apiItemName><apiType value="String"/><apiData/><apiDesc>evtType  事件类型
+          </apiDesc></apiParam><apiParam><apiItemName>data</apiItemName><apiType value="any"/><apiData>null</apiData><apiDesc>数据对象。
+         </apiDesc></apiParam></apiOperationDef><apiDesc>
+          TODO:派发全局共享数据
+          </apiDesc></apiOperationDetail></apiOperation><apiOperation id="com.supermap.framework.components:BaseComponent:protected:partAdded"><apiName>partAdded</apiName><shortdesc/><prolog/><apiOperationDetail><apiOperationDef><apiAccess value="protected"/><apiIsOverride/><apiReturn><apiType value="void"/></apiReturn><apiParam><apiItemName>partName</apiItemName><apiType value="String"/></apiParam><apiParam><apiItemName>instance</apiItemName><apiType value="Object"/></apiParam></apiOperationDef></apiOperationDetail></apiOperation><apiOperation id="com.supermap.framework.components:BaseComponent:protected:partRemoved"><apiName>partRemoved</apiName><shortdesc/><prolog/><apiOperationDetail><apiOperationDef><apiAccess value="protected"/><apiIsOverride/><apiReturn><apiType value="void"/></apiReturn><apiParam><apiItemName>partName</apiItemName><apiType value="String"/></apiParam><apiParam><apiItemName>instance</apiItemName><apiType value="Object"/></apiParam></apiOperationDef></apiOperationDetail></apiOperation><apiOperation id="com.supermap.framework.components:BaseComponent:protected:removeFromStageHandler"><apiName>removeFromStageHandler</apiName><shortdesc>
+          覆写移除插件本身的监听，并在必要时候释放资源
+         </shortdesc><prolog/><apiOperationDetail><apiOperationDef><apiAccess value="protected"/><apiReturn><apiType value="void"/></apiReturn><apiParam><apiItemName>event</apiItemName><apiType value="flash.events:Event"/></apiParam></apiOperationDef><apiDesc>
+          覆写移除插件本身的监听，并在必要时候释放资源
+         </apiDesc></apiOperationDetail></apiOperation><apiOperation id="com.supermap.framework.components:BaseComponent:setAnimationShader"><apiName>setAnimationShader</apiName><shortdesc>
+          TODO:设置组件Shader动画
+          </shortdesc><prolog/><apiOperationDetail><apiOperationDef><apiAccess value="public"/><apiReturn><apiType value="void"/></apiReturn><apiParam><apiItemName>shader</apiItemName><apiType value="Class"/><apiDesc>        </apiDesc></apiParam></apiOperationDef><apiDesc>
+          TODO:设置组件Shader动画
+          </apiDesc></apiOperationDetail></apiOperation><apiOperation id="com.supermap.framework.components:BaseComponent:setBorderEabled"><apiName>setBorderEabled</apiName><shortdesc>
+          TODO:组件边框样式设置是否可用
+         </shortdesc><prolog/><apiOperationDetail><apiOperationDef><apiAccess value="public"/><apiReturn><apiType value="void"/></apiReturn><apiParam><apiItemName>isBorder</apiItemName><apiType value="Boolean"/><apiData>true</apiData></apiParam></apiOperationDef><apiDesc>
+          TODO:组件边框样式设置是否可用
+         </apiDesc></apiOperationDetail></apiOperation><apiOperation id="com.supermap.framework.components:BaseComponent:setBorderStyle"><apiName>setBorderStyle</apiName><shortdesc>
+          TODO:组件边框样式设置
+         </shortdesc><prolog/><apiOperationDetail><apiOperationDef><apiAccess value="public"/><apiReturn><apiType value="void"/></apiReturn><apiParam><apiItemName>style</apiItemName><apiType value="Object"/></apiParam></apiOperationDef><apiDesc>
+          TODO:组件边框样式设置
+         </apiDesc></apiOperationDetail></apiOperation><apiOperation id="com.supermap.framework.components:BaseComponent:setComponentSkin"><apiName>setComponentSkin</apiName><shortdesc>
+          TODO:设置本身组件外部链接skin
+         </shortdesc><prolog/><apiOperationDetail><apiOperationDef><apiAccess value="public"/><apiReturn><apiType value="void"/></apiReturn><apiParam><apiItemName>skin</apiItemName><apiType value="spark.components.supportClasses:Skin"/></apiParam></apiOperationDef><apiDesc>
+          TODO:设置本身组件外部链接skin
+         </apiDesc></apiOperationDetail></apiOperation><apiOperation id="com.supermap.framework.components:BaseComponent:setStyleObject"><apiName>setStyleObject</apiName><shortdesc>
+          TODO:设置组件本身共享样式对象
+         </shortdesc><prolog/><apiOperationDetail><apiOperationDef><apiAccess value="public"/><apiReturn><apiType value="void"/></apiReturn><apiParam><apiItemName>value</apiItemName><apiType value="Object"/></apiParam></apiOperationDef><apiDesc>
+          TODO:设置组件本身共享样式对象
+         </apiDesc></apiOperationDetail></apiOperation><apiValue id="com.supermap.framework.components:BaseComponent:protected:configData"><apiName>configData</apiName><shortdesc>
+          配置文件信息
+         </shortdesc><prolog/><apiValueDetail><apiValueDef><apiProperty/><apiAccess value="protected"/><apiDynamic/><apiType value="Array"/></apiValueDef><apiDesc>
+          配置文件信息
+         </apiDesc></apiValueDetail></apiValue><apiValue id="com.supermap.framework.components:BaseComponent:sm_internal:listeners"><apiName>listeners</apiName><shortdesc/><prolog/><apiValueDetail><apiValueDef><apiProperty/><apiAccess value="sm_internal"/><apiDynamic/><apiData>unknown</apiData><apiType value="Array"/></apiValueDef></apiValueDetail></apiValue><apiValue id="com.supermap.framework.components:BaseComponent:protected:pluginManager"><apiName>pluginManager</apiName><shortdesc>
+          插件管理器
+         </shortdesc><prolog/><apiValueDetail><apiValueDef><apiProperty/><apiAccess value="protected"/><apiDynamic/><apiType value="com.supermap.framework.managers:PluginManager"/></apiValueDef><apiDesc>
+          插件管理器
+         </apiDesc></apiValueDetail></apiValue><apiValue id="com.supermap.framework.components:BaseComponent:protected:reflectUtil"><apiName>reflectUtil</apiName><shortdesc/><prolog/><apiValueDetail><apiValueDef><apiProperty/><apiAccess value="protected"/><apiDynamic/><apiType value="inject.utils:ReflectUtil"/></apiValueDef></apiValueDetail></apiValue><apiValue id="com.supermap.framework.components:BaseComponent:EventBus:get"><apiName>EventBus</apiName><shortdesc>
+          获取事件总线
+         </shortdesc><prolog/><apiValueDetail><apiValueDef><apiProperty/><apiAccess value="public"/><apiDynamic/><apiValueAccess value="read"/><apiType value="Object"/></apiValueDef><apiDesc>
+          获取事件总线
+         </apiDesc></apiValueDetail></apiValue><apiValue id="com.supermap.framework.components:BaseComponent:borderAlpha:set"><apiName>borderAlpha</apiName><shortdesc>
+          设置默认边框透明度样式
+         </shortdesc><prolog/><apiValueDetail><apiValueDef><apiProperty/><apiAccess value="public"/><apiDynamic/><apiValueAccess value="readwrite"/><apiType value="Number"/></apiValueDef><apiDesc>
+          设置默认边框透明度样式
+         </apiDesc></apiValueDetail></apiValue><apiValue id="com.supermap.framework.components:BaseComponent:borderColor:set"><apiName>borderColor</apiName><shortdesc>
+          设置默认边框颜色样式
+         </shortdesc><prolog/><apiValueDetail><apiValueDef><apiProperty/><apiAccess value="public"/><apiDynamic/><apiValueAccess value="readwrite"/><apiType value="uint"/></apiValueDef><apiDesc>
+          设置默认边框颜色样式
+         </apiDesc></apiValueDetail></apiValue><apiValue id="com.supermap.framework.components:BaseComponent:borderWeight:set"><apiName>borderWeight</apiName><shortdesc>
+          设置默认边框宽度样式
+         </shortdesc><prolog/><apiValueDetail><apiValueDef><apiProperty/><apiAccess value="public"/><apiDynamic/><apiValueAccess value="readwrite"/><apiType value="Number"/></apiValueDef><apiDesc>
+          设置默认边框宽度样式
+         </apiDesc></apiValueDetail></apiValue><apiValue id="com.supermap.framework.components:BaseComponent:componentAnimation:get"><apiName>componentAnimation</apiName><shortdesc>
+          TODO:获取组件动画实例
+         </shortdesc><prolog/><apiValueDetail><apiValueDef><apiProperty/><apiAccess value="public"/><apiDynamic/><apiValueAccess value="readwrite"/><apiType value="Object"/></apiValueDef><apiDesc>
+          TODO:获取组件动画实例
+         </apiDesc></apiValueDetail></apiValue><apiValue id="com.supermap.framework.components:BaseComponent:currentState:get"><apiName>currentState</apiName><shortdesc>
+          获取组件当前状态.</shortdesc><prolog/><apiValueDetail><apiValueDef><apiIsOverride/><apiProperty/><apiAccess value="public"/><apiDynamic/><apiValueAccess value="readwrite"/><apiType value="String"/></apiValueDef><apiDesc>
+          获取组件当前状态.
+          实现IState接口里的状态接口
+         </apiDesc></apiValueDetail></apiValue><apiValue id="com.supermap.framework.components:BaseComponent:metaData:get"><apiName>metaData</apiName><shortdesc>
+          获取该类的元数据注入信息
+          这里主要包含了event与inject标签注入的信息
+          </shortdesc><prolog/><apiValueDetail><apiValueDef><apiProperty/><apiAccess value="public"/><apiDynamic/><apiValueAccess value="read"/><apiType value="Object"/></apiValueDef><apiDesc>
+          获取该类的元数据注入信息
+          这里主要包含了event与inject标签注入的信息
+          </apiDesc></apiValueDetail></apiValue><apiValue id="com.supermap.framework.components:BaseComponent:type:get"><apiName>type</apiName><shortdesc/><prolog/><apiValueDetail><apiValueDef><apiProperty/><apiAccess value="public"/><apiDynamic/><apiValueAccess value="read"/><apiType value="String"/></apiValueDef></apiValueDetail></apiValue></apiClassifier><apiClassifier id="com.supermap.framework.components:SkinnableContainerSkin"><apiName>SkinnableContainerSkin</apiName><shortdesc>基础布局容器对应的皮肤文件.</shortdesc><prolog><asMetadata><DefaultProperty name="mxmlContent"/></asMetadata></prolog><apiClassifierDetail><apiClassifierDef><apiAccess value="public"/><apiStatic/><apiBaseInterface>mx.core:IStateClient2</apiBaseInterface><apiBaseClassifier>spark.components.supportClasses:Skin</apiBaseClassifier></apiClassifierDef><apiDesc>基础布局容器对应的皮肤文件.
+    </apiDesc></apiClassifierDetail><related-links><link href="com.supermap.framework.components.xml#LayoutComponent"><linktext>com.supermap.framework.components.LayoutComponent</linktext></link></related-links><apiConstructor id="com.supermap.framework.components:SkinnableContainerSkin:SkinnableContainerSkin"><apiName>SkinnableContainerSkin</apiName><shortdesc>Constructor.</shortdesc><prolog/><apiConstructorDetail><apiConstructorDef><apiAccess value="public"/></apiConstructorDef><apiDesc>Constructor.</apiDesc></apiConstructorDetail></apiConstructor><apiValue id="com.supermap.framework.components:SkinnableContainerSkin:background"><apiName>background</apiName><shortdesc>Defines the appearance of the SkinnableContainer class's background.</shortdesc><prolog/><apiValueDetail><apiValueDef><apiProperty isBindable="true" name="Bindable"/><apiAccess value="public"/><apiDynamic/><apiType value="spark.primitives:Rect"/></apiValueDef><apiDesc>Defines the appearance of the SkinnableContainer class's background.</apiDesc></apiValueDetail></apiValue><apiValue id="com.supermap.framework.components:SkinnableContainerSkin:bgBorder"><apiName>bgBorder</apiName><shortdesc/><prolog/><apiValueDetail><apiValueDef><apiProperty isBindable="true" name="Bindable"/><apiAccess value="public"/><apiDynamic/><apiType value="mx.graphics:SolidColorStroke"/></apiValueDef><apiDesc></apiDesc></apiValueDetail></apiValue><apiValue id="com.supermap.framework.components:SkinnableContainerSkin:contentGroup"><apiName>contentGroup</apiName><shortdesc conref="spark.components.SkinnableContainer#contentGroup"/><prolog/><apiValueDetail><apiValueDef><apiProperty isBindable="true" name="Bindable"/><apiAccess value="public"/><apiDynamic/><apiType value="spark.components:Group"/></apiValueDef><apiDesc conref="spark.components.SkinnableContainer#contentGroup"></apiDesc></apiValueDetail></apiValue><apiValue id="com.supermap.framework.components:SkinnableContainerSkin:hostComponent"><apiName>hostComponent</apiName><shortdesc conref="spark.skins.spark.ApplicationSkin#hostComponent"> 
+         </shortdesc><prolog/><apiValueDetail><apiValueDef><apiProperty isBindable="true" name="Bindable"/><apiAccess value="public"/><apiDynamic/><apiValueClassifier>com.supermap.framework.components:LayoutComponent</apiValueClassifier></apiValueDef><apiDesc conref="spark.skins.spark.ApplicationSkin#hostComponent"> 
+         </apiDesc></apiValueDetail></apiValue></apiClassifier><apiClassifier id="com.supermap.framework.components:LayoutComponent"><apiName>LayoutComponent</apiName><shortdesc>
+      布局基础组件.</shortdesc><prolog><asMetadata><DefaultProperty name="mxmlContentFactory"/><styles><style format="Color" inherit="yes" name="unfocusedTextSelectionColor" owner="com.supermap.framework.components:LayoutComponent" type="uint">
+	</style><style format="Color" inherit="yes" name="inactiveTextSelectionColor" owner="com.supermap.framework.components:LayoutComponent" type="uint">
+	</style><style format="Color" inherit="yes" name="focusedTextSelectionColor" owner="com.supermap.framework.components:LayoutComponent" type="uint">
+	</style><style enumeration="collapse,preserve" inherit="yes" name="whiteSpaceCollapse" owner="com.supermap.framework.components:LayoutComponent" type="String">
+	</style><style enumeration="auto,rotate0,rotate90,rotate180,rotate270" inherit="yes" name="textRotation" owner="com.supermap.framework.components:LayoutComponent" type="String">
+	</style><style format="Length" inherit="yes" name="textIndent" owner="com.supermap.framework.components:LayoutComponent" type="Number">
+	</style><style inherit="yes" name="tabStops" owner="com.supermap.framework.components:LayoutComponent" type="String">
+	</style><style format="length" inherit="yes" name="paragraphStartIndent" owner="com.supermap.framework.components:LayoutComponent" type="Number">
+	</style><style format="length" inherit="yes" name="paragraphSpaceBefore" owner="com.supermap.framework.components:LayoutComponent" type="Number">
+	</style><style format="length" inherit="yes" name="paragraphSpaceAfter" owner="com.supermap.framework.components:LayoutComponent" type="Number">
+	</style><style format="length" inherit="yes" name="paragraphEndIndent" owner="com.supermap.framework.components:LayoutComponent" type="Number">
+	</style><style enumeration="auto,romanUp,ideographicTopUp,ideographicCenterUp,ideographicTopDown,ideographicCenterDown,ascentDescentUp" inherit="yes" name="leadingModel" owner="com.supermap.framework.components:LayoutComponent" type="String">
+	</style><style inherit="yes" name="firstBaselineOffset" owner="com.supermap.framework.components:LayoutComponent" type="Object">
+	</style><style enumeration="auto,all,any,none" inherit="yes" name="breakOpportunity" owner="com.supermap.framework.components:LayoutComponent" type="String">
+	</style><style enumeration="tb,rl" inherit="yes" name="blockProgression" owner="com.supermap.framework.components:LayoutComponent" type="String">
+	</style><style enumeration="default,capsToSmallCaps,uppercase,lowercase,lowercaseToSmallCaps" inherit="yes" name="typographicCase" owner="com.supermap.framework.components:LayoutComponent" type="String">
+	</style><style inherit="yes" name="trackingRight" owner="com.supermap.framework.components:LayoutComponent" type="Object">
+	</style><style inherit="yes" name="trackingLeft" owner="com.supermap.framework.components:LayoutComponent" type="Object">
+	</style><style enumeration="interWord,distribute" inherit="yes" name="textJustify" owner="com.supermap.framework.components:LayoutComponent" type="String">
+	</style><style enumeration="none,underline" inherit="yes" name="textDecoration" owner="com.supermap.framework.components:LayoutComponent" type="String">
+	</style><style inherit="yes" name="textAlpha" owner="com.supermap.framework.components:LayoutComponent" type="Number">
+	</style><style enumeration="start,end,left,right,center,justify" inherit="yes" name="textAlignLast" owner="com.supermap.framework.components:LayoutComponent" type="String">
+	</style><style enumeration="start,end,left,right,center,justify" inherit="yes" name="textAlign" owner="com.supermap.framework.components:LayoutComponent" type="String">
+	</style><style enumeration="cff,normal" inherit="yes" name="renderingMode" owner="com.supermap.framework.components:LayoutComponent" type="String">
+	</style><style inherit="yes" name="locale" owner="com.supermap.framework.components:LayoutComponent" type="String">
+	</style><style inherit="yes" name="lineThrough" owner="com.supermap.framework.components:LayoutComponent" type="Boolean">
+	</style><style inherit="yes" name="lineHeight" owner="com.supermap.framework.components:LayoutComponent" type="Object">
+	</style><style enumeration="common,minimum,uncommon,exotic" inherit="yes" name="ligatureLevel" owner="com.supermap.framework.components:LayoutComponent" type="String">
+	</style><style enumeration="auto,on,off" inherit="yes" name="kerning" owner="com.supermap.framework.components:LayoutComponent" type="String">
+	</style><style enumeration="auto,prioritizeLeastAdjustment,pushInKinsoku,pushOutOnly" inherit="yes" name="justificationStyle" owner="com.supermap.framework.components:LayoutComponent" type="String">
+	</style><style enumeration="auto,space,eastAsian" inherit="yes" name="justificationRule" owner="com.supermap.framework.components:LayoutComponent" type="String">
+	</style><style enumeration="normal,bold" inherit="yes" name="fontWeight" owner="com.supermap.framework.components:LayoutComponent" type="String">
+	</style><style enumeration="normal,italic" inherit="yes" name="fontStyle" owner="com.supermap.framework.components:LayoutComponent" type="String">
+	</style><style format="Length" inherit="yes" name="fontSize" owner="com.supermap.framework.components:LayoutComponent" type="Number">
+	</style><style enumeration="auto,device,embeddedCFF" inherit="yes" name="fontLookup" owner="com.supermap.framework.components:LayoutComponent" type="String">
+	</style><style inherit="yes" name="fontFamily" owner="com.supermap.framework.components:LayoutComponent" type="String">
+	</style><style enumeration="auto,roman,ascent,descent,ideographicTop,ideographicCenter,ideographicBottom" inherit="yes" name="dominantBaseline" owner="com.supermap.framework.components:LayoutComponent" type="String">
+	</style><style enumeration="ltr,rtl" inherit="yes" name="direction" owner="com.supermap.framework.components:LayoutComponent" type="String">
+	</style><style enumeration="default,proportional,tabular" inherit="yes" name="digitWidth" owner="com.supermap.framework.components:LayoutComponent" type="String">
+	</style><style enumeration="default,lining,oldStyle" inherit="yes" name="digitCase" owner="com.supermap.framework.components:LayoutComponent" type="String">
+	</style><style format="Color" inherit="yes" name="color" owner="com.supermap.framework.components:LayoutComponent" type="uint">
+	</style><style enumeration="horizontalStem,none" inherit="yes" name="cffHinting" owner="com.supermap.framework.components:LayoutComponent" type="String">
+	</style><style inherit="yes" name="baselineShift" owner="com.supermap.framework.components:LayoutComponent" type="Object">
+	</style><style enumeration="useDominantBaseline,roman,ascent,descent,ideographicTop,ideographicCenter,ideographicBottom" inherit="yes" name="alignmentBaseline" owner="com.supermap.framework.components:LayoutComponent" type="String">
+	</style><style format="Color" inherit="yes" name="symbolColor" owner="com.supermap.framework.components:LayoutComponent" theme="spark" type="uint">
+	</style><style format="Color" inherit="yes" name="rollOverColor" owner="com.supermap.framework.components:LayoutComponent" theme="spark" type="uint">
+	</style><style format="Color" inherit="yes" name="focusColor" owner="com.supermap.framework.components:LayoutComponent" theme="spark" type="uint">
+	</style><style format="Color" inherit="yes" name="contentBackgroundColor" owner="com.supermap.framework.components:LayoutComponent" theme="spark" type="uint">
+	</style><style inherit="yes" name="contentBackgroundAlpha" owner="com.supermap.framework.components:LayoutComponent" theme="spark" type="Number">
+	</style><style format="Color" inherit="no" name="backgroundColor" owner="com.supermap.framework.components:LayoutComponent" theme="spark" type="uint">
+	</style><style inherit="no" name="backgroundAlpha" owner="com.supermap.framework.components:LayoutComponent" theme="spark" type="Number">
+	</style><style arrayType="uint" format="Color" inherit="yes" name="alternatingItemColors" owner="com.supermap.framework.components:LayoutComponent" theme="spark" type="Array">
+	</style><style format="Color" inherit="yes" name="accentColor" owner="com.supermap.framework.components:LayoutComponent" theme="spark" type="uint">
+	</style></styles><skinParts><SkinPart name="background" owner="com.supermap.framework.components:LayoutComponent" required="false" var_type="spark.primitives:Rect">
+<description>
+         
+         </description>
+<default>
+         </default>
+	</SkinPart><SkinPart name="contentGroup" owner="com.supermap.framework.components:LayoutComponent" required="false" var_type="spark.components:Group">
+<description>
+         
+         </description>
+<default>
+         </default>
+	</SkinPart></skinParts></asMetadata></prolog><apiClassifierDetail><apiClassifierDef><apiAccess value="public"/><apiStatic/><apiBaseInterface>mx.core:IDeferredContentOwner</apiBaseInterface><apiBaseInterface>mx.core:IVisualElementContainer</apiBaseInterface><apiBaseClassifier>com.supermap.framework.components:BaseComponent</apiBaseClassifier></apiClassifierDef><apiDesc>
+      布局基础组件.
+      该组件主要基于BaseComponent基础组件增加了布局管理的功能,布局这方面使用LayoutManager进行管理.
+      默认使用内置的布局管理器.
+      </apiDesc></apiClassifierDetail><related-links><link href="" invalidHref="com.supermap.framework.core.ILayout.xml"><linktext>com.supermap.framework.core.ILayout</linktext></link></related-links><adobeApiEvent id="com.supermap.framework.components:LayoutComponent_com.supermap.framework.events.LayoutEvent_layoutComplete"><apiName>layoutComplete</apiName><shortdesc/><prolog/><adobeApiEventDetail><adobeApiEventDef><adobeApiEventClassifier>com.supermap.framework.events.LayoutEvent</adobeApiEventClassifier><apiGeneratedEvent/></adobeApiEventDef><apiDesc></apiDesc></adobeApiEventDetail></adobeApiEvent><adobeApiEvent id="com.supermap.framework.components:LayoutComponent_com.supermap.framework.events.LayoutEvent_layoutChanged"><apiName>layoutChanged</apiName><shortdesc/><prolog/><adobeApiEventDetail><adobeApiEventDef><adobeApiEventClassifier>com.supermap.framework.events.LayoutEvent</adobeApiEventClassifier><apiGeneratedEvent/></adobeApiEventDef><apiDesc></apiDesc></adobeApiEventDetail></adobeApiEvent><adobeApiEvent id="com.supermap.framework.components:LayoutComponent_spark.events.ElementExistenceEvent_elementRemove"><apiName>elementRemove</apiName><shortdesc/><prolog/><adobeApiEventDetail><adobeApiEventDef><adobeApiEventClassifier>spark.events.ElementExistenceEvent</adobeApiEventClassifier><apiGeneratedEvent/></adobeApiEventDef><apiDesc></apiDesc></adobeApiEventDetail></adobeApiEvent><adobeApiEvent id="com.supermap.framework.components:LayoutComponent_spark.events.ElementExistenceEvent_elementAdd"><apiName>elementAdd</apiName><shortdesc/><prolog/><adobeApiEventDetail><adobeApiEventDef><adobeApiEventClassifier>spark.events.ElementExistenceEvent</adobeApiEventClassifier><apiGeneratedEvent/></adobeApiEventDef><apiDesc></apiDesc></adobeApiEventDetail></adobeApiEvent><adobeApiEvent id="com.supermap.framework.components:LayoutComponent_mx.events.FlexEvent_contentCreationComplete"><apiName>contentCreationComplete</apiName><shortdesc/><prolog/><adobeApiEventDetail><adobeApiEventDef><adobeApiEventClassifier>mx.events.FlexEvent</adobeApiEventClassifier><apiGeneratedEvent/></adobeApiEventDef><apiDesc></apiDesc></adobeApiEventDetail></adobeApiEvent><apiConstructor id="com.supermap.framework.components:LayoutComponent:LayoutComponent"><apiName>LayoutComponent</apiName><shortdesc>
+          构造函数
+         </shortdesc><prolog/><apiConstructorDetail><apiConstructorDef><apiAccess value="public"/></apiConstructorDef><apiDesc>
+          构造函数
+         </apiDesc></apiConstructorDetail></apiConstructor><apiOperation id="com.supermap.framework.components:LayoutComponent:addElementAt"><apiName>addElementAt</apiName><shortdesc>
+         
+         </shortdesc><prolog/><apiOperationDetail><apiOperationDef><apiAccess value="public"/><apiReturn><apiDesc>
+         </apiDesc><apiType value="mx.core:IVisualElement"/></apiReturn><apiParam><apiItemName>element</apiItemName><apiType value="mx.core:IVisualElement"/><apiDesc>        </apiDesc></apiParam><apiParam><apiItemName>index</apiItemName><apiType value="int"/><apiDesc>        </apiDesc></apiParam></apiOperationDef><apiDesc>
+         
+         </apiDesc></apiOperationDetail></apiOperation><apiOperation id="com.supermap.framework.components:LayoutComponent:addElement"><apiName>addElement</apiName><shortdesc>
+         
+         </shortdesc><prolog/><apiOperationDetail><apiOperationDef><apiAccess value="public"/><apiReturn><apiDesc>
+         </apiDesc><apiType value="mx.core:IVisualElement"/></apiReturn><apiParam><apiItemName>element</apiItemName><apiType value="mx.core:IVisualElement"/><apiDesc>        </apiDesc></apiParam></apiOperationDef><apiDesc>
+         
+         </apiDesc></apiOperationDetail></apiOperation><apiOperation id="com.supermap.framework.components:LayoutComponent:addPlugin"><apiName>addPlugin</apiName><shortdesc>
+          添加插件
+          主要用在对移除舞台但是仍然可以取到对象引用的插件
+         
+         </shortdesc><prolog/><apiOperationDetail><apiOperationDef><apiAccess value="public"/><apiReturn><apiType value="void"/></apiReturn><apiParam><apiItemName>plugin</apiItemName><apiType value="any"/></apiParam></apiOperationDef><apiDesc>
+          添加插件
+          主要用在对移除舞台但是仍然可以取到对象引用的插件
+         
+         </apiDesc></apiOperationDetail></apiOperation><apiOperation id="com.supermap.framework.components:LayoutComponent:protected:commitProperties"><apiName>commitProperties</apiName><shortdesc/><prolog/><apiOperationDetail><apiOperationDef><apiAccess value="protected"/><apiIsOverride/><apiReturn><apiType value="void"/></apiReturn></apiOperationDef></apiOperationDetail></apiOperation><apiOperation id="com.supermap.framework.components:LayoutComponent:protected:createChildren"><apiName>createChildren</apiName><shortdesc/><prolog/><apiOperationDetail><apiOperationDef><apiAccess value="protected"/><apiIsOverride/><apiReturn><apiType value="void"/></apiReturn></apiOperationDef></apiOperationDetail></apiOperation><apiOperation id="com.supermap.framework.components:LayoutComponent:createDeferredContent"><apiName>createDeferredContent</apiName><shortdesc>
+         
+         </shortdesc><prolog/><apiOperationDetail><apiOperationDef><apiAccess value="public"/><apiReturn><apiType value="void"/></apiReturn></apiOperationDef><apiDesc>
+         
+         </apiDesc></apiOperationDetail></apiOperation><apiOperation id="com.supermap.framework.components:LayoutComponent:createPlugin"><apiName>createPlugin</apiName><shortdesc>
+          根据容器动态生成插件
+         </shortdesc><prolog/><apiOperationDetail><apiOperationDef><apiAccess value="public"/><apiReturn><apiOperationClassifier>com.supermap.framework.core:IPlugin</apiOperationClassifier></apiReturn><apiParam><apiItemName>value</apiItemName><apiType value="String"/><apiData/></apiParam></apiOperationDef><apiDesc>
+          根据容器动态生成插件
+         </apiDesc></apiOperationDetail></apiOperation><apiOperation id="com.supermap.framework.components:LayoutComponent:getElementAt"><apiName>getElementAt</apiName><shortdesc>
+         
+         </shortdesc><prolog/><apiOperationDetail><apiOperationDef><apiAccess value="public"/><apiReturn><apiDesc>
+         </apiDesc><apiType value="mx.core:IVisualElement"/></apiReturn><apiParam><apiItemName>index</apiItemName><apiType value="int"/><apiDesc>        </apiDesc></apiParam></apiOperationDef><apiDesc>
+         
+         </apiDesc></apiOperationDetail></apiOperation><apiOperation id="com.supermap.framework.components:LayoutComponent:getElementIndex"><apiName>getElementIndex</apiName><shortdesc>
+         
+         </shortdesc><prolog/><apiOperationDetail><apiOperationDef><apiAccess value="public"/><apiReturn><apiDesc>
+         </apiDesc><apiType value="int"/></apiReturn><apiParam><apiItemName>element</apiItemName><apiType value="mx.core:IVisualElement"/><apiDesc>        </apiDesc></apiParam></apiOperationDef><apiDesc>
+         
+         </apiDesc></apiOperationDetail></apiOperation><apiOperation id="com.supermap.framework.components:LayoutComponent:getLayout"><apiName>getLayout</apiName><shortdesc>
+         
+         </shortdesc><prolog/><apiOperationDetail><apiOperationDef><apiAccess value="public"/><apiReturn><apiDesc>
+         </apiDesc><apiType value="String"/></apiReturn></apiOperationDef><apiDesc>
+         
+         </apiDesc></apiOperationDetail></apiOperation><apiOperation id="com.supermap.framework.components:LayoutComponent:getPluginById"><apiName>getPluginById</apiName><shortdesc>
+          根据插件传入ID获取对应的插件实例
+          </shortdesc><prolog/><apiOperationDetail><apiOperationDef><apiAccess value="public"/><apiReturn><apiType value="Object"/></apiReturn><apiParam><apiItemName>id</apiItemName><apiType value="String"/><apiDesc>id
+         </apiDesc></apiParam></apiOperationDef><apiDesc>
+          根据插件传入ID获取对应的插件实例
+          </apiDesc></apiOperationDetail></apiOperation><apiOperation id="com.supermap.framework.components:LayoutComponent:getPluginClassName"><apiName>getPluginClassName</apiName><shortdesc>
+          获取插件对象的完全限定类名
+         </shortdesc><prolog/><apiOperationDetail><apiOperationDef><apiAccess value="public"/><apiReturn><apiType value="String"/></apiReturn></apiOperationDef><apiDesc>
+          获取插件对象的完全限定类名
+         </apiDesc></apiOperationDetail></apiOperation><apiOperation id="com.supermap.framework.components:LayoutComponent:getPluginIndex"><apiName>getPluginIndex</apiName><shortdesc>
+          根据插件传入对象来获取索引
+          暂不开放
+          </shortdesc><prolog/><apiOperationDetail><apiOperationDef><apiAccess value="public"/><apiReturn><apiType value="int"/></apiReturn><apiParam><apiItemName>plugin</apiItemName><apiType value="any"/><apiDesc>        </apiDesc></apiParam></apiOperationDef><apiDesc>
+          根据插件传入对象来获取索引
+          暂不开放
+          </apiDesc></apiOperationDetail></apiOperation><apiOperation id="com.supermap.framework.components:LayoutComponent:getPlugin"><apiName>getPlugin</apiName><shortdesc>
+         
+         </shortdesc><prolog/><apiOperationDetail><apiOperationDef><apiAccess value="public"/><apiReturn><apiDesc>
+         </apiDesc><apiType value="Object"/></apiReturn><apiParam><apiItemName>plugin</apiItemName><apiType value="any"/><apiDesc>        </apiDesc></apiParam></apiOperationDef><apiDesc>
+         
+         </apiDesc></apiOperationDetail></apiOperation><apiOperation id="com.supermap.framework.components:LayoutComponent:sm_internal:insertToDictionary"><apiName>insertToDictionary</apiName><shortdesc>
+         
+         </shortdesc><prolog/><apiOperationDetail><apiOperationDef><apiAccess value="sm_internal"/><apiReturn><apiType value="void"/></apiReturn><apiParam><apiItemName>container</apiItemName><apiType value="any"/><apiDesc>        </apiDesc></apiParam><apiParam><apiItemName>dictionary</apiItemName><apiType value="flash.utils:Dictionary"/><apiDesc>        </apiDesc></apiParam></apiOperationDef><apiDesc>
+         
+         </apiDesc></apiOperationDetail></apiOperation><apiOperation id="com.supermap.framework.components:LayoutComponent:protected:partAdded"><apiName>partAdded</apiName><shortdesc/><prolog/><apiOperationDetail><apiOperationDef><apiAccess value="protected"/><apiIsOverride/><apiReturn><apiType value="void"/></apiReturn><apiParam><apiItemName>partName</apiItemName><apiType value="String"/></apiParam><apiParam><apiItemName>instance</apiItemName><apiType value="Object"/></apiParam></apiOperationDef></apiOperationDetail></apiOperation><apiOperation id="com.supermap.framework.components:LayoutComponent:protected:partRemoved"><apiName>partRemoved</apiName><shortdesc/><prolog/><apiOperationDetail><apiOperationDef><apiAccess value="protected"/><apiIsOverride/><apiReturn><apiType value="void"/></apiReturn><apiParam><apiItemName>partName</apiItemName><apiType value="String"/></apiParam><apiParam><apiItemName>instance</apiItemName><apiType value="Object"/></apiParam></apiOperationDef></apiOperationDetail></apiOperation><apiOperation id="com.supermap.framework.components:LayoutComponent:removeAllElements"><apiName>removeAllElements</apiName><shortdesc>
+         
+         </shortdesc><prolog/><apiOperationDetail><apiOperationDef><apiAccess value="public"/><apiReturn><apiType value="void"/></apiReturn></apiOperationDef><apiDesc>
+         
+         </apiDesc></apiOperationDetail></apiOperation><apiOperation id="com.supermap.framework.components:LayoutComponent:removeElementAt"><apiName>removeElementAt</apiName><shortdesc>
+         
+         </shortdesc><prolog/><apiOperationDetail><apiOperationDef><apiAccess value="public"/><apiReturn><apiDesc>
+         </apiDesc><apiType value="mx.core:IVisualElement"/></apiReturn><apiParam><apiItemName>index</apiItemName><apiType value="int"/><apiDesc>        </apiDesc></apiParam></apiOperationDef><apiDesc>
+         
+         </apiDesc></apiOperationDetail></apiOperation><apiOperation id="com.supermap.framework.components:LayoutComponent:removeElement"><apiName>removeElement</apiName><shortdesc>
+         
+         </shortdesc><prolog/><apiOperationDetail><apiOperationDef><apiAccess value="public"/><apiReturn><apiDesc>
+         </apiDesc><apiType value="mx.core:IVisualElement"/></apiReturn><apiParam><apiItemName>element</apiItemName><apiType value="mx.core:IVisualElement"/><apiDesc>        </apiDesc></apiParam></apiOperationDef><apiDesc>
+         
+         </apiDesc></apiOperationDetail></apiOperation><apiOperation id="com.supermap.framework.components:LayoutComponent:protected:removeFromStageHandler"><apiName>removeFromStageHandler</apiName><shortdesc>
+          资源释放
+          建议在覆写该方法里清理自己外部使用的引用,节省内部资源.</shortdesc><prolog/><apiOperationDetail><apiOperationDef><apiAccess value="protected"/><apiIsOverride/><apiReturn><apiType value="void"/></apiReturn><apiParam><apiItemName>event</apiItemName><apiType value="flash.events:Event"/></apiParam></apiOperationDef><apiDesc>
+          资源释放
+          建议在覆写该方法里清理自己外部使用的引用,节省内部资源.
+         </apiDesc></apiOperationDetail></apiOperation><apiOperation id="com.supermap.framework.components:LayoutComponent:removePluginById"><apiName>removePluginById</apiName><shortdesc>
+          根据插件传入对象ID来移除该插件
+          </shortdesc><prolog/><apiOperationDetail><apiOperationDef><apiAccess value="public"/><apiReturn><apiType value="Object"/></apiReturn><apiParam><apiItemName>id</apiItemName><apiType value="String"/><apiDesc>id
+          </apiDesc></apiParam><apiParam><apiItemName>isDestroy</apiItemName><apiType value="Boolean"/><apiData>false</apiData><apiDesc>isDestroy 是否销毁 默认为false
+         </apiDesc></apiParam></apiOperationDef><apiDesc>
+          根据插件传入对象ID来移除该插件
+          </apiDesc></apiOperationDetail></apiOperation><apiOperation id="com.supermap.framework.components:LayoutComponent:removePlugin"><apiName>removePlugin</apiName><shortdesc>
+          根据插件传入对象来移除该插件
+          </shortdesc><prolog/><apiOperationDetail><apiOperationDef><apiAccess value="public"/><apiReturn><apiType value="Object"/></apiReturn><apiParam><apiItemName>plugin</apiItemName><apiType value="any"/><apiDesc>         </apiDesc></apiParam><apiParam><apiItemName>isDestroy</apiItemName><apiType value="Boolean"/><apiData>false</apiData><apiDesc>isDestroy 是否销毁 默认为false
+         </apiDesc></apiParam></apiOperationDef><apiDesc>
+          根据插件传入对象来移除该插件
+          </apiDesc></apiOperationDetail></apiOperation><apiOperation id="com.supermap.framework.components:LayoutComponent:setDragComponent"><apiName>setDragComponent</apiName><shortdesc>
+          TODO:设置容器里单个容器可拖拽
+          </shortdesc><prolog/><apiOperationDetail><apiOperationDef><apiAccess value="public"/><apiReturn><apiType value="void"/></apiReturn><apiParam><apiItemName>component</apiItemName><apiType value="Object"/><apiDesc>传入一个对象
+         
+         </apiDesc></apiParam></apiOperationDef><apiDesc>
+          TODO:设置容器里单个容器可拖拽
+          </apiDesc></apiOperationDetail></apiOperation><apiOperation id="com.supermap.framework.components:LayoutComponent:setElementIndex"><apiName>setElementIndex</apiName><shortdesc>
+         
+         </shortdesc><prolog/><apiOperationDetail><apiOperationDef><apiAccess value="public"/><apiReturn><apiType value="void"/></apiReturn><apiParam><apiItemName>element</apiItemName><apiType value="mx.core:IVisualElement"/><apiDesc>        </apiDesc></apiParam><apiParam><apiItemName>index</apiItemName><apiType value="int"/><apiDesc>        </apiDesc></apiParam></apiOperationDef><apiDesc>
+         
+         </apiDesc></apiOperationDetail></apiOperation><apiOperation id="com.supermap.framework.components:LayoutComponent:sm_internal:setLayoutById"><apiName>setLayoutById</apiName><shortdesc/><prolog/><apiOperationDetail><apiOperationDef><apiAccess value="sm_internal"/><apiReturn><apiType value="void"/></apiReturn><apiParam><apiItemName>id</apiItemName><apiType value="String"/></apiParam></apiOperationDef></apiOperationDetail></apiOperation><apiOperation id="com.supermap.framework.components:LayoutComponent:setLayout"><apiName>setLayout</apiName><shortdesc>
+          设置布局管理方式,调用布局管理器里相应的方法.</shortdesc><prolog/><apiOperationDetail><apiOperationDef><apiAccess value="public"/><apiReturn><apiType value="String"/></apiReturn><apiParam><apiItemName>baseLayout</apiItemName><apiType value="String"/></apiParam></apiOperationDef><apiDesc>
+          设置布局管理方式,调用布局管理器里相应的方法.
+         </apiDesc></apiOperationDetail></apiOperation><apiOperation id="com.supermap.framework.components:LayoutComponent:swapElementsAt"><apiName>swapElementsAt</apiName><shortdesc>
+         
+         </shortdesc><prolog/><apiOperationDetail><apiOperationDef><apiAccess value="public"/><apiReturn><apiType value="void"/></apiReturn><apiParam><apiItemName>index1</apiItemName><apiType value="int"/><apiDesc>        </apiDesc></apiParam><apiParam><apiItemName>index2</apiItemName><apiType value="int"/><apiDesc>        </apiDesc></apiParam></apiOperationDef><apiDesc>
+         
+         </apiDesc></apiOperationDetail></apiOperation><apiOperation id="com.supermap.framework.components:LayoutComponent:swapElements"><apiName>swapElements</apiName><shortdesc>
+         
+         </shortdesc><prolog/><apiOperationDetail><apiOperationDef><apiAccess value="public"/><apiReturn><apiType value="void"/></apiReturn><apiParam><apiItemName>element1</apiItemName><apiType value="mx.core:IVisualElement"/><apiDesc>        </apiDesc></apiParam><apiParam><apiItemName>element2</apiItemName><apiType value="mx.core:IVisualElement"/><apiDesc>        </apiDesc></apiParam></apiOperationDef><apiDesc>
+         
+         </apiDesc></apiOperationDetail></apiOperation><apiValue id="com.supermap.framework.components:LayoutComponent:sm_internal:_displayListArray"><apiName>_displayListArray</apiName><shortdesc/><prolog/><apiValueDetail><apiValueDef><apiProperty/><apiAccess value="sm_internal"/><apiDynamic/><apiType value="mx.collections:ArrayCollection"/></apiValueDef></apiValueDetail></apiValue><apiValue id="com.supermap.framework.components:LayoutComponent:sm_internal:_displayListElements"><apiName>_displayListElements</apiName><shortdesc/><prolog/><apiValueDetail><apiValueDef><apiProperty/><apiAccess value="sm_internal"/><apiDynamic/><apiType value="flash.utils:Dictionary"/></apiValueDef></apiValueDetail></apiValue><apiValue id="com.supermap.framework.components:LayoutComponent:autoLayout:get"><apiName>autoLayout</apiName><shortdesc>
+         
+         </shortdesc><prolog/><apiValueDetail><apiValueDef><apiProperty/><apiAccess value="public"/><apiDynamic/><apiValueAccess value="readwrite"/><apiType value="Boolean"/></apiValueDef><apiDesc>
+         
+         </apiDesc></apiValueDetail></apiValue><apiValue id="com.supermap.framework.components:LayoutComponent:borderColor:set"><apiName>borderColor</apiName><shortdesc>
+          设置默认边框颜色样式
+         </shortdesc><prolog/><apiValueDetail><apiValueDef><apiIsOverride/><apiProperty/><apiAccess value="public"/><apiDynamic/><apiValueAccess value="readwrite"/><apiType value="uint"/></apiValueDef><apiDesc>
+          设置默认边框颜色样式
+         </apiDesc></apiValueDetail></apiValue><apiValue id="com.supermap.framework.components:LayoutComponent:creationPolicy:get"><apiName>creationPolicy</apiName><shortdesc>
+         
+         </shortdesc><prolog/><apiValueDetail><apiValueDef><apiProperty/><apiAccess value="public"/><apiDynamic/><apiValueAccess value="readwrite"/><apiType value="String"/></apiValueDef><apiDesc>
+         
+         </apiDesc></apiValueDetail></apiValue><apiValue id="com.supermap.framework.components:LayoutComponent:deferredContentCreated:get"><apiName>deferredContentCreated</apiName><shortdesc>
+         
+         </shortdesc><prolog/><apiValueDetail><apiValueDef><apiProperty/><apiAccess value="public"/><apiDynamic/><apiValueAccess value="read"/><apiType value="Boolean"/></apiValueDef><apiDesc>
+         
+         </apiDesc></apiValueDetail></apiValue><apiValue id="com.supermap.framework.components:LayoutComponent:sm_internal:displayListElements:get"><apiName>displayListElements</apiName><shortdesc/><prolog/><apiValueDetail><apiValueDef><apiProperty/><apiAccess value="sm_internal"/><apiDynamic/><apiValueAccess value="readwrite"/><apiType value="flash.utils:Dictionary"/></apiValueDef></apiValueDetail></apiValue><apiValue id="com.supermap.framework.components:LayoutComponent:layout:get"><apiName>layout</apiName><shortdesc>
+         
+         </shortdesc><prolog/><apiValueDetail><apiValueDef><apiProperty/><apiAccess value="public"/><apiDynamic/><apiValueAccess value="readwrite"/><apiType value="spark.layouts.supportClasses:LayoutBase"/></apiValueDef><apiDesc>
+         
+         </apiDesc></apiValueDetail></apiValue><apiValue id="com.supermap.framework.components:LayoutComponent:numElements:get"><apiName>numElements</apiName><shortdesc>
+         
+         </shortdesc><prolog/><apiValueDetail><apiValueDef><apiProperty/><apiAccess value="public"/><apiDynamic/><apiValueAccess value="read"/><apiType value="int"/></apiValueDef><apiDesc>
+         
+         </apiDesc></apiValueDetail></apiValue><apiValue id="com.supermap.framework.components:LayoutComponent:moduleFactory:set"><apiName>moduleFactory</apiName><shortdesc/><prolog/><apiValueDetail><apiValueDef><apiIsOverride/><apiProperty/><apiAccess value="public"/><apiDynamic/><apiValueAccess value="write"/><apiType value="mx.core:IFlexModuleFactory"/></apiValueDef></apiValueDetail></apiValue><apiValue id="com.supermap.framework.components:LayoutComponent:mxmlContentFactory:set"><apiName>mxmlContentFactory</apiName><shortdesc>
+         
+         </shortdesc><prolog/><apiValueDetail><apiValueDef><apiProperty/><apiAccess value="public"/><apiDynamic/><apiValueAccess value="write"/><apiType value="mx.core:IDeferredInstance"/></apiValueDef><apiDesc>
+         
+         </apiDesc></apiValueDetail></apiValue><apiValue id="com.supermap.framework.components:LayoutComponent:mxmlContent:set"><apiName>mxmlContent</apiName><shortdesc>
+         
+         </shortdesc><prolog/><apiValueDetail><apiValueDef><apiProperty/><apiAccess value="public"/><apiDynamic/><apiValueAccess value="write"/><apiType value="Array"/></apiValueDef><apiDesc>
+         
+         </apiDesc></apiValueDetail></apiValue></apiClassifier></apiPackage>

@@ -1,0 +1,98 @@
+<apiPackage id="com.supermap.framework.core"><apiName>com.supermap.framework.core</apiName><apiDetail/><apiClassifier id="com.supermap.framework.core:IGear"><apiName>IGear</apiName><shortdesc>
+      基础模块接口.</shortdesc><prolog><asMetadata/></prolog><apiClassifierDetail><apiClassifierDef><apiInterface/><apiAccess value="public"/><apiStatic/><apiBaseInterface>com.supermap.framework.core:IPlugin</apiBaseInterface><apiBaseClassifier/></apiClassifierDef><apiDesc>
+      基础模块接口.
+      规范了基础模块要实现的几个基础功能方面.
+      </apiDesc></apiClassifierDetail><related-links><link href="com.supermap.framework.components.xml#BaseGear"><linktext>com.supermap.framework.components.BaseGear</linktext></link></related-links><apiOperation id="com.supermap.framework.core:IGear:com.supermap.framework.core:IGear:getIcon"><apiName>getIcon</apiName><shortdesc/><prolog/><apiOperationDetail><apiOperationDef><apiAccess value="public"/><apiReturn><apiType value="String"/></apiReturn></apiOperationDef></apiOperationDetail></apiOperation><apiOperation id="com.supermap.framework.core:IGear:com.supermap.framework.core:IGear:getId"><apiName>getId</apiName><shortdesc/><prolog/><apiOperationDetail><apiOperationDef><apiAccess value="public"/><apiReturn><apiType value="String"/></apiReturn></apiOperationDef></apiOperationDetail></apiOperation><apiOperation id="com.supermap.framework.core:IGear:com.supermap.framework.core:IGear:getTitle"><apiName>getTitle</apiName><shortdesc/><prolog/><apiOperationDetail><apiOperationDef><apiAccess value="public"/><apiReturn><apiType value="String"/></apiReturn></apiOperationDef></apiOperationDetail></apiOperation><apiOperation id="com.supermap.framework.core:IGear:com.supermap.framework.core:IGear:setConfigData"><apiName>setConfigData</apiName><shortdesc>
+          配置文件
+         </shortdesc><prolog/><apiOperationDetail><apiOperationDef><apiAccess value="public"/><apiReturn><apiType value="void"/></apiReturn><apiParam><apiItemName>value</apiItemName><apiType value="Object"/><apiDesc>        </apiDesc></apiParam></apiOperationDef><apiDesc>
+          配置文件
+         </apiDesc></apiOperationDetail></apiOperation><apiOperation id="com.supermap.framework.core:IGear:com.supermap.framework.core:IGear:setIcon"><apiName>setIcon</apiName><shortdesc>
+          Icon
+         </shortdesc><prolog/><apiOperationDetail><apiOperationDef><apiAccess value="public"/><apiReturn><apiType value="void"/></apiReturn><apiParam><apiItemName>value</apiItemName><apiType value="String"/></apiParam></apiOperationDef><apiDesc>
+          Icon
+         </apiDesc></apiOperationDetail></apiOperation><apiOperation id="com.supermap.framework.core:IGear:com.supermap.framework.core:IGear:setId"><apiName>setId</apiName><shortdesc>
+          ID
+         </shortdesc><prolog/><apiOperationDetail><apiOperationDef><apiAccess value="public"/><apiReturn><apiType value="void"/></apiReturn><apiParam><apiItemName>value</apiItemName><apiType value="String"/></apiParam></apiOperationDef><apiDesc>
+          ID
+         </apiDesc></apiOperationDetail></apiOperation><apiOperation id="com.supermap.framework.core:IGear:com.supermap.framework.core:IGear:setPreload"><apiName>setPreload</apiName><shortdesc>
+          预加载
+          </shortdesc><prolog/><apiOperationDetail><apiOperationDef><apiAccess value="public"/><apiReturn><apiType value="void"/></apiReturn><apiParam><apiItemName>value</apiItemName><apiType value="String"/><apiDesc>        </apiDesc></apiParam></apiOperationDef><apiDesc>
+          预加载
+          </apiDesc></apiOperationDetail></apiOperation><apiOperation id="com.supermap.framework.core:IGear:com.supermap.framework.core:IGear:setTitle"><apiName>setTitle</apiName><shortdesc>
+          Title
+         </shortdesc><prolog/><apiOperationDetail><apiOperationDef><apiAccess value="public"/><apiReturn><apiType value="void"/></apiReturn><apiParam><apiItemName>value</apiItemName><apiType value="String"/></apiParam></apiOperationDef><apiDesc>
+          Title
+         </apiDesc></apiOperationDetail></apiOperation></apiClassifier><apiClassifier id="com.supermap.framework.core:BaseLayout"><apiName>BaseLayout</apiName><shortdesc>
+      布局设置参数类
+      该类不可实例化
+      </shortdesc><prolog><asMetadata/></prolog><apiClassifierDetail><apiClassifierDef><apiAccess value="public"/><apiStatic/><apiBaseClassifier>Object</apiBaseClassifier></apiClassifierDef><apiDesc>
+      布局设置参数类
+      该类不可实例化
+      </apiDesc></apiClassifierDetail><related-links><link href="" invalidHref="com.supermap.framework.core.ILayout.xml"><linktext>com.supermap.framework.core.ILayout</linktext></link></related-links><apiValue id="com.supermap.framework.core:BaseLayout:ABSOLUTE"><apiName>ABSOLUTE</apiName><shortdesc>
+          绝对布局
+         </shortdesc><prolog/><apiValueDetail><apiValueDef><apiAccess value="public"/><apiStatic/><apiData>absolute</apiData><apiType value="String"/></apiValueDef><apiDesc>
+          绝对布局
+         </apiDesc></apiValueDetail></apiValue><apiValue id="com.supermap.framework.core:BaseLayout:HORIZONTAL"><apiName>HORIZONTAL</apiName><shortdesc>
+          水平布局
+         </shortdesc><prolog/><apiValueDetail><apiValueDef><apiAccess value="public"/><apiStatic/><apiData>horizontal</apiData><apiType value="String"/></apiValueDef><apiDesc>
+          水平布局
+         </apiDesc></apiValueDetail></apiValue><apiValue id="com.supermap.framework.core:BaseLayout:TILE"><apiName>TILE</apiName><shortdesc>
+          分块布局
+         </shortdesc><prolog/><apiValueDetail><apiValueDef><apiAccess value="public"/><apiStatic/><apiData>tile</apiData><apiType value="String"/></apiValueDef><apiDesc>
+          分块布局
+         </apiDesc></apiValueDetail></apiValue><apiValue id="com.supermap.framework.core:BaseLayout:VERTICAL"><apiName>VERTICAL</apiName><shortdesc>
+          垂直布局
+         </shortdesc><prolog/><apiValueDetail><apiValueDef><apiAccess value="public"/><apiStatic/><apiData>vertical</apiData><apiType value="String"/></apiValueDef><apiDesc>
+          垂直布局
+         </apiDesc></apiValueDetail></apiValue></apiClassifier><apiClassifier id="com.supermap.framework.core:GearStates"><apiName>GearStates</apiName><shortdesc>
+      基础模块状态类.这里默认有三种状态.</shortdesc><prolog><asMetadata/></prolog><apiClassifierDetail><apiClassifierDef><apiAccess value="public"/><apiStatic/><apiFinal/><apiBaseClassifier>Object</apiBaseClassifier></apiClassifierDef><apiDesc>
+      基础模块状态类.这里默认有三种状态.
+      该类不需要实例化.
+     </apiDesc></apiClassifierDetail><apiValue id="com.supermap.framework.core:GearStates:GEAR_CLOSED"><apiName>GEAR_CLOSED</apiName><shortdesc>
+          gear模块关闭
+         </shortdesc><prolog/><apiValueDetail><apiValueDef><apiAccess value="public"/><apiStatic/><apiData>closed</apiData><apiType value="String"/></apiValueDef><apiDesc>
+          gear模块关闭
+         </apiDesc></apiValueDetail></apiValue><apiValue id="com.supermap.framework.core:GearStates:GEAR_MINIMIZED"><apiName>GEAR_MINIMIZED</apiName><shortdesc>
+          gear模块最小化
+         </shortdesc><prolog/><apiValueDetail><apiValueDef><apiAccess value="public"/><apiStatic/><apiData>minimized</apiData><apiType value="String"/></apiValueDef><apiDesc>
+          gear模块最小化
+         </apiDesc></apiValueDetail></apiValue><apiValue id="com.supermap.framework.core:GearStates:GEAR_OPENED"><apiName>GEAR_OPENED</apiName><shortdesc>
+          gear模块打开
+         </shortdesc><prolog/><apiValueDetail><apiValueDef><apiAccess value="public"/><apiStatic/><apiData>open</apiData><apiType value="String"/></apiValueDef><apiDesc>
+          gear模块打开
+         </apiDesc></apiValueDetail></apiValue></apiClassifier><apiClassifier id="com.supermap.framework.core:IPlugin"><apiName>IPlugin</apiName><shortdesc>
+      插件寄存在baseContianer里 是对baseComponent(插件实例)的操作
+      最终都是以类似操作Element的方式来进行装卸的 因为这里暂不开放PluginEvent事件
+      相关功能可以通过SDK内部的ElementADD等事件来进行监听即可.</shortdesc><prolog><asMetadata/></prolog><apiClassifierDetail><apiClassifierDef><apiInterface/><apiAccess value="public"/><apiStatic/><apiBaseClassifier/></apiClassifierDef><apiDesc>
+      插件寄存在baseContianer里 是对baseComponent(插件实例)的操作
+      最终都是以类似操作Element的方式来进行装卸的 因为这里暂不开放PluginEvent事件
+      相关功能可以通过SDK内部的ElementADD等事件来进行监听即可.
+      该接口更多的表征这个名称的含义 不带有太多的具体功能实现
+      继承该接口的主要有IGear, ITemplate, BaseComponent
+     
+      </apiDesc></apiClassifierDetail><related-links><link href="com.supermap.framework.core.xml#IGear"><linktext>com.supermap.framework.core.IGear</linktext></link><link href="com.supermap.framework.core.xml#ITemplate"><linktext>com.supermap.framework.core.ITemplate</linktext></link><link href="com.supermap.framework.components.xml#BaseComponent"><linktext>com.supermap.framework.components.BaseComponent</linktext></link></related-links><apiOperation id="com.supermap.framework.core:IPlugin:com.supermap.framework.core:IPlugin:destroy"><apiName>destroy</apiName><shortdesc>
+          插件销毁
+         </shortdesc><prolog/><apiOperationDetail><apiOperationDef><apiAccess value="public"/><apiReturn><apiType value="void"/></apiReturn></apiOperationDef><apiDesc>
+          插件销毁
+         </apiDesc></apiOperationDetail></apiOperation><apiOperation id="com.supermap.framework.core:IPlugin:com.supermap.framework.core:IPlugin:notify"><apiName>notify</apiName><shortdesc>
+          全局共享数据接口.</shortdesc><prolog/><apiOperationDetail><apiOperationDef><apiAccess value="public"/><apiReturn><apiType value="void"/></apiReturn><apiParam><apiItemName>evtClass</apiItemName><apiType value="String"/><apiData/></apiParam><apiParam><apiItemName>evtType</apiItemName><apiType value="String"/><apiData/></apiParam><apiParam><apiItemName>data</apiItemName><apiType value="any"/><apiData>null</apiData></apiParam></apiOperationDef><apiDesc>
+          全局共享数据接口.
+     	  通过派发事件来把装载的数据传递出去,由于基础模块与基础组件都实现了该接口,因此在整个应用程序
+          域内都可以拿到这个数据原型.
+          </apiDesc></apiOperationDetail><related-links><link href="" invalidHref="com.supermap.framework.model.Model.xml"><linktext>com.supermap.framework.model.Model</linktext></link></related-links></apiOperation><apiValue id="com.supermap.framework.core:IPlugin:com.supermap.framework.core:IPlugin:EventBus:get"><apiName>EventBus</apiName><shortdesc>
+          事件总线
+         </shortdesc><prolog/><apiValueDetail><apiValueDef><apiProperty/><apiAccess value="public"/><apiDynamic/><apiValueAccess value="read"/><apiType value="Object"/></apiValueDef><apiDesc>
+          事件总线
+         </apiDesc></apiValueDetail></apiValue><apiValue id="com.supermap.framework.core:IPlugin:com.supermap.framework.core:IPlugin:type:get"><apiName>type</apiName><shortdesc>
+          返回该类ClassName
+         </shortdesc><prolog/><apiValueDetail><apiValueDef><apiProperty/><apiAccess value="public"/><apiDynamic/><apiValueAccess value="read"/><apiType value="String"/></apiValueDef><apiDesc>
+          返回该类ClassName
+         </apiDesc></apiValueDetail></apiValue></apiClassifier><apiClassifier id="com.supermap.framework.core:ITemplate"><apiName>ITemplate</apiName><shortdesc>
+      统一模板接口.</shortdesc><prolog><asMetadata/></prolog><apiClassifierDetail><apiClassifierDef><apiInterface/><apiAccess value="public"/><apiStatic/><apiBaseInterface>com.supermap.framework.core:IPlugin</apiBaseInterface><apiBaseClassifier/></apiClassifierDef><apiDesc>
+      统一模板接口.
+      该接口规范了模板逻辑的功能职责.
+      </apiDesc></apiClassifierDetail><related-links><link href="" invalidHref="com.supermap.framework.core.GearTemplate.xml"><linktext>com.supermap.framework.core.GearTemplate</linktext></link></related-links><apiValue id="com.supermap.framework.core:ITemplate:com.supermap.framework.core:ITemplate:baseGear:set"><apiName>baseGear</apiName><shortdesc>
+          设置基础模块
+         </shortdesc><prolog/><apiValueDetail><apiValueDef><apiProperty/><apiAccess value="public"/><apiDynamic/><apiValueAccess value="write"/><apiValueClassifier>com.supermap.framework.core:IGear</apiValueClassifier></apiValueDef><apiDesc>
+          设置基础模块
+         </apiDesc></apiValueDetail></apiValue></apiClassifier></apiPackage>

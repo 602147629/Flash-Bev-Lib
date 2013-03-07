@@ -1,0 +1,64 @@
+/* CSS file */
+@namespace s "library://ns.adobe.com/flex/spark";
+@namespace mx "library://ns.adobe.com/flex/mx";
+@namespace core "com.supermap.framework.core.*";
+@namespace dock "com.supermap.framework.dock.*";
+@namespace supportClasses "com.supermap.framework.dock.supportClasses.*";
+
+core|GearTemplate 
+{	
+	skinClass:ClassReference("com.supermap.framework.components.GearTemplateSkin");
+}
+
+dock|FloatPanel
+{
+	skinClass: ClassReference("com.supermap.framework.skins.FloatPanelSkin");
+}
+
+dock|DockBarComponent
+{
+	skinClass: ClassReference("com.supermap.framework.skins.DockBarComponentSkin");
+}
+supportClasses|DockBar
+{
+	skinClass:ClassReference("com.supermap.framework.dock.supportClasses.DockBarSkin");
+}
+
+dock|ToolTipContainer
+{
+	skinClass:ClassReference("com.supermap.framework.skins.ToolTipBarSkin");
+}
+
+mx|TabNavigator{
+	
+	tabHeight:22;	
+	tabWidth:80;	
+	paddingTop:0;	
+	paddingLeft:0;	
+	horizontalGap:0;	
+	tabStyleName:"myTab";	
+	firstTabStyleName:"myTab";	
+	lastTabStyleName: "myTab";	
+	selectedTabTextStyleName: "selectedTabTextStyle";
+	borderVisible:true;	
+}
+
+.selectedTabTextStyle
+{
+	color : #000000;
+}
+
+.myTab{	
+	fontFamily:宋体;	
+	fontSize:13;	
+	fontWeight:bold;	
+	color:#ffffff;
+	up-skin:ClassReference("com.supermap.framework.skins.TabNavigatorTabSkin");	
+	down-skin:ClassReference("com.supermap.framework.skins.TabNavigatorTabSkin");	
+	over-skin:ClassReference("com.supermap.framework.skins.TabNavigatorTabSkin");	
+	disabled-skin:ClassReference("com.supermap.framework.skins.TabNavigatorTabSkin");	
+	selected-up-skin:ClassReference("com.supermap.framework.skins.TabNavigatorTabSelectedSkin");	
+	selected-down-skin:ClassReference("com.supermap.framework.skins.TabNavigatorTabSelectedSkin");	
+	selected-over-skin:ClassReference("com.supermap.framework.skins.TabNavigatorTabSelectedSkin");	
+	selected-disabled-skin:ClassReference("com.supermap.framework.skins.TabNavigatorTabSelectedSkin");
+}

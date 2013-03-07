@@ -1,0 +1,353 @@
+<apiPackage id="com.supermap.framework.dock"><apiName>com.supermap.framework.dock</apiName><apiDetail/><apiClassifier id="com.supermap.framework.dock:ChildChangeEvent"><apiName>ChildChangeEvent</apiName><shortdesc>
+     标签页索引改变事件.</shortdesc><prolog><author>gis
+     </author><asMetadata/></prolog><apiClassifierDetail><apiClassifierDef><apiAccess value="public"/><apiStatic/><apiBaseClassifier>flash.events:Event</apiBaseClassifier></apiClassifierDef><apiDesc>
+     标签页索引改变事件.
+     </apiDesc></apiClassifierDetail><related-links><link href="com.supermap.framework.dock.xml#ClosableTabNavigator"><linktext>com.supermap.framework.dock.ClosableTabNavigator</linktext></link><link href="com.supermap.framework.dock.xml#DockableTabNavigator"><linktext>com.supermap.framework.dock.DockableTabNavigator</linktext></link></related-links><apiConstructor id="com.supermap.framework.dock:ChildChangeEvent:ChildChangeEvent"><apiName>ChildChangeEvent</apiName><shortdesc>
+         
+         </shortdesc><prolog/><apiConstructorDetail><apiConstructorDef><apiAccess value="public"/><apiParam><apiItemName>param1</apiItemName><apiType value="String"/><apiDesc>        </apiDesc></apiParam><apiParam><apiItemName>param2</apiItemName><apiType value="Boolean"/><apiData>false</apiData><apiDesc>        </apiDesc></apiParam><apiParam><apiItemName>param3</apiItemName><apiType value="Boolean"/><apiData>false</apiData><apiDesc>        </apiDesc></apiParam></apiConstructorDef><apiDesc>
+         
+         </apiDesc></apiConstructorDetail></apiConstructor><apiValue id="com.supermap.framework.dock:ChildChangeEvent:CHILD_CHANGE"><apiName>CHILD_CHANGE</apiName><shortdesc>
+         
+         </shortdesc><prolog/><apiValueDetail><apiValueDef><apiAccess value="public"/><apiStatic/><apiData>childChange</apiData><apiType value="String"/><apiDefaultValue>
+         </apiDefaultValue></apiValueDef><apiDesc>
+         
+         </apiDesc></apiValueDetail></apiValue><apiValue id="com.supermap.framework.dock:ChildChangeEvent:newTitle"><apiName>newTitle</apiName><shortdesc>
+         
+         </shortdesc><prolog/><apiValueDetail><apiValueDef><apiProperty/><apiAccess value="public"/><apiDynamic/><apiType value="String"/><apiDefaultValue>
+         </apiDefaultValue></apiValueDef><apiDesc>
+         
+         </apiDesc></apiValueDetail></apiValue><apiValue id="com.supermap.framework.dock:ChildChangeEvent:useCloseButton"><apiName>useCloseButton</apiName><shortdesc>
+         
+         </shortdesc><prolog/><apiValueDetail><apiValueDef><apiProperty/><apiAccess value="public"/><apiDynamic/><apiData>false</apiData><apiType value="Boolean"/><apiDefaultValue>
+         </apiDefaultValue></apiValueDef><apiDesc>
+         
+         </apiDesc></apiValueDetail></apiValue></apiClassifier><apiClassifier id="com.supermap.framework.dock:DockBarItemRenderer"><apiName>DockBarItemRenderer</apiName><shortdesc>停靠条数据渲染器</shortdesc><prolog><asMetadata><DefaultProperty name="mxmlContent"/></asMetadata></prolog><apiClassifierDetail><apiClassifierDef><apiAccess value="public"/><apiStatic/><apiBaseInterface>mx.binding:IBindingClient</apiBaseInterface><apiBaseInterface>mx.core:IStateClient2</apiBaseInterface><apiBaseClassifier>spark.components.supportClasses:ItemRenderer</apiBaseClassifier></apiClassifierDef><apiDesc>停靠条数据渲染器</apiDesc></apiClassifierDetail><apiConstructor id="com.supermap.framework.dock:DockBarItemRenderer:DockBarItemRenderer"><apiName>DockBarItemRenderer</apiName><shortdesc>Constructor.</shortdesc><prolog/><apiConstructorDetail><apiConstructorDef><apiAccess value="public"/></apiConstructorDef><apiDesc>Constructor.</apiDesc></apiConstructorDetail></apiConstructor><apiOperation id="com.supermap.framework.dock:DockBarItemRenderer:protected:itemrenderer1_mouseOutHandler"><apiName>itemrenderer1_mouseOutHandler</apiName><shortdesc/><prolog/><apiOperationDetail><apiOperationDef><apiAccess value="protected"/><apiReturn><apiType value="void"/></apiReturn><apiParam><apiItemName>event</apiItemName><apiType value="flash.events:MouseEvent"/></apiParam></apiOperationDef></apiOperationDetail></apiOperation><apiOperation id="com.supermap.framework.dock:DockBarItemRenderer:protected:itemrenderer1_mouseOverHandler"><apiName>itemrenderer1_mouseOverHandler</apiName><shortdesc/><prolog/><apiOperationDetail><apiOperationDef><apiAccess value="protected"/><apiReturn><apiType value="void"/></apiReturn><apiParam><apiItemName>event</apiItemName><apiType value="flash.events:MouseEvent"/></apiParam></apiOperationDef></apiOperationDetail></apiOperation><apiValue id="com.supermap.framework.dock:DockBarItemRenderer:bg"><apiName>bg</apiName><shortdesc/><prolog/><apiValueDetail><apiValueDef><apiProperty isBindable="true" name="Bindable"/><apiAccess value="public"/><apiDynamic/><apiType value="spark.primitives:Rect"/></apiValueDef><apiDesc></apiDesc></apiValueDetail></apiValue><apiValue id="com.supermap.framework.dock:DockBarItemRenderer:icon"><apiName>icon</apiName><shortdesc/><prolog/><apiValueDetail><apiValueDef><apiProperty isBindable="true" name="Bindable"/><apiAccess value="public"/><apiDynamic/><apiType value="mx.controls:Image"/></apiValueDef><apiDesc></apiDesc></apiValueDetail></apiValue></apiClassifier><apiClassifier id="com.supermap.framework.dock:ToolTipContainer"><apiName>ToolTipContainer</apiName><shortdesc>
+     停靠条信息提示框
+     </shortdesc><prolog><author>gis
+     </author><asMetadata><DefaultProperty name="mxmlContentFactory"/><skinParts><SkinPart name="path" owner="com.supermap.framework.dock:ToolTipContainer" required="false" var_type="spark.primitives:Path">
+<description>
+         
+         </description>
+<default>
+         </default>
+	</SkinPart></skinParts></asMetadata></prolog><apiClassifierDetail><apiClassifierDef><apiAccess value="public"/><apiStatic/><apiBaseClassifier>com.supermap.containers:LayoutContainer</apiBaseClassifier></apiClassifierDef><apiDesc>
+     停靠条信息提示框
+     </apiDesc></apiClassifierDetail><apiConstructor id="com.supermap.framework.dock:ToolTipContainer:ToolTipContainer"><apiName>ToolTipContainer</apiName><shortdesc>
+         
+         </shortdesc><prolog/><apiConstructorDetail><apiConstructorDef><apiAccess value="public"/></apiConstructorDef><apiDesc>
+         
+         </apiDesc></apiConstructorDetail></apiConstructor><apiOperation id="com.supermap.framework.dock:ToolTipContainer:getInstance"><apiName>getInstance</apiName><shortdesc>
+         
+         </shortdesc><prolog/><apiOperationDetail><apiOperationDef><apiAccess value="public"/><apiStatic/><apiReturn><apiDesc>
+         </apiDesc><apiOperationClassifier>com.supermap.framework.dock:ToolTipContainer</apiOperationClassifier></apiReturn></apiOperationDef><apiDesc>
+         
+         </apiDesc></apiOperationDetail></apiOperation><apiOperation id="com.supermap.framework.dock:ToolTipContainer:protected:partAdded"><apiName>partAdded</apiName><shortdesc/><prolog/><apiOperationDetail><apiOperationDef><apiAccess value="protected"/><apiIsOverride/><apiReturn><apiType value="void"/></apiReturn><apiParam><apiItemName>partName</apiItemName><apiType value="String"/></apiParam><apiParam><apiItemName>instance</apiItemName><apiType value="Object"/></apiParam></apiOperationDef></apiOperationDetail></apiOperation><apiOperation id="com.supermap.framework.dock:ToolTipContainer:protected:partRemoved"><apiName>partRemoved</apiName><shortdesc/><prolog/><apiOperationDetail><apiOperationDef><apiAccess value="protected"/><apiIsOverride/><apiReturn><apiType value="void"/></apiReturn><apiParam><apiItemName>partName</apiItemName><apiType value="String"/></apiParam><apiParam><apiItemName>instance</apiItemName><apiType value="Object"/></apiParam></apiOperationDef></apiOperationDetail></apiOperation><apiValue id="com.supermap.framework.dock:ToolTipContainer:currentItems:get"><apiName>currentItems</apiName><shortdesc>
+         
+         </shortdesc><prolog/><apiValueDetail><apiValueDef><apiProperty/><apiAccess value="public"/><apiDynamic/><apiValueAccess value="readwrite"/><apiType value="Array"/></apiValueDef><apiDesc>
+         
+         </apiDesc></apiValueDetail></apiValue></apiClassifier><apiClassifier id="com.supermap.framework.dock:FloatPanel"><apiName>FloatPanel</apiName><shortdesc>
+	 浮动面板类
+	 </shortdesc><prolog><author>gis
+	 </author><asMetadata><DefaultProperty name="mxmlContentFactory"/><skinParts><SkinPart name="resize" owner="com.supermap.framework.dock:FloatPanel" required="false" var_type="mx.controls:Image">
+<description>
+		 
+		 </description>
+<default>
+		 </default>
+	</SkinPart><SkinPart name="dockButton" owner="com.supermap.framework.dock:FloatPanel" required="false" var_type="spark.components:Button">
+<description>
+		 
+		 </description>
+<default>
+		 </default>
+	</SkinPart><SkinPart name="minButton" owner="com.supermap.framework.dock:FloatPanel" required="false" var_type="spark.components:Button">
+<description>
+		 
+		 </description>
+<default>
+		 </default>
+	</SkinPart><SkinPart name="dockbar" owner="com.supermap.framework.dock:FloatPanel" required="false" var_type="spark.components:VGroup">
+<description>
+		 
+		 </description>
+<default>
+		 </default>
+	</SkinPart><SkinPart name="titleImg" owner="com.supermap.framework.dock:FloatPanel" required="false" var_type="mx.controls:Image">
+<description>
+		 
+		 </description>
+<default>
+		 </default>
+	</SkinPart><SkinPart name="lockButton" owner="com.supermap.framework.dock:FloatPanel" required="false" var_type="spark.components:Button">
+<description>
+		 
+		 </description>
+<default>
+		 </default>
+	</SkinPart></skinParts></asMetadata></prolog><apiClassifierDetail><apiClassifierDef><apiAccess value="public"/><apiStatic/><apiBaseClassifier>spark.components:TitleWindow</apiBaseClassifier></apiClassifierDef><apiDesc>
+	 浮动面板类
+	 </apiDesc></apiClassifierDetail><apiConstructor id="com.supermap.framework.dock:FloatPanel:FloatPanel"><apiName>FloatPanel</apiName><shortdesc>
+		 
+		 </shortdesc><prolog/><apiConstructorDetail><apiConstructorDef><apiAccess value="public"/><apiParam><apiItemName>param1</apiItemName><apiType value="mx.core:INavigatorContent"/><apiData>null</apiData><apiDesc>	 </apiDesc></apiParam></apiConstructorDef><apiDesc>
+		 
+		 </apiDesc></apiConstructorDetail></apiConstructor><apiOperation id="com.supermap.framework.dock:FloatPanel:addChildAt"><apiName>addChildAt</apiName><shortdesc/><prolog/><apiOperationDetail><apiOperationDef><apiAccess value="public"/><apiIsOverride/><apiReturn><apiType value="flash.display:DisplayObject"/></apiReturn><apiParam><apiItemName>param1</apiItemName><apiType value="flash.display:DisplayObject"/></apiParam><apiParam><apiItemName>param2</apiItemName><apiType value="int"/></apiParam></apiOperationDef></apiOperationDetail></apiOperation><apiOperation id="com.supermap.framework.dock:FloatPanel:addChild"><apiName>addChild</apiName><shortdesc/><prolog/><apiOperationDetail><apiOperationDef><apiAccess value="public"/><apiIsOverride/><apiReturn><apiType value="flash.display:DisplayObject"/></apiReturn><apiParam><apiItemName>param1</apiItemName><apiType value="flash.display:DisplayObject"/></apiParam></apiOperationDef></apiOperationDetail></apiOperation><apiOperation id="com.supermap.framework.dock:FloatPanel:addElementAt"><apiName>addElementAt</apiName><shortdesc/><prolog/><apiOperationDetail><apiOperationDef><apiAccess value="public"/><apiIsOverride/><apiReturn><apiType value="mx.core:IVisualElement"/></apiReturn><apiParam><apiItemName>element</apiItemName><apiType value="mx.core:IVisualElement"/></apiParam><apiParam><apiItemName>index</apiItemName><apiType value="int"/></apiParam></apiOperationDef></apiOperationDetail></apiOperation><apiOperation id="com.supermap.framework.dock:FloatPanel:protected:closeButton_clickHandler"><apiName>closeButton_clickHandler</apiName><shortdesc/><prolog/><apiOperationDetail><apiOperationDef><apiAccess value="protected"/><apiIsOverride/><apiReturn><apiType value="void"/></apiReturn><apiParam><apiItemName>event</apiItemName><apiType value="flash.events:MouseEvent"/></apiParam></apiOperationDef></apiOperationDetail></apiOperation><apiOperation id="com.supermap.framework.dock:FloatPanel:protected:createChildren"><apiName>createChildren</apiName><shortdesc/><prolog/><apiOperationDetail><apiOperationDef><apiAccess value="protected"/><apiIsOverride/><apiReturn><apiType value="void"/></apiReturn></apiOperationDef></apiOperationDetail></apiOperation><apiOperation id="com.supermap.framework.dock:FloatPanel:protected:getCurrentSkinState"><apiName>getCurrentSkinState</apiName><shortdesc/><prolog/><apiOperationDetail><apiOperationDef><apiAccess value="protected"/><apiIsOverride/><apiReturn><apiType value="String"/></apiReturn></apiOperationDef></apiOperationDetail></apiOperation><apiOperation id="com.supermap.framework.dock:FloatPanel:protected:moveArea_mouseDownHandler"><apiName>moveArea_mouseDownHandler</apiName><shortdesc>
+		  处理拖拽 
+		  TODO:性能问题
+		 </shortdesc><prolog/><apiOperationDetail><apiOperationDef><apiAccess value="protected"/><apiIsOverride/><apiReturn><apiType value="void"/></apiReturn><apiParam><apiItemName>event</apiItemName><apiType value="flash.events:MouseEvent"/></apiParam></apiOperationDef><apiDesc>
+		  处理拖拽 
+		  TODO:性能问题
+		 </apiDesc></apiOperationDetail></apiOperation><apiOperation id="com.supermap.framework.dock:FloatPanel:protected:moveArea_mouseUpHandler"><apiName>moveArea_mouseUpHandler</apiName><shortdesc>
+		  结束拖拽
+		  TODO:性能问题
+		 </shortdesc><prolog/><apiOperationDetail><apiOperationDef><apiAccess value="protected"/><apiIsOverride/><apiReturn><apiType value="void"/></apiReturn><apiParam><apiItemName>event</apiItemName><apiType value="flash.events:Event"/></apiParam></apiOperationDef><apiDesc>
+		  结束拖拽
+		  TODO:性能问题
+		 </apiDesc></apiOperationDetail></apiOperation><apiOperation id="com.supermap.framework.dock:FloatPanel:protected:partAdded"><apiName>partAdded</apiName><shortdesc/><prolog/><apiOperationDetail><apiOperationDef><apiAccess value="protected"/><apiIsOverride/><apiReturn><apiType value="void"/></apiReturn><apiParam><apiItemName>partName</apiItemName><apiType value="String"/></apiParam><apiParam><apiItemName>instance</apiItemName><apiType value="Object"/></apiParam></apiOperationDef></apiOperationDetail></apiOperation><apiOperation id="com.supermap.framework.dock:FloatPanel:protected:partRemoved"><apiName>partRemoved</apiName><shortdesc/><prolog/><apiOperationDetail><apiOperationDef><apiAccess value="protected"/><apiIsOverride/><apiReturn><apiType value="void"/></apiReturn><apiParam><apiItemName>partName</apiItemName><apiType value="String"/></apiParam><apiParam><apiItemName>instance</apiItemName><apiType value="Object"/></apiParam></apiOperationDef></apiOperationDetail></apiOperation><apiOperation id="com.supermap.framework.dock:FloatPanel:removeChild"><apiName>removeChild</apiName><shortdesc/><prolog/><apiOperationDetail><apiOperationDef><apiAccess value="public"/><apiIsOverride/><apiReturn><apiType value="flash.display:DisplayObject"/></apiReturn><apiParam><apiItemName>param1</apiItemName><apiType value="flash.display:DisplayObject"/></apiParam></apiOperationDef></apiOperationDetail></apiOperation><apiOperation id="com.supermap.framework.dock:FloatPanel:removeElement"><apiName>removeElement</apiName><shortdesc/><prolog/><apiOperationDetail><apiOperationDef><apiAccess value="public"/><apiIsOverride/><apiReturn><apiType value="mx.core:IVisualElement"/></apiReturn><apiParam><apiItemName>element</apiItemName><apiType value="mx.core:IVisualElement"/></apiParam></apiOperationDef></apiOperationDetail></apiOperation><apiOperation id="com.supermap.framework.dock:FloatPanel:showDockBarHandler"><apiName>showDockBarHandler</apiName><shortdesc>
+		  显示停靠
+		 </shortdesc><prolog/><apiOperationDetail><apiOperationDef><apiAccess value="public"/><apiReturn><apiType value="void"/></apiReturn></apiOperationDef><apiDesc>
+		  显示停靠
+		 </apiDesc></apiOperationDetail></apiOperation><apiOperation id="com.supermap.framework.dock:FloatPanel:titleDisplayFalse"><apiName>titleDisplayFalse</apiName><shortdesc/><prolog/><apiOperationDetail><apiOperationDef><apiAccess value="public"/><apiReturn><apiType value="void"/></apiReturn></apiOperationDef></apiOperationDetail></apiOperation><apiOperation id="com.supermap.framework.dock:FloatPanel:titleDisplayTrue"><apiName>titleDisplayTrue</apiName><shortdesc/><prolog/><apiOperationDetail><apiOperationDef><apiAccess value="public"/><apiReturn><apiType value="void"/></apiReturn></apiOperationDef></apiOperationDetail></apiOperation><apiValue id="com.supermap.framework.dock:FloatPanel:CLOSED"><apiName>CLOSED</apiName><shortdesc>
+		 
+		 </shortdesc><prolog/><apiValueDetail><apiValueDef><apiAccess value="public"/><apiStatic/><apiData>closed</apiData><apiType value="String"/><apiDefaultValue>
+		 </apiDefaultValue></apiValueDef><apiDesc>
+		 
+		 </apiDesc></apiValueDetail></apiValue><apiValue id="com.supermap.framework.dock:FloatPanel:DOCK"><apiName>DOCK</apiName><shortdesc>
+		 
+		 </shortdesc><prolog/><apiValueDetail><apiValueDef><apiAccess value="public"/><apiStatic/><apiData>dock</apiData><apiType value="String"/><apiDefaultValue>
+		 </apiDefaultValue></apiValueDef><apiDesc>
+		 
+		 </apiDesc></apiValueDetail></apiValue><apiValue id="com.supermap.framework.dock:FloatPanel:MINIMIZED"><apiName>MINIMIZED</apiName><shortdesc>
+		 
+		 </shortdesc><prolog/><apiValueDetail><apiValueDef><apiAccess value="public"/><apiStatic/><apiData>minimized</apiData><apiType value="String"/><apiDefaultValue>
+		 </apiDefaultValue></apiValueDef><apiDesc>
+		 
+		 </apiDesc></apiValueDetail></apiValue><apiValue id="com.supermap.framework.dock:FloatPanel:OPEN"><apiName>OPEN</apiName><shortdesc>
+		 
+		 </shortdesc><prolog/><apiValueDetail><apiValueDef><apiAccess value="public"/><apiStatic/><apiData>open</apiData><apiType value="String"/><apiDefaultValue>
+		 </apiDefaultValue></apiValueDef><apiDesc>
+		 
+		 </apiDesc></apiValueDetail></apiValue><apiValue id="com.supermap.framework.dock:FloatPanel:protected:dockContainer"><apiName>dockContainer</apiName><shortdesc>
+		 
+		 </shortdesc><prolog/><apiValueDetail><apiValueDef><apiProperty/><apiAccess value="protected"/><apiDynamic/><apiData>null</apiData><apiType value="com.supermap.framework.dock:IDockableContainer"/><apiDefaultValue>
+		 </apiDefaultValue></apiValueDef><apiDesc>
+		 
+		 </apiDesc></apiValueDetail></apiValue><apiValue id="com.supermap.framework.dock:FloatPanel:isDragable"><apiName>isDragable</apiName><shortdesc>
+		 
+		 </shortdesc><prolog/><apiValueDetail><apiValueDef><apiProperty/><apiAccess value="public"/><apiDynamic/><apiData>true</apiData><apiType value="Boolean"/><apiDefaultValue>
+		 </apiDefaultValue></apiValueDef><apiDesc>
+		 
+		 </apiDesc></apiValueDetail></apiValue><apiValue id="com.supermap.framework.dock:FloatPanel:isResizable"><apiName>isResizable</apiName><shortdesc>
+		 
+		 </shortdesc><prolog/><apiValueDetail><apiValueDef><apiProperty/><apiAccess value="public"/><apiDynamic/><apiData>true</apiData><apiType value="Boolean"/><apiDefaultValue>
+		 </apiDefaultValue></apiValueDef><apiDesc>
+		 
+		 </apiDesc></apiValueDetail></apiValue><apiValue id="com.supermap.framework.dock:FloatPanel:lockPanel"><apiName>lockPanel</apiName><shortdesc>
+		 
+		 </shortdesc><prolog/><apiValueDetail><apiValueDef><apiProperty/><apiAccess value="public"/><apiDynamic/><apiData>false</apiData><apiType value="Boolean"/><apiDefaultValue>
+		 </apiDefaultValue></apiValueDef><apiDesc>
+		 
+		 </apiDesc></apiValueDetail></apiValue><apiValue id="com.supermap.framework.dock:FloatPanel:minBtnClass"><apiName>minBtnClass</apiName><shortdesc>
+		 
+		 </shortdesc><prolog/><apiValueDetail><apiValueDef><apiProperty/><apiAccess value="public"/><apiDynamic/><apiData>assets/panel_min.png</apiData><apiType value="String"/><apiDefaultValue>
+		 </apiDefaultValue></apiValueDef><apiDesc>
+		 
+		 </apiDesc></apiValueDetail></apiValue><apiValue id="com.supermap.framework.dock:FloatPanel:minBtnOverClass"><apiName>minBtnOverClass</apiName><shortdesc>
+		 
+		 </shortdesc><prolog/><apiValueDetail><apiValueDef><apiProperty/><apiAccess value="public"/><apiDynamic/><apiData>assets/images/panel_max.png</apiData><apiType value="String"/><apiDefaultValue>
+		 </apiDefaultValue></apiValueDef><apiDesc>
+		 
+		 </apiDesc></apiValueDetail></apiValue><apiValue id="com.supermap.framework.dock:FloatPanel:mouseClickHandler"><apiName>mouseClickHandler</apiName><shortdesc/><prolog/><apiValueDetail><apiValueDef><apiProperty/><apiAccess value="public"/><apiDynamic/><apiType value="Function"/></apiValueDef></apiValueDetail></apiValue><apiValue id="com.supermap.framework.dock:FloatPanel:resizeCursor"><apiName>resizeCursor</apiName><shortdesc>
+		 
+		 </shortdesc><prolog/><apiValueDetail><apiValueDef><apiProperty/><apiAccess value="public"/><apiDynamic/><apiType value="Class"/><apiDefaultValue>
+		 </apiDefaultValue></apiValueDef><apiDesc>
+		 
+		 </apiDesc></apiValueDetail></apiValue><apiValue id="com.supermap.framework.dock:FloatPanel:tabLimitNum"><apiName>tabLimitNum</apiName><shortdesc>
+		 
+		 </shortdesc><prolog/><apiValueDetail><apiValueDef><apiProperty/><apiAccess value="public"/><apiDynamic/><apiData>5</apiData><apiType value="int"/><apiDefaultValue>
+		 </apiDefaultValue></apiValueDef><apiDesc>
+		 
+		 </apiDesc></apiValueDetail></apiValue><apiValue id="com.supermap.framework.dock:FloatPanel:tabNavigator"><apiName>tabNavigator</apiName><shortdesc/><prolog/><apiValueDetail><apiValueDef><apiProperty/><apiAccess value="public"/><apiDynamic/><apiType value="mx.containers:TabNavigator"/></apiValueDef></apiValueDetail></apiValue><apiValue id="com.supermap.framework.dock:FloatPanel:autoCreatePanelEnabled:get"><apiName>autoCreatePanelEnabled</apiName><shortdesc>
+		 
+		 </shortdesc><prolog/><apiValueDetail><apiValueDef><apiProperty/><apiAccess value="public"/><apiDynamic/><apiValueAccess value="read"/><apiType value="Boolean"/></apiValueDef><apiDesc>
+		 
+		 </apiDesc></apiValueDetail></apiValue><apiValue id="com.supermap.framework.dock:FloatPanel:explicitMinHeight:get"><apiName>explicitMinHeight</apiName><shortdesc/><prolog/><apiValueDetail><apiValueDef><apiIsOverride/><apiProperty/><apiAccess value="public"/><apiDynamic/><apiValueAccess value="read"/><apiType value="Number"/></apiValueDef></apiValueDetail></apiValue><apiValue id="com.supermap.framework.dock:FloatPanel:explicitMinWidth:get"><apiName>explicitMinWidth</apiName><shortdesc/><prolog/><apiValueDetail><apiValueDef><apiIsOverride/><apiProperty/><apiAccess value="public"/><apiDynamic/><apiValueAccess value="read"/><apiType value="Number"/></apiValueDef></apiValueDetail></apiValue><apiValue id="com.supermap.framework.dock:FloatPanel:floatEnabled:get"><apiName>floatEnabled</apiName><shortdesc>
+		 
+		 </shortdesc><prolog/><apiValueDetail><apiValueDef><apiProperty/><apiAccess value="public"/><apiDynamic/><apiValueAccess value="read"/><apiType value="Boolean"/></apiValueDef><apiDesc>
+		 
+		 </apiDesc></apiValueDetail></apiValue><apiValue id="com.supermap.framework.dock:FloatPanel:icon:get"><apiName>icon</apiName><shortdesc>
+		 
+		 </shortdesc><prolog/><apiValueDetail><apiValueDef><apiProperty isBindable="true"/><apiAccess value="public"/><apiDynamic/><apiValueAccess value="read"/><apiType value="String"/><apiDefaultValue>
+		 </apiDefaultValue></apiValueDef><apiDesc>
+		 
+		 </apiDesc></apiValueDetail></apiValue><apiValue id="com.supermap.framework.dock:FloatPanel:isShowIcon:get"><apiName>isShowIcon</apiName><shortdesc>
+		  默认不显示左侧的图标
+		 </shortdesc><prolog/><apiValueDetail><apiValueDef><apiProperty/><apiAccess value="public"/><apiDynamic/><apiValueAccess value="readwrite"/><apiType value="Boolean"/></apiValueDef><apiDesc>
+		  默认不显示左侧的图标
+		 </apiDesc></apiValueDetail></apiValue><apiValue id="com.supermap.framework.dock:FloatPanel:multiTabEnabled:get"><apiName>multiTabEnabled</apiName><shortdesc>
+		 
+		 </shortdesc><prolog/><apiValueDetail><apiValueDef><apiProperty/><apiAccess value="public"/><apiDynamic/><apiValueAccess value="read"/><apiType value="Boolean"/></apiValueDef><apiDesc>
+		 
+		 </apiDesc></apiValueDetail></apiValue><apiValue id="com.supermap.framework.dock:FloatPanel:resizeClass:get"><apiName>resizeClass</apiName><shortdesc>
+		 浮动面板右下角的resize默认显示图标
+		 </shortdesc><prolog/><apiValueDetail><apiValueDef><apiProperty isBindable="true"/><apiAccess value="public"/><apiDynamic/><apiValueAccess value="read"/><apiType value="Class"/><apiDefaultValue>
+		 </apiDefaultValue></apiValueDef><apiDesc>
+		 浮动面板右下角的resize默认显示图标
+		 </apiDesc></apiValueDetail></apiValue><apiValue id="com.supermap.framework.dock:FloatPanel:stageHeight:get"><apiName>stageHeight</apiName><shortdesc>
+		 
+		 </shortdesc><prolog/><apiValueDetail><apiValueDef><apiProperty isBindable="true"/><apiAccess value="public"/><apiDynamic/><apiValueAccess value="read"/><apiType value="Number"/><apiDefaultValue>
+		 </apiDefaultValue></apiValueDef><apiDesc>
+		 
+		 </apiDesc></apiValueDetail></apiValue><apiValue id="com.supermap.framework.dock:FloatPanel:stageWidth:get"><apiName>stageWidth</apiName><shortdesc>
+		 
+		 </shortdesc><prolog/><apiValueDetail><apiValueDef><apiProperty isBindable="true"/><apiAccess value="public"/><apiDynamic/><apiValueAccess value="read"/><apiType value="Number"/><apiDefaultValue>
+		 </apiDefaultValue></apiValueDef><apiDesc>
+		 
+		 </apiDesc></apiValueDetail></apiValue><apiValue id="com.supermap.framework.dock:FloatPanel:titleWindowState:get"><apiName>titleWindowState</apiName><shortdesc>
+		 
+		 </shortdesc><prolog/><apiValueDetail><apiValueDef><apiProperty/><apiAccess value="public"/><apiDynamic/><apiValueAccess value="readwrite"/><apiType value="String"/></apiValueDef><apiDesc>
+		 
+		 </apiDesc></apiValueDetail></apiValue></apiClassifier><apiClassifier id="com.supermap.framework.dock:DockableTabNavigator"><apiName>DockableTabNavigator</apiName><shortdesc>
+     停靠面板内部的标签页
+     该类主要处理了对内部容器显示上布局设置以及拖拽标签页逻辑的实现.</shortdesc><prolog><author>gis
+     </author><asMetadata/></prolog><apiClassifierDetail><apiClassifierDef><apiAccess value="public"/><apiStatic/><apiBaseInterface>com.supermap.framework.dock:IDockableContainer</apiBaseInterface><apiBaseClassifier>com.supermap.framework.dock:ClosableTabNavigator</apiBaseClassifier></apiClassifierDef><apiDesc>
+     停靠面板内部的标签页
+     该类主要处理了对内部容器显示上布局设置以及拖拽标签页逻辑的实现.
+     </apiDesc></apiClassifierDetail><related-links><link href="com.supermap.framework.dock.xml#ClosableTabNavigator"><linktext>com.supermap.framework.dock.ClosableTabNavigator</linktext></link></related-links><apiConstructor id="com.supermap.framework.dock:DockableTabNavigator:DockableTabNavigator"><apiName>DockableTabNavigator</apiName><shortdesc>
+         
+         </shortdesc><prolog/><apiConstructorDetail><apiConstructorDef><apiAccess value="public"/></apiConstructorDef><apiDesc>
+         
+         </apiDesc></apiConstructorDetail></apiConstructor><apiOperation id="com.supermap.framework.dock:DockableTabNavigator:protected:childrenCreated"><apiName>childrenCreated</apiName><shortdesc/><prolog/><apiOperationDetail><apiOperationDef><apiAccess value="protected"/><apiIsOverride/><apiReturn><apiType value="void"/></apiReturn></apiOperationDef></apiOperationDetail></apiOperation><apiOperation id="com.supermap.framework.dock:DockableTabNavigator:dockAsk"><apiName>dockAsk</apiName><shortdesc>
+         
+         </shortdesc><prolog/><apiOperationDetail><apiOperationDef><apiAccess value="public"/><apiReturn><apiDesc>
+         </apiDesc><apiType value="Boolean"/></apiReturn><apiParam><apiItemName>param1</apiItemName><apiType value="com.supermap.framework.dock:DockSource"/><apiDesc>        </apiDesc></apiParam><apiParam><apiItemName>param2</apiItemName><apiType value="mx.core:UIComponent"/><apiDesc>        </apiDesc></apiParam><apiParam><apiItemName>param3</apiItemName><apiType value="String"/><apiDesc>        </apiDesc></apiParam></apiOperationDef><apiDesc>
+         
+         </apiDesc></apiOperationDetail></apiOperation><apiOperation id="com.supermap.framework.dock:DockableTabNavigator:dockIn"><apiName>dockIn</apiName><shortdesc>
+         
+         </shortdesc><prolog/><apiOperationDetail><apiOperationDef><apiAccess value="public"/><apiReturn><apiType value="void"/></apiReturn><apiParam><apiItemName>param1</apiItemName><apiType value="com.supermap.framework.dock:DockSource"/><apiDesc>        </apiDesc></apiParam><apiParam><apiItemName>param2</apiItemName><apiType value="mx.core:UIComponent"/><apiDesc>        </apiDesc></apiParam><apiParam><apiItemName>param3</apiItemName><apiType value="String"/><apiDesc>        </apiDesc></apiParam></apiOperationDef><apiDesc>
+         
+         </apiDesc></apiOperationDetail></apiOperation><apiOperation id="com.supermap.framework.dock:DockableTabNavigator:toFloat"><apiName>toFloat</apiName><shortdesc>
+         
+         </shortdesc><prolog/><apiOperationDetail><apiOperationDef><apiAccess value="public"/><apiReturn><apiType value="void"/></apiReturn></apiOperationDef><apiDesc>
+         
+         </apiDesc></apiOperationDetail></apiOperation><apiValue id="com.supermap.framework.dock:DockableTabNavigator:protected:_floatEnabled"><apiName>_floatEnabled</apiName><shortdesc>
+         
+         </shortdesc><prolog/><apiValueDetail><apiValueDef><apiProperty/><apiAccess value="protected"/><apiDynamic/><apiData>true</apiData><apiType value="Boolean"/><apiDefaultValue>
+         </apiDefaultValue></apiValueDef><apiDesc>
+         
+         </apiDesc></apiValueDetail></apiValue><apiValue id="com.supermap.framework.dock:DockableTabNavigator:autoCreatePanelEnabled"><apiName>autoCreatePanelEnabled</apiName><shortdesc>
+         
+         </shortdesc><prolog/><apiValueDetail><apiValueDef><apiProperty/><apiAccess value="public"/><apiDynamic/><apiData>true</apiData><apiType value="Boolean"/><apiDefaultValue>
+         </apiDefaultValue></apiValueDef><apiDesc>
+         
+         </apiDesc></apiValueDetail></apiValue><apiValue id="com.supermap.framework.dock:DockableTabNavigator:dockId"><apiName>dockId</apiName><shortdesc>
+         
+         </shortdesc><prolog/><apiValueDetail><apiValueDef><apiProperty/><apiAccess value="public"/><apiDynamic/><apiType value="String"/><apiDefaultValue>
+         </apiDefaultValue></apiValueDef><apiDesc>
+         
+         </apiDesc></apiValueDetail></apiValue><apiValue id="com.supermap.framework.dock:DockableTabNavigator:multiTabEnabled"><apiName>multiTabEnabled</apiName><shortdesc>
+         
+         </shortdesc><prolog/><apiValueDetail><apiValueDef><apiProperty/><apiAccess value="public"/><apiDynamic/><apiData>true</apiData><apiType value="Boolean"/><apiDefaultValue>
+         </apiDefaultValue></apiValueDef><apiDesc>
+         
+         </apiDesc></apiValueDetail></apiValue><apiValue id="com.supermap.framework.dock:DockableTabNavigator:explicitMinHeight:get"><apiName>explicitMinHeight</apiName><shortdesc/><prolog/><apiValueDetail><apiValueDef><apiIsOverride/><apiProperty/><apiAccess value="public"/><apiDynamic/><apiValueAccess value="read"/><apiType value="Number"/></apiValueDef></apiValueDetail></apiValue><apiValue id="com.supermap.framework.dock:DockableTabNavigator:explicitMinWidth:get"><apiName>explicitMinWidth</apiName><shortdesc/><prolog/><apiValueDetail><apiValueDef><apiIsOverride/><apiProperty/><apiAccess value="public"/><apiDynamic/><apiValueAccess value="read"/><apiType value="Number"/></apiValueDef></apiValueDetail></apiValue><apiValue id="com.supermap.framework.dock:DockableTabNavigator:floatEnabled:get"><apiName>floatEnabled</apiName><shortdesc>
+         
+         </shortdesc><prolog/><apiValueDetail><apiValueDef><apiProperty/><apiAccess value="public"/><apiDynamic/><apiValueAccess value="readwrite"/><apiType value="Boolean"/></apiValueDef><apiDesc>
+         
+         </apiDesc></apiValueDetail></apiValue></apiClassifier><apiClassifier id="com.supermap.framework.dock:DockBarDataGroup"><apiName>DockBarDataGroup</apiName><shortdesc>
+     停靠条内部数据对象
+     </shortdesc><prolog><author>gis
+     </author><asMetadata><DefaultProperty name="dataProvider"/></asMetadata></prolog><apiClassifierDetail><apiClassifierDef><apiAccess value="public"/><apiStatic/><apiBaseClassifier>spark.components:DataGroup</apiBaseClassifier></apiClassifierDef><apiDesc>
+     停靠条内部数据对象
+     </apiDesc></apiClassifierDetail><related-links><link href="com.supermap.framework.dock.xml#DockBarItemRenderer"><linktext>com.supermap.framework.dock.DockBarItemRenderer</linktext></link></related-links><adobeApiEvent id="com.supermap.framework.dock:DockBarDataGroup_flash.events.Event_dockItemClick"><apiName>dockItemClick</apiName><shortdesc/><prolog/><adobeApiEventDetail><adobeApiEventDef><adobeApiEventClassifier>flash.events.Event</adobeApiEventClassifier><apiGeneratedEvent/></adobeApiEventDef><apiDesc></apiDesc></adobeApiEventDetail></adobeApiEvent><adobeApiEvent id="com.supermap.framework.dock:DockBarDataGroup_flash.events.Event_dockItemMouseOver"><apiName>dockItemMouseOver</apiName><shortdesc/><prolog/><adobeApiEventDetail><adobeApiEventDef><adobeApiEventClassifier>flash.events.Event</adobeApiEventClassifier><apiGeneratedEvent/></adobeApiEventDef><apiDesc></apiDesc></adobeApiEventDetail></adobeApiEvent><adobeApiEvent id="com.supermap.framework.dock:DockBarDataGroup_flash.events.Event_dockItemMouseOut"><apiName>dockItemMouseOut</apiName><shortdesc/><prolog/><adobeApiEventDetail><adobeApiEventDef><adobeApiEventClassifier>flash.events.Event</adobeApiEventClassifier><apiGeneratedEvent/></adobeApiEventDef><apiDesc></apiDesc></adobeApiEventDetail></adobeApiEvent><apiConstructor id="com.supermap.framework.dock:DockBarDataGroup:DockBarDataGroup"><apiName>DockBarDataGroup</apiName><shortdesc>
+         
+         </shortdesc><prolog/><apiConstructorDetail><apiConstructorDef><apiAccess value="public"/></apiConstructorDef><apiDesc>
+         
+         </apiDesc></apiConstructorDetail></apiConstructor></apiClassifier><apiClassifier id="com.supermap.framework.dock:ClosePanel"><apiName>ClosePanel</apiName><shortdesc>弹出框.具有多于一个标签页的面板关闭时候会弹出该窗口.</shortdesc><prolog><asMetadata><DefaultProperty name="mxmlContentFactory"/></asMetadata></prolog><apiClassifierDetail><apiClassifierDef><apiAccess value="public"/><apiStatic/><apiBaseClassifier>com.supermap.framework.dock:FloatPanel</apiBaseClassifier></apiClassifierDef><apiDesc>弹出框.具有多于一个标签页的面板关闭时候会弹出该窗口.</apiDesc></apiClassifierDetail><apiConstructor id="com.supermap.framework.dock:ClosePanel:ClosePanel"><apiName>ClosePanel</apiName><shortdesc>Constructor.</shortdesc><prolog/><apiConstructorDetail><apiConstructorDef><apiAccess value="public"/></apiConstructorDef><apiDesc>Constructor.</apiDesc></apiConstructorDetail></apiConstructor><apiOperation id="com.supermap.framework.dock:ClosePanel:protected:closeButton_clickHandler"><apiName>closeButton_clickHandler</apiName><shortdesc> 关闭当前提示框 </shortdesc><prolog/><apiOperationDetail><apiOperationDef><apiAccess value="protected"/><apiIsOverride/><apiReturn><apiType value="void"/></apiReturn><apiParam><apiItemName>event</apiItemName><apiType value="flash.events:MouseEvent"/></apiParam></apiOperationDef><apiDesc> 关闭当前提示框 </apiDesc></apiOperationDetail></apiOperation><apiOperation id="com.supermap.framework.dock:ClosePanel:protected:floatpanel1_creationCompleteHandler"><apiName>floatpanel1_creationCompleteHandler</apiName><shortdesc/><prolog/><apiOperationDetail><apiOperationDef><apiAccess value="protected"/><apiReturn><apiType value="void"/></apiReturn><apiParam><apiItemName>event</apiItemName><apiType value="mx.events:FlexEvent"/></apiParam></apiOperationDef></apiOperationDetail></apiOperation><apiOperation id="com.supermap.framework.dock:ClosePanel:getInstance"><apiName>getInstance</apiName><shortdesc/><prolog/><apiOperationDetail><apiOperationDef><apiAccess value="public"/><apiStatic/><apiReturn><apiOperationClassifier>com.supermap.framework.dock:ClosePanel</apiOperationClassifier></apiReturn></apiOperationDef></apiOperationDetail></apiOperation><apiValue id="com.supermap.framework.dock:ClosePanel:cancelHandler"><apiName>cancelHandler</apiName><shortdesc> 点击"取消"按钮时触发  </shortdesc><prolog/><apiValueDetail><apiValueDef><apiProperty/><apiAccess value="public"/><apiDynamic/><apiType value="Function"/></apiValueDef><apiDesc> 点击"取消"按钮时触发  </apiDesc></apiValueDetail></apiValue><apiValue id="com.supermap.framework.dock:ClosePanel:cancelLabel"><apiName>cancelLabel</apiName><shortdesc> 关闭提示框窗口  </shortdesc><prolog/><apiValueDetail><apiValueDef><apiAccess value="public"/><apiStatic/><apiData>取消</apiData><apiType value="String"/></apiValueDef><apiDesc> 关闭提示框窗口  </apiDesc></apiValueDetail></apiValue><apiValue id="com.supermap.framework.dock:ClosePanel:closeHandler"><apiName>closeHandler</apiName><shortdesc> 点击"关闭"按钮时触发  </shortdesc><prolog/><apiValueDetail><apiValueDef><apiProperty/><apiAccess value="public"/><apiDynamic/><apiType value="Function"/></apiValueDef><apiDesc> 点击"关闭"按钮时触发  </apiDesc></apiValueDetail></apiValue><apiValue id="com.supermap.framework.dock:ClosePanel:closeLabel"><apiName>closeLabel</apiName><shortdesc> 关闭当前面板  </shortdesc><prolog/><apiValueDetail><apiValueDef><apiAccess value="public"/><apiStatic/><apiData>关闭</apiData><apiType value="String"/></apiValueDef><apiDesc> 关闭当前面板  </apiDesc></apiValueDetail></apiValue><apiValue id="com.supermap.framework.dock:ClosePanel:protected:skinParts:get"><apiName>skinParts</apiName><shortdesc/><prolog/><apiValueDetail><apiValueDef><apiIsOverride/><apiProperty/><apiAccess value="protected"/><apiDynamic/><apiValueAccess value="read"/><apiType value="Object"/></apiValueDef></apiValueDetail></apiValue></apiClassifier><apiClassifier id="com.supermap.framework.dock:DockBarComponent"><apiName>DockBarComponent</apiName><shortdesc>
+	 停靠条组件
+	 </shortdesc><prolog><author>gis
+	 </author><asMetadata><skinParts><SkinPart name="dockBar" owner="com.supermap.framework.dock:DockBarComponent" required="false" var_type="spark.components:Group">
+<description>
+		 
+		 </description>
+<default>
+		 </default>
+	</SkinPart></skinParts></asMetadata></prolog><apiClassifierDetail><apiClassifierDef><apiAccess value="public"/><apiStatic/><apiBaseClassifier>com.supermap.framework.components:BaseComponent</apiBaseClassifier></apiClassifierDef><apiDesc>
+	 停靠条组件
+	 </apiDesc></apiClassifierDetail><apiConstructor id="com.supermap.framework.dock:DockBarComponent:DockBarComponent"><apiName>DockBarComponent</apiName><shortdesc>
+		 
+		 </shortdesc><prolog/><apiConstructorDetail><apiConstructorDef><apiAccess value="public"/></apiConstructorDef><apiDesc>
+		 
+		 </apiDesc></apiConstructorDetail></apiConstructor><apiOperation id="com.supermap.framework.dock:DockBarComponent:getImageCenter"><apiName>getImageCenter</apiName><shortdesc>
+		 
+		 </shortdesc><prolog/><apiOperationDetail><apiOperationDef><apiAccess value="public"/><apiReturn><apiDesc>
+		 </apiDesc><apiType value="flash.geom:Point"/></apiReturn><apiParam><apiItemName>img</apiItemName><apiType value="mx.controls:Image"/><apiDesc>	 </apiDesc></apiParam></apiOperationDef><apiDesc>
+		 
+		 </apiDesc></apiOperationDetail></apiOperation><apiOperation id="com.supermap.framework.dock:DockBarComponent:getInstance"><apiName>getInstance</apiName><shortdesc>
+		 
+		 </shortdesc><prolog/><apiOperationDetail><apiOperationDef><apiAccess value="public"/><apiStatic/><apiReturn><apiDesc>
+		 </apiDesc><apiOperationClassifier>com.supermap.framework.dock:DockBarComponent</apiOperationClassifier></apiReturn></apiOperationDef><apiDesc>
+		 
+		 </apiDesc></apiOperationDetail></apiOperation><apiOperation id="com.supermap.framework.dock:DockBarComponent:protected:partAdded"><apiName>partAdded</apiName><shortdesc/><prolog/><apiOperationDetail><apiOperationDef><apiAccess value="protected"/><apiIsOverride/><apiReturn><apiType value="void"/></apiReturn><apiParam><apiItemName>partName</apiItemName><apiType value="String"/></apiParam><apiParam><apiItemName>instance</apiItemName><apiType value="Object"/></apiParam></apiOperationDef></apiOperationDetail></apiOperation><apiOperation id="com.supermap.framework.dock:DockBarComponent:protected:partRemoved"><apiName>partRemoved</apiName><shortdesc/><prolog/><apiOperationDetail><apiOperationDef><apiAccess value="protected"/><apiIsOverride/><apiReturn><apiType value="void"/></apiReturn><apiParam><apiItemName>partName</apiItemName><apiType value="String"/></apiParam><apiParam><apiItemName>instance</apiItemName><apiType value="Object"/></apiParam></apiOperationDef></apiOperationDetail></apiOperation><apiValue id="com.supermap.framework.dock:DockBarComponent:_instance"><apiName>_instance</apiName><shortdesc>
+		 
+		 </shortdesc><prolog/><apiValueDetail><apiValueDef><apiProperty/><apiAccess value="public"/><apiStatic/><apiValueClassifier>com.supermap.framework.dock:DockBarComponent</apiValueClassifier><apiDefaultValue>
+		 </apiDefaultValue></apiValueDef><apiDesc>
+		 
+		 </apiDesc></apiValueDetail></apiValue><apiValue id="com.supermap.framework.dock:DockBarComponent:mouseOverImageCenter:get"><apiName>mouseOverImageCenter</apiName><shortdesc>
+		  鼠标移动到某个image对象的时候 这样就简化了datagroup的多层判断读取
+		 </shortdesc><prolog/><apiValueDetail><apiValueDef><apiProperty/><apiAccess value="public"/><apiDynamic/><apiValueAccess value="read"/><apiType value="flash.geom:Point"/></apiValueDef><apiDesc>
+		  鼠标移动到某个image对象的时候 这样就简化了datagroup的多层判断读取
+		 </apiDesc></apiValueDetail></apiValue></apiClassifier><apiClassifier id="com.supermap.framework.dock:ClosableTabNavigator"><apiName>ClosableTabNavigator</apiName><shortdesc>
+     停靠面板内部的标签页基类
+     </shortdesc><prolog><author>gis
+     </author><asMetadata/></prolog><apiClassifierDetail><apiClassifierDef><apiAccess value="public"/><apiStatic/><apiBaseClassifier>mx.containers:TabNavigator</apiBaseClassifier></apiClassifierDef><apiDesc>
+     停靠面板内部的标签页基类
+     </apiDesc></apiClassifierDetail><related-links><link href="" invalidHref="mx.containers.TabNavigator.xml"><linktext>mx.containers.TabNavigator</linktext></link></related-links><apiConstructor id="com.supermap.framework.dock:ClosableTabNavigator:ClosableTabNavigator"><apiName>ClosableTabNavigator</apiName><shortdesc>
+          构造函数
+         </shortdesc><prolog/><apiConstructorDetail><apiConstructorDef><apiAccess value="public"/></apiConstructorDef><apiDesc>
+          构造函数
+         </apiDesc></apiConstructorDetail></apiConstructor><apiOperation id="com.supermap.framework.dock:ClosableTabNavigator:protected:createChildren"><apiName>createChildren</apiName><shortdesc>
+          覆写方法.实现自定义的TabBar
+          </shortdesc><prolog><asCustoms><override>
+         </override></asCustoms></prolog><apiOperationDetail><apiOperationDef><apiAccess value="protected"/><apiIsOverride/><apiReturn><apiType value="void"/></apiReturn></apiOperationDef><apiDesc>
+          覆写方法.实现自定义的TabBar
+          </apiDesc></apiOperationDetail></apiOperation><apiOperation id="com.supermap.framework.dock:ClosableTabNavigator:removeChild"><apiName>removeChild</apiName><shortdesc>
+          覆写removechild方法保留之前的对mx.control.TitleWindow的处理
+          同时增加对spark.conponments.TitleWindow的处理
+          2012.4.6
+         </shortdesc><prolog/><apiOperationDetail><apiOperationDef><apiAccess value="public"/><apiIsOverride/><apiReturn><apiType value="flash.display:DisplayObject"/></apiReturn><apiParam><apiItemName>param1</apiItemName><apiType value="flash.display:DisplayObject"/></apiParam></apiOperationDef><apiDesc>
+          覆写removechild方法保留之前的对mx.control.TitleWindow的处理
+          同时增加对spark.conponments.TitleWindow的处理
+          2012.4.6
+         </apiDesc></apiOperationDetail></apiOperation><apiOperation id="com.supermap.framework.dock:ClosableTabNavigator:protected:updateDisplayList"><apiName>updateDisplayList</apiName><shortdesc>
+          </shortdesc><prolog><asCustoms><override>
+         </override></asCustoms></prolog><apiOperationDetail><apiOperationDef><apiAccess value="protected"/><apiIsOverride/><apiReturn><apiType value="void"/></apiReturn><apiParam><apiItemName>unscaledWidth</apiItemName><apiType value="Number"/></apiParam><apiParam><apiItemName>unscaledHeight</apiItemName><apiType value="Number"/></apiParam></apiOperationDef><apiDesc>
+          </apiDesc></apiOperationDetail></apiOperation><apiValue id="com.supermap.framework.dock:ClosableTabNavigator:autoRemove"><apiName>autoRemove</apiName><shortdesc>
+         
+         </shortdesc><prolog/><apiValueDetail><apiValueDef><apiProperty/><apiAccess value="public"/><apiDynamic/><apiData>true</apiData><apiType value="Boolean"/><apiDefaultValue>
+         </apiDefaultValue></apiValueDef><apiDesc>
+         
+         </apiDesc></apiValueDetail></apiValue><apiValue id="com.supermap.framework.dock:ClosableTabNavigator:selectedIndex:set"><apiName>selectedIndex</apiName><shortdesc>
+          </shortdesc><prolog><asCustoms><override>
+         </override></asCustoms></prolog><apiValueDetail><apiValueDef><apiIsOverride/><apiProperty/><apiAccess value="public"/><apiDynamic/><apiValueAccess value="write"/><apiType value="int"/></apiValueDef><apiDesc>
+          </apiDesc></apiValueDetail></apiValue></apiClassifier><apiClassifier id="com.supermap.framework.dock:IconUtil"><apiName>IconUtil</apiName><shortdesc>
+     动态图标加载类.</shortdesc><prolog><asMetadata/></prolog><apiClassifierDetail><apiClassifierDef><apiAccess value="public"/><apiStatic/><apiBaseClassifier>mx.core:BitmapAsset</apiBaseClassifier></apiClassifierDef><apiDesc>
+     动态图标加载类.
+     </apiDesc></apiClassifierDetail><apiOperation id="com.supermap.framework.dock:IconUtil:getClass"><apiName>getClass</apiName><shortdesc>
+         Used to associate run-time graphics with a target
+         </shortdesc><prolog/><apiOperationDetail><apiOperationDef><apiAccess value="public"/><apiStatic/><apiReturn><apiDesc>A reference to the IconUtility class which may be treated as a BitmapAsset
+         </apiDesc><apiType value="Class"/></apiReturn><apiParam><apiItemName>target</apiItemName><apiType value="mx.core:UIComponent"/><apiDesc>A reference to the component associated with this icon
+         </apiDesc></apiParam><apiParam><apiItemName>source</apiItemName><apiType value="Object"/><apiDesc>A url to a JPG, PNG or GIF file you wish to be loaded and displayed or A DisplayObject
+         </apiDesc></apiParam><apiParam><apiItemName>width</apiItemName><apiType value="Number"/><apiData>unknown</apiData><apiDesc>Defines the width of the graphic when displayed
+         </apiDesc></apiParam><apiParam><apiItemName>height</apiItemName><apiType value="Number"/><apiData>unknown</apiData><apiDesc>Defines the height of the graphic when displayed
+         </apiDesc></apiParam></apiOperationDef><apiDesc>
+         Used to associate run-time graphics with a target
+         </apiDesc><example>&lt;mx:Button id="button" icon="{IconUtility.getClass(button, 'http://www.yourdomain.com/images/test.jpg')}" /&gt;
+         </example></apiOperationDetail></apiOperation><apiOperation id="com.supermap.framework.dock:IconUtil:getImgSource"><apiName>getImgSource</apiName><shortdesc>
+		  根据传入的navigator来得到它的source属性值
+		 </shortdesc><prolog/><apiOperationDetail><apiOperationDef><apiAccess value="public"/><apiStatic/><apiReturn><apiType value="String"/></apiReturn><apiParam><apiItemName>target</apiItemName><apiType value="any"/></apiParam></apiOperationDef><apiDesc>
+		  根据传入的navigator来得到它的source属性值
+		 </apiDesc></apiOperationDetail></apiOperation><apiOperation id="com.supermap.framework.dock:IconUtil:getSource"><apiName>getSource</apiName><shortdesc>
+          根据传入的navigetor来得到它的source与label属性值
+         </shortdesc><prolog/><apiOperationDetail><apiOperationDef><apiAccess value="public"/><apiStatic/><apiReturn><apiType value="String"/></apiReturn><apiParam><apiItemName>target</apiItemName><apiType value="any"/></apiParam></apiOperationDef><apiDesc>
+          根据传入的navigetor来得到它的source与label属性值
+         </apiDesc></apiOperationDetail></apiOperation><apiValue id="com.supermap.framework.dock:IconUtil:connector"><apiName>connector</apiName><shortdesc/><prolog/><apiValueDetail><apiValueDef><apiAccess value="public"/><apiStatic/><apiData>&amp;</apiData><apiType value="String"/></apiValueDef></apiValueDetail></apiValue></apiClassifier></apiPackage>

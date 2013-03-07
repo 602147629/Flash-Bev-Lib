@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+/////////////////////////////////////////////////////////////////////////////////////////////
+//
+//	Copyright (c) 2013 SuperMap. All Rights Reserved.
+//
+//	Licensed under the Apache License, Version 2.0 (the "License");
+//	you may not use this file except in compliance with the License.
+//	You may obtain a copy of the License at
+//
+//	http://www.apache.org/licenses/LICENSE-2.0
+//
+//	Unless required by applicable law or agreed to in writing, software
+//	distributed under the License is distributed on an  "AS IS" BASIS,
+//	WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+//	See the License for the specific language governing permissions and
+//	limitations under the License.
+//
+///////////////////////////////////////////////////////////////////////////////////////////// 
+-->
+<!---
+	停靠条默认皮肤样式.
+-->
+<s:Skin xmlns:fx="http://ns.adobe.com/mxml/2009" 
+		xmlns:s="library://ns.adobe.com/flex/spark" 
+		xmlns:mx="library://ns.adobe.com/flex/mx" xmlns:containers="com.supermap.containers.*" xmlns:dock="dock.*" xmlns:supportClasses="com.supermap.framework.dock.supportClasses.*">
+
+	<fx:Metadata>
+		[HostComponent("com.supermap.framework.dock.supportClasses.DockBar")]
+	</fx:Metadata>
+	
+	<fx:Script>
+		<![CDATA[
+			import mx.events.EffectEvent;
+			
+			protected function parallel1_effectStartHandler(event:EffectEvent):void
+			{
+			}
+			
+			protected function parallel1_effectEndHandler(event:EffectEvent):void
+			{
+				dockContainer.width = hostComponent.unfoldWidth;
+			}
+
+			protected function parallel2_effectStartHandler(event:EffectEvent):void
+			{
+			}
+			
+			protected function parallel2_effectEndHandler(event:EffectEvent):void
+			{
+				dockContainer.width = 5;
+			}
+
+
+		]]>
+	</fx:Script>
+
+	<!--皮肤状态-->
+	<s:states>
+		<s:State name="normal"/>
+		<s:State name="disabled"/>
+		<s:State name="fold"/>
+		<s:State name="unFold"/>
+	</s:states>
+	
+	<fx:Declarations>
+		<s:Sine id="sineEasing"	easeInFraction="0.05"/>
+		<s:Power id="powerEasing" exponent="4"/>
+	</fx:Declarations>
+	
+	<!--动画抖动的问题-->
+	<s:transitions>
+		
+		<!--从折叠状态到打开状态-->
+		<s:Transition fromState="fold" toState="unFold">
+			<s:Parallel duration="1000" effectStart="parallel1_effectStartHandler(event)" effectEnd="parallel1_effectEndHandler(event)">
+				<s:Move id="moveLeft" target="{dockContainer}" xBy="500" duration="500"/>
+				<s:Resize id="Lresize" target="{dockContainer}" widthFrom="5" widthTo="{hostComponent.unfoldWidth}" duration="200"/>
+			</s:Parallel>			
+		</s:Transition>
+		<!--从展开状态到折叠状态-->
+		<s:Transition fromState="unFold" toState="fold">
+			<s:Parallel duration="1000" effectStart="parallel2_effectStartHandler(event)" effectEnd="parallel2_effectEndHandler(event)">
+				<s:Move id="moveRight" target="{dockContainer}" xBy="500" duration="500"	/>
+				<s:Resize id="Rresize" target="{dockContainer}" widthFrom="{hostComponent.unfoldWidth}" widthTo="5" duration="200"/>
+			</s:Parallel>	
+		</s:Transition>
+	</s:transitions>
+	
+	<!--水平布局-->
+	<s:layout>
+		<s:HorizontalLayout gap="0"/>
+	</s:layout>
+	
+	<!--组件外观-->
+	<s:Button id="dockBtn" height="48" width="20" top="2" left="2" bottom="2" skinClass="com.supermap.framework.dock.supportClasses.DockBtnSkin"  label="1" />
+	<supportClasses:CustomContainer id="dockContainer" height="48" backgroundColor="0x000000"
+						  backgroundAlpha="0.6">
+		<supportClasses:layout>
+			<s:HorizontalLayout paddingLeft="5" gap="5"  verticalAlign="middle"/>
+		</supportClasses:layout>
+	</supportClasses:CustomContainer>
+</s:Skin>

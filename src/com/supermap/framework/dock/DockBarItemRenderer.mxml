@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+/////////////////////////////////////////////////////////////////////////////////////////////
+//
+//	Copyright (c) 2013 SuperMap. All Rights Reserved.
+//
+//	Licensed under the Apache License, Version 2.0 (the "License");
+//	you may not use this file except in compliance with the License.
+//	You may obtain a copy of the License at
+//
+//	http://www.apache.org/licenses/LICENSE-2.0
+//
+//	Unless required by applicable law or agreed to in writing, software
+//	distributed under the License is distributed on an  "AS IS" BASIS,
+//	WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+//	See the License for the specific language governing permissions and
+//	limitations under the License.
+//
+///////////////////////////////////////////////////////////////////////////////////////////// 
+-->
+<!---
+        停靠条数据渲染器
+-->
+<s:ItemRenderer 
+    click="itemrenderer_clickHandler(event)"
+    dataChange="itemrenderer_dataChangeHandler(event)"
+    mouseOut="itemrenderer1_mouseOutHandler(event)"
+    mouseOver="itemrenderer1_mouseOverHandler(event)"
+    xmlns:fx="http://ns.adobe.com/mxml/2009"
+    xmlns:s="library://ns.adobe.com/flex/spark"
+    xmlns:mx="library://ns.adobe.com/flex/mx"
+    autoDrawBackground="false"
+    buttonMode="true"
+    useHandCursor="true">
+
+    <fx:Script>
+        <![CDATA[
+            import com.supermap.framework.skins.DockBarComponentSkin;
+            import mx.effects.Glow;
+            import mx.events.FlexEvent;
+
+            private const DOCKITEMCLICK:String = "dockItemClick";
+
+            private const DOCKITEMMOUSEOVER:String = "dockItemMouseOver";
+
+            private const DOCKITEMMOUSEOUT:String = "dockItemMouseOut";
+
+            private var glow:Glow;
+
+            [Bindable]
+            private var dockData:DockData;
+
+            private function itemrenderer_dataChangeHandler(event:FlexEvent):void
+            {
+                dockData = data as DockData;
+            }
+
+            private function itemrenderer_clickHandler(event:MouseEvent):void
+            {
+                dispatchEvent(new Event(DOCKITEMCLICK, true));
+            }
+
+            protected function itemrenderer1_mouseOutHandler(event:MouseEvent):void
+            {
+                bg.visible = false;
+                dispatchEvent(new Event(DOCKITEMMOUSEOUT, true));
+            }
+
+            protected function itemrenderer1_mouseOverHandler(event:MouseEvent):void
+            {
+                bg.visible = true;
+                dispatchEvent(new Event(DOCKITEMMOUSEOVER, true));
+            }
+
+            private function imgMouseOverHandler(event:MouseEvent):void
+            {
+                //event.stopImmediatePropagation();
+                if (this.parentDocument is DockBarComponentSkin)
+                {
+                    (this.parentDocument as DockBarComponentSkin).hostComponent.getImageCenter(event.currentTarget as Image);
+                }
+            }
+        ]]>
+    </fx:Script>
+
+    <s:states>
+        <s:State name="normal"/>
+        <s:State name="hovered"/>
+    </s:states>
+
+    <!-- background fill -->
+    <s:Rect id="bg"
+        left="-4" right="-4" top="-4" bottom="-4"
+        radiusX="2"
+        radiusY="2"
+        visible="false">
+        <s:fill>
+            <s:SolidColor 
+                color="0xffffff"
+                alpha="0.5"/>
+        </s:fill>
+        <s:stroke>
+            <s:SolidColorStroke 
+                color="0xffffff"
+                weight="1"/>
+        </s:stroke>
+    </s:Rect>
+
+    <mx:Image id="icon" name="icon"
+        width="20" height="20"
+        verticalCenter="0"
+        source="{dockData.icon}"
+        mouseOver="imgMouseOverHandler(event)"/>
+
+</s:ItemRenderer>

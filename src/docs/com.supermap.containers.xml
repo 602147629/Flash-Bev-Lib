@@ -1,0 +1,109 @@
+<apiPackage id="com.supermap.containers"><apiName>com.supermap.containers</apiName><apiDetail/><apiClassifier id="com.supermap.containers:TemplateContainer"><apiName>TemplateContainer</apiName><shortdesc>
+      基础模板容器
+      该容器主要用来装载带有统一模板(GearTemplate)的功能模块(BaseGear).</shortdesc><prolog><asMetadata><DefaultProperty name="mxmlContentFactory"/></asMetadata></prolog><apiClassifierDetail><apiClassifierDef><apiAccess value="public"/><apiStatic/><apiBaseClassifier>com.supermap.framework.components:LayoutComponent</apiBaseClassifier></apiClassifierDef><apiDesc>
+      基础模板容器
+      该容器主要用来装载带有统一模板(GearTemplate)的功能模块(BaseGear).
+     
+     </apiDesc></apiClassifierDetail><apiConstructor id="com.supermap.containers:TemplateContainer:TemplateContainer"><apiName>TemplateContainer</apiName><shortdesc/><prolog/><apiConstructorDetail><apiConstructorDef><apiAccess value="public"/></apiConstructorDef></apiConstructorDetail></apiConstructor><apiOperation id="com.supermap.containers:TemplateContainer:protected:creationCompleteHandler"><apiName>creationCompleteHandler</apiName><shortdesc/><prolog/><apiOperationDetail><apiOperationDef><apiAccess value="protected"/><apiReturn><apiType value="void"/></apiReturn><apiParam><apiItemName>event</apiItemName><apiType value="mx.events:FlexEvent"/></apiParam></apiOperationDef></apiOperationDetail></apiOperation><apiValue id="com.supermap.containers:TemplateContainer:gearData:get"><apiName>gearData</apiName><shortdesc>
+          获取加载数据项
+         
+         </shortdesc><prolog/><apiValueDetail><apiValueDef><apiProperty/><apiAccess value="public"/><apiDynamic/><apiValueAccess value="readwrite"/><apiType value="Object"/></apiValueDef><apiDesc>
+          获取加载数据项
+         
+         </apiDesc></apiValueDetail></apiValue><apiValue id="com.supermap.containers:TemplateContainer:map:get"><apiName>map</apiName><shortdesc>
+          获取map
+         </shortdesc><prolog/><apiValueDetail><apiValueDef><apiProperty/><apiAccess value="public"/><apiDynamic/><apiValueAccess value="readwrite"/><apiType value="com.supermap.web.mapping:Map"/></apiValueDef><apiDesc>
+          获取map
+         </apiDesc></apiValueDetail></apiValue><apiValue id="com.supermap.containers:TemplateContainer:type:get"><apiName>type</apiName><shortdesc>
+          获取类名
+         </shortdesc><prolog/><apiValueDetail><apiValueDef><apiIsOverride/><apiProperty/><apiAccess value="public"/><apiDynamic/><apiValueAccess value="read"/><apiType value="String"/></apiValueDef><apiDesc>
+          获取类名
+         </apiDesc></apiValueDetail></apiValue></apiClassifier><apiClassifier id="com.supermap.containers:MapContainer"><apiName>MapContainer</apiName><shortdesc>
+      主要用来读取map组件配置信息 并实现自身的初始化
+      这里需要注意的是 在插件的操作方面 只提供对下一级别的操作 即针对map或者mapcontrol的操作
+      如果要通过id直接取到layer的话 建议通过map单独处理
+      插件容器本身不针对layer进行直接操作
+      </shortdesc><prolog><asMetadata><DefaultProperty name="mxmlContentFactory"/></asMetadata></prolog><apiClassifierDetail><apiClassifierDef><apiAccess value="public"/><apiStatic/><apiBaseClassifier>com.supermap.containers:LayoutContainer</apiBaseClassifier></apiClassifierDef><apiDesc>
+      主要用来读取map组件配置信息 并实现自身的初始化
+      这里需要注意的是 在插件的操作方面 只提供对下一级别的操作 即针对map或者mapcontrol的操作
+      如果要通过id直接取到layer的话 建议通过map单独处理
+      插件容器本身不针对layer进行直接操作
+      </apiDesc></apiClassifierDetail><adobeApiEvent id="com.supermap.containers:MapContainer_com.supermap.framework.events.LayoutEvent_layoutChanged"><apiName>layoutChanged</apiName><shortdesc/><prolog/><adobeApiEventDetail><adobeApiEventDef><adobeApiEventClassifier>com.supermap.framework.events.LayoutEvent</adobeApiEventClassifier><apiGeneratedEvent/></adobeApiEventDef><apiDesc></apiDesc></adobeApiEventDetail></adobeApiEvent><adobeApiEvent id="com.supermap.containers:MapContainer_com.supermap.framework.events.PluginEvent_mapPluginAdded"><apiName>mapPluginAdded</apiName><shortdesc/><prolog/><adobeApiEventDetail><adobeApiEventDef><adobeApiEventClassifier>com.supermap.framework.events.PluginEvent</adobeApiEventClassifier><apiGeneratedEvent/></adobeApiEventDef><apiDesc></apiDesc></adobeApiEventDetail></adobeApiEvent><apiConstructor id="com.supermap.containers:MapContainer:MapContainer"><apiName>MapContainer</apiName><shortdesc/><prolog/><apiConstructorDetail><apiConstructorDef><apiAccess value="public"/></apiConstructorDef></apiConstructorDetail></apiConstructor><apiOperation id="com.supermap.containers:MapContainer:protected:commitProperties"><apiName>commitProperties</apiName><shortdesc/><prolog/><apiOperationDetail><apiOperationDef><apiAccess value="protected"/><apiIsOverride/><apiReturn><apiType value="void"/></apiReturn></apiOperationDef></apiOperationDetail></apiOperation><apiOperation id="com.supermap.containers:MapContainer:getMapControl"><apiName>getMapControl</apiName><shortdesc>
+          根据配置文件获取mapControl
+         </shortdesc><prolog/><apiOperationDetail><apiOperationDef><apiAccess value="public"/><apiReturn><apiType value="Object"/></apiReturn><apiParam><apiItemName>mapControlId</apiItemName><apiType value="String"/><apiData/></apiParam></apiOperationDef><apiDesc>
+          根据配置文件获取mapControl
+         </apiDesc></apiOperationDetail></apiOperation><apiOperation id="com.supermap.containers:MapContainer:getMaps"><apiName>getMaps</apiName><shortdesc>
+          获取地图配置后的数据
+          </shortdesc><prolog/><apiOperationDetail><apiOperationDef><apiAccess value="public"/><apiReturn><apiDesc>Array
+         </apiDesc><apiType value="Array"/></apiReturn></apiOperationDef><apiDesc>
+          获取地图配置后的数据
+          </apiDesc></apiOperationDetail></apiOperation><apiOperation id="com.supermap.containers:MapContainer:notify"><apiName>notify</apiName><shortdesc>
+          发布应用程序级别上的数据共享。
+          建议在container里采用notify的机制来处理事件派发流程。
+          </shortdesc><prolog/><apiOperationDetail><apiOperationDef><apiAccess value="public"/><apiIsOverride/><apiReturn><apiType value="void"/></apiReturn><apiParam><apiItemName>evtClass</apiItemName><apiType value="String"/><apiData/><apiDesc>事件完全限定类名
+          </apiDesc></apiParam><apiParam><apiItemName>evtType</apiItemName><apiType value="String"/><apiData/><apiDesc>事件类型
+          </apiDesc></apiParam><apiParam><apiItemName>data</apiItemName><apiType value="any"/><apiData>null</apiData><apiDesc> 事件数据对象
+         
+         </apiDesc></apiParam></apiOperationDef><apiDesc>
+          发布应用程序级别上的数据共享。
+          建议在container里采用notify的机制来处理事件派发流程。
+          </apiDesc></apiOperationDetail></apiOperation><apiOperation id="com.supermap.containers:MapContainer:removeMapControl"><apiName>removeMapControl</apiName><shortdesc>
+          根据配置文件里设置的ID移除mapControl
+         </shortdesc><prolog/><apiOperationDetail><apiOperationDef><apiAccess value="public"/><apiReturn><apiType value="Object"/></apiReturn><apiParam><apiItemName>mapControlId</apiItemName><apiType value="String"/><apiData/></apiParam></apiOperationDef><apiDesc>
+          根据配置文件里设置的ID移除mapControl
+         </apiDesc></apiOperationDetail></apiOperation><apiValue id="com.supermap.containers:MapContainer:CLOUDLAYER"><apiName>CLOUDLAYER</apiName><shortdesc/><prolog/><apiValueDetail><apiValueDef><apiAccess value="public"/><apiStatic/><apiData>CloudLayer</apiData><apiType value="String"/></apiValueDef></apiValueDetail></apiValue><apiValue id="com.supermap.containers:MapContainer:TILEDDYNAMICRESTLAYER"><apiName>TILEDDYNAMICRESTLAYER</apiName><shortdesc/><prolog/><apiValueDetail><apiValueDef><apiAccess value="public"/><apiStatic/><apiData>TiledDynamicRESTLayer</apiData><apiType value="String"/></apiValueDef></apiValueDetail></apiValue><apiValue id="com.supermap.containers:MapContainer:configURL:get"><apiName>configURL</apiName><shortdesc>
+          获取配置文件路径
+         </shortdesc><prolog/><apiValueDetail><apiValueDef><apiProperty/><apiAccess value="public"/><apiDynamic/><apiValueAccess value="readwrite"/><apiType value="String"/></apiValueDef><apiDesc>
+          获取配置文件路径
+         </apiDesc></apiValueDetail></apiValue><apiValue id="com.supermap.containers:MapContainer:currentMap:get"><apiName>currentMap</apiName><shortdesc/><prolog/><apiValueDetail><apiValueDef><apiProperty/><apiAccess value="public"/><apiDynamic/><apiValueAccess value="readwrite"/><apiType value="com.supermap.web.mapping:Map"/></apiValueDef></apiValueDetail></apiValue><apiValue id="com.supermap.containers:MapContainer:type:get"><apiName>type</apiName><shortdesc>
+          获取该容器类名
+         </shortdesc><prolog/><apiValueDetail><apiValueDef><apiIsOverride/><apiProperty/><apiAccess value="public"/><apiDynamic/><apiValueAccess value="read"/><apiType value="String"/></apiValueDef><apiDesc>
+          获取该容器类名
+         </apiDesc></apiValueDetail></apiValue></apiClassifier><apiClassifier id="com.supermap.containers:GearContainer"><apiName>GearContainer</apiName><shortdesc>
+      基础模块容器.</shortdesc><prolog><asMetadata><DefaultProperty name="mxmlContentFactory"/></asMetadata></prolog><apiClassifierDetail><apiClassifierDef><apiAccess value="public"/><apiStatic/><apiBaseClassifier>com.supermap.framework.components:LayoutComponent</apiBaseClassifier></apiClassifierDef><apiDesc>
+      基础模块容器.
+      该容器主要用来装载继承自BaseGear的模块(不需要用GearTemplate模板以区分TemplateContainer).
+     
+     </apiDesc></apiClassifierDetail><apiConstructor id="com.supermap.containers:GearContainer:GearContainer"><apiName>GearContainer</apiName><shortdesc>
+          构造函数
+         </shortdesc><prolog/><apiConstructorDetail><apiConstructorDef><apiAccess value="public"/></apiConstructorDef><apiDesc>
+          构造函数
+         </apiDesc></apiConstructorDetail></apiConstructor><apiValue id="com.supermap.containers:GearContainer:gearContainerData:get"><apiName>gearContainerData</apiName><shortdesc>
+          获取加载数据项
+         
+         </shortdesc><prolog/><apiValueDetail><apiValueDef><apiProperty/><apiAccess value="public"/><apiDynamic/><apiValueAccess value="readwrite"/><apiType value="Object"/></apiValueDef><apiDesc>
+          获取加载数据项
+         
+         </apiDesc></apiValueDetail></apiValue><apiValue id="com.supermap.containers:GearContainer:gearLayout:get"><apiName>gearLayout</apiName><shortdesc>
+          获取容器布局类型
+          </shortdesc><prolog/><apiValueDetail><apiValueDef><apiProperty/><apiAccess value="public"/><apiDynamic/><apiValueAccess value="read"/><apiType value="String"/></apiValueDef><apiDesc>
+          获取容器布局类型
+          </apiDesc></apiValueDetail></apiValue><apiValue id="com.supermap.containers:GearContainer:map:get"><apiName>map</apiName><shortdesc>
+          获取map
+         </shortdesc><prolog/><apiValueDetail><apiValueDef><apiProperty/><apiAccess value="public"/><apiDynamic/><apiValueAccess value="readwrite"/><apiType value="com.supermap.web.mapping:Map"/></apiValueDef><apiDesc>
+          获取map
+         </apiDesc></apiValueDetail></apiValue><apiValue id="com.supermap.containers:GearContainer:type:get"><apiName>type</apiName><shortdesc>
+          获取该容器的类名
+         </shortdesc><prolog/><apiValueDetail><apiValueDef><apiIsOverride/><apiProperty/><apiAccess value="public"/><apiDynamic/><apiValueAccess value="read"/><apiType value="String"/></apiValueDef><apiDesc>
+          获取该容器的类名
+         </apiDesc></apiValueDetail></apiValue></apiClassifier><apiClassifier id="com.supermap.containers:LayoutContainer"><apiName>LayoutContainer</apiName><shortdesc>
+      基础容器.</shortdesc><prolog><asMetadata><DefaultProperty name="mxmlContentFactory"/></asMetadata></prolog><apiClassifierDetail><apiClassifierDef><apiAccess value="public"/><apiStatic/><apiBaseClassifier>com.supermap.framework.components:LayoutComponent</apiBaseClassifier></apiClassifierDef><apiDesc>
+      基础容器.
+      用来管理基础组件的容器.主要用来读取外部基础组件配置信息 并实现自身的初始化.
+      </apiDesc></apiClassifierDetail><related-links><link href="com.supermap.framework.components.xml#BaseComponent"><linktext>com.supermap.framework.components.BaseComponent</linktext></link></related-links><apiConstructor id="com.supermap.containers:LayoutContainer:LayoutContainer"><apiName>LayoutContainer</apiName><shortdesc>
+          构造函数
+         </shortdesc><prolog/><apiConstructorDetail><apiConstructorDef><apiAccess value="public"/></apiConstructorDef><apiDesc>
+          构造函数
+         </apiDesc></apiConstructorDetail></apiConstructor><apiOperation id="com.supermap.containers:LayoutContainer:getLayourManager"><apiName>getLayourManager</apiName><shortdesc>
+          获取容器里的布局管理器
+         </shortdesc><prolog/><apiOperationDetail><apiOperationDef><apiAccess value="public"/><apiReturn><apiType value="com.supermap.framework.core:ILayout"/></apiReturn></apiOperationDef><apiDesc>
+          获取容器里的布局管理器
+         </apiDesc></apiOperationDetail></apiOperation><apiOperation id="com.supermap.containers:LayoutContainer:setLayoutMananger"><apiName>setLayoutMananger</apiName><shortdesc>
+          设置容器内部布局管理器
+         </shortdesc><prolog/><apiOperationDetail><apiOperationDef><apiAccess value="public"/><apiReturn><apiType value="void"/></apiReturn><apiParam><apiItemName>layoutManager</apiItemName><apiType value="com.supermap.framework.core:ILayout"/></apiParam></apiOperationDef><apiDesc>
+          设置容器内部布局管理器
+         </apiDesc></apiOperationDetail></apiOperation><apiValue id="com.supermap.containers:LayoutContainer:describe:get"><apiName>describe</apiName><shortdesc/><prolog/><apiValueDetail><apiValueDef><apiProperty/><apiAccess value="public"/><apiDynamic/><apiValueAccess value="readwrite"/><apiType value="String"/></apiValueDef></apiValueDetail></apiValue><apiValue id="com.supermap.containers:LayoutContainer:iconBar:get"><apiName>iconBar</apiName><shortdesc/><prolog/><apiValueDetail><apiValueDef><apiProperty/><apiAccess value="public"/><apiDynamic/><apiValueAccess value="readwrite"/><apiType value="String"/></apiValueDef></apiValueDetail></apiValue><apiValue id="com.supermap.containers:LayoutContainer:isDrag:get"><apiName>isDrag</apiName><shortdesc/><prolog/><apiValueDetail><apiValueDef><apiProperty/><apiAccess value="public"/><apiDynamic/><apiValueAccess value="readwrite"/><apiType value="Boolean"/></apiValueDef></apiValueDetail></apiValue><apiValue id="com.supermap.containers:LayoutContainer:isShowBar:get"><apiName>isShowBar</apiName><shortdesc>
+          是否显示拖拽条
+         </shortdesc><prolog/><apiValueDetail><apiValueDef><apiProperty/><apiAccess value="public"/><apiDynamic/><apiValueAccess value="readwrite"/><apiType value="Boolean"/></apiValueDef><apiDesc>
+          是否显示拖拽条
+         </apiDesc></apiValueDetail></apiValue><apiValue id="com.supermap.containers:LayoutContainer:map:get"><apiName>map</apiName><shortdesc/><prolog/><apiValueDetail><apiValueDef><apiProperty/><apiAccess value="public"/><apiDynamic/><apiValueAccess value="readwrite"/><apiType value="com.supermap.web.mapping:Map"/></apiValueDef></apiValueDetail></apiValue><apiValue id="com.supermap.containers:LayoutContainer:panel:get"><apiName>panel</apiName><shortdesc/><prolog/><apiValueDetail><apiValueDef><apiProperty/><apiAccess value="public"/><apiDynamic/><apiValueAccess value="readwrite"/><apiValueClassifier>com.supermap.framework.dock:FloatPanel</apiValueClassifier></apiValueDef></apiValueDetail></apiValue><apiValue id="com.supermap.containers:LayoutContainer:type:get"><apiName>type</apiName><shortdesc/><prolog/><apiValueDetail><apiValueDef><apiIsOverride/><apiProperty/><apiAccess value="public"/><apiDynamic/><apiValueAccess value="read"/><apiType value="String"/></apiValueDef></apiValueDetail></apiValue></apiClassifier></apiPackage>

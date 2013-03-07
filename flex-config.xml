@@ -1,0 +1,14 @@
+<flex-config>
+	<compiler>
+		<defaults-css-url>defaults.css</defaults-css-url>
+		<keep-as3-metadata><name>Inject</name></keep-as3-metadata>
+		<!--<define>
+			<name>CONFIG::SDK4_0</name>
+ 			<value>true</value>
+		</define>		
+		<define>
+			<name>CONFIG::SDK4_5</name>
+ 			<value>false</value>
+		</define>-->
+	</compiler>
+</flex-config>

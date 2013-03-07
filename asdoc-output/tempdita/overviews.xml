@@ -1,0 +1,184 @@
+
+<overviews>
+	
+<packages>
+		
+<package name="com.supermap.framework.commands">
+			
+<shortDescription>
+			
+				框架命令包.
+			
+			</shortDescription>
+			
+<description>
+			
+				该包主要定义了命令的接口与实现类.主要功能职责是通过与事件类型的绑定来获取事件回调函数里的数据,
+				并做数据在视图层面上的传递.
+			
+			</description>
+		</package>
+		
+<package name="com.supermap.framework.components">
+			
+<shortDescription>
+			
+				框架基础组件包.
+			
+			</shortDescription>
+			
+<description>
+			
+				基础组件包,主要包含了基础组件类,基础组件委托类以及委托类管理类等.
+				同时,该包还提供了一个布局的基础组件.
+				如果要定制可视化组件,可以选择继承自基础组件(BaseComponent),也可以选择继承自布局组件(LayoutComponent).
+			
+			</description>
+		</package>
+		
+<package name="com.supermap.framework.core">
+			
+<shortDescription>
+			
+				核心包.主要包含了接口的定义以及基础模块相关类.
+			
+			</shortDescription>
+			
+<description>
+			
+				Flex Bev框架核心包.
+				主要包含了按照各个功能模块划分的接口定义,涉及到插件接口,状态接口,模板接口等以及相关接口的对应实现.
+				该包对了解整个框架的功能组成有一定帮助.
+			
+			</description>
+		</package>
+		
+<package name="com.supermap.framework.events">
+			
+<shortDescription>
+			
+				框架事件包.
+			
+			</shortDescription>
+			
+<description>
+			
+				该包主要涵盖了基础事件类以及全局的事件派发器.同时包含了一些扩展事件类.
+			
+			</description>
+		</package>
+		
+<package name="com.supermap.framework.managers">
+			
+<shortDescription>
+			
+				框架辅助管理包.				
+			
+			</shortDescription>
+			
+<description>
+			
+				该包主要是一些辅助管理的类.涉及配置管理,事件管理,布局管理以及插件管理.
+				管理通过注入的方式对应到具体的实现类中,提供默认的管理方案.对于高级的用户,也可以
+				适当的扩展管理类.
+			
+			</description>
+		</package>
+		
+<package name="com.supermap.framework.model">
+			
+<shortDescription>
+			
+				框架模型包.
+			
+			</shortDescription>
+			
+<description>
+			
+				该包只包含一个抽象的模型定义.通过继承可封装需要的数据原型.
+			
+			</description>
+		</package>
+		
+		
+<package name="com.supermap.containers">
+			
+<shortDescription>
+			
+				框架容器包.
+			
+			</shortDescription>
+			
+<description>
+			
+				该包包含了几个容器,分别是基础容器,地图显示容器,模块容器以及模板容器.
+			
+			</description>
+		</package>
+		
+		
+<package name="com.supermap.framework.dock">
+			
+<shortDescription>
+			
+				组件管理窗口包.
+			
+			</shortDescription>
+			
+<description>
+			
+				该包包含了一个面板容器FloatPanel.该面板允许拖拽,停靠等一系列相关操作.
+			
+			</description>
+		</package>
+		
+		
+<package name="com.supermap.framework.skins">
+			
+<shortDescription>
+			
+				默认组件皮肤包.
+			
+			</shortDescription>
+			
+<description>
+			
+				该包包含了常用组件的默认皮肤.
+			
+			</description>
+		</package>
+		
+		
+<package name="com.supermap.framework.skins.scrollBarSkins">
+			
+<shortDescription>
+			
+				默认组件滚动条皮肤包.
+			
+			</shortDescription>
+			
+<description>
+			
+				该包包含了滚动条默认皮肤.框架本身的使用主要用在了停靠组件本身,当停靠栏图标高度超过默认值时显示该滚动条及其样式.
+			
+			</description>
+		</package>
+		
+		
+<package name="com.supermap.framework.dock.supportClasses">
+			
+<shortDescription>
+			
+				停靠辅助类.
+			
+			</shortDescription>
+			
+<description>
+			
+				该包包含了面板停靠时涉及到的组件类及其皮肤样式文件.
+			
+			</description>
+		</package>
+		
+	</packages>
+</overviews>
