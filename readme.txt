@@ -1,7 +1,2 @@
-说明:
-1.本框架是一套逻辑架构,暂针对公司内部使用(事业部以及分公司).
-2.本框架需借助FlexBev2来展现UI层面,与FlexBev2 UI工程协同开发.
-3.本框架遵循BSD开源许可协议,请在许可说明范围内使用本框架.
-4.该版本为beta版本.
-	请各位及时反馈信息至zengming@supermap.com或者直接拨打010-59896655转6789.
-
+﻿Flex-Bev-Lib框架简介：
+该框架是一套逻辑框架，主要是针对Flex-Bev界面开发框架设计的一套底层通信逻辑框架。有关Flex-Bev框架的信息请移至：https://github.com/SuperMap/Flex-Bev。
